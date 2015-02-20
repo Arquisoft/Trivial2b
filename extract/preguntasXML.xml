@@ -1,0 +1,40 @@
+ <?xml version="1.0"?>
+ //Respuesta múltiple
+   <Tipo1>
+    <cuestion id=1>
+      <P>¿Cuál de las siguientes afirmaciones es correcta para un arquitecto de software?</P>
+     <R tipo="false"> Debe ser un negociador experto, capaz de convencer al cliente</R> 
+	 <R tipo="false">Debe ser un negociador duro, capaz de modificar los hitos de entrega</R> 
+	 <R tipo="true">Debe ser un técnico con amplios conocimeintos y actualizado capaz de tomar decisiones tecnológicas</R>
+    </cuestion>
+    <cuestion id =2>
+     <P>La arquitectura del software...</P>
+     <R tipo="false">es lo mismo que el diseño</R>
+     <R tipo="true">no incluye las definiciones del hardware, a no ser aquellas partes que puedan condicionarla</R>
+     <R tipo="false">no incluye la estructura de módulos</R>
+	 </cuestion>
+	 <cuestion id=3>
+     <P>¿Cuáles de los siguiente son atributos de calidad de una arquitectura?</P>
+     <R tipo="false">Clases, interfaces y módulos</R>
+     <R tipo="false">Estructura, patrones y estilos</R>
+     <R tipo="true">Seguridad, mantenibilidad y rendimiento</R>
+    </cuestion>
+	<cuestion id=4>
+     <P>¿Cuál de las siguientes definiciones es correcta?</P>
+     <R tipo="false"> La arquitectura del software se basa en la modularización y el diseño de las interfaces detalladas de los elementos del sistema</R>
+     <R tipo="false">La arquitectura del software en ajena a los requisitos no funcionales</R>
+     <R tipo="true"> La arquitectura del software se basa en la selección de elementos arquitectónicos, su interacción y las restricciones de esos elementos y sus interacciones </R>
+    </cuestion>
+  
+   </Tipo1>
+   //Verdadera o falsa
+   <Tipo2>
+   <enunciado tipo="true"> Los stakeholders son personas, grupos de personas u organizaciones que tienen un interés personal en la aplicación </enunciado>
+   <enunciado tipo="false"> un stakeholder es un entidad o persona que está afectada por el funcionamiento del sistema </enunciado>
+   <enunciado tipo="false"> un arquitecto del software debe tener amplia experiencia en diseño y desarrollo de software </enunciado>
+   <enunciado tipo="false"> un arquitecto del software es al mismo tiempo arquitecto de datos y de red </enunciado>
+   
+   
+   </Tipo2>
+   
+   
