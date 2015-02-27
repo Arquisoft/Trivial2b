@@ -1,4 +1,6 @@
-package es.uniovi.asw.trivial;
+package es.uniovi.asw.trivial.mainToMondoDB;
+
+import es.uniovi.asw.trivial.parser.ParserXMLtoJSON;
 
 
 public class Extractor {

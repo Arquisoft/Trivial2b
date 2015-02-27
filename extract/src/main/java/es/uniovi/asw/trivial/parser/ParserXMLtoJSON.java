@@ -1,4 +1,4 @@
-package es.uniovi.asw.trivial;
+package es.uniovi.asw.trivial.parser;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -26,7 +26,7 @@ public class ParserXMLtoJSON {
 			JSONObject xmlJSONObj = XML.toJSONObject(sb.toString());
 			String jsonPrettyPrintString = xmlJSONObj.toString(4);
 			
-			File file = new File("files/preguntas.json");
+			File file = new File("files/preguntasFromXML.json");
  
 			// if file doesnt exists, then create it
 			if (!file.exists()) {
