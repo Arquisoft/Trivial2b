@@ -1,0 +1,2 @@
+Es necesario importar la libreria Gson: google-gson-2.3.1/gson-2.3.1.jar
+Importar la libreria y aloajrla en /lib
