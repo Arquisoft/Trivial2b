@@ -12,29 +12,39 @@ import es.uniovi.asw.trivial.parser.ParserGIFT;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-		
+		run();
+	}
+
+	public static int run() throws IOException {
+		BufferedReader entrada = new BufferedReader(new InputStreamReader(
+				System.in));
+
 		System.out.println("Introduzca la ruta del fichero: ");
 		String ruta = entrada.readLine();
-		
-		//parseadores
-		ParserGIFT gift;
-//		ParserXMLtoJSON xml;
-//		ParserToJSON json;
-		
-		//Preguntas
+
+		// parseadores
+		// ParserXMLtoJSON xml;
+		// ParserToJSON json;
+
+		int contador = 0;
+		// Preguntas
 		ArrayList<Pregunta> preguntas;
 		if (ruta.toLowerCase().endsWith(".gift")) {
-			gift = new ParserGIFT();
-			preguntas = gift.parsear(ruta);
+			preguntas = parserGIFTtoPregunta(ruta);
+			
+			// Juego
+			JuegoConsola juegoConsola = new JuegoConsola(preguntas);
+			contador = juegoConsola.jugar();
 		} else {
-			preguntas = new ArrayList<Pregunta>();
+			System.err.println("No se ha podido cargar el archivo(debe ser formato gift)");
 		}
 		
-		//Juego				
-		JuegoConsola juegoConsola = new JuegoConsola(preguntas);
-		juegoConsola.jugar();
-		
+		return contador;
+	}
+	
+	public static ArrayList<Pregunta> parserGIFTtoPregunta(String ruta) throws IOException{
+		ParserGIFT gift = new ParserGIFT();
+		return gift.parsear(ruta);
 	}
 
 }
