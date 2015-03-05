@@ -1,36 +1,36 @@
 ﻿// Conjunto de preguntas de múltiple respuesta 
-::1:: ¿Cuál de los elementos indicados no es un elemento de HTML5? 
+::1:: ¿Cual de los elementos indicados no es un elemento de HTML5?
 { 
-=center # Correcto! 
+=center # Correcto!
 ~audio # Incorrecto.
-~footer # Incorrecto. 
+~footer # Incorrecto.
 ~source # Incorrecto.
 }
-::2:: Indica, cuál de las siguientes estructuras de SGML no se utiliza en HTML4
+::2:: Indica, cual de las siguientes estructuras de SGML no se utiliza en HTML4
 { 
-~Comentarios # Incorrecto. 
+~Comentarios # Incorrecto.
 ~Entidades # Incorrecto.
 =Instrucciones de procesamiento # Correcto!
 ~Atributos # Incorrecto.
 }
-::3:: Indicar el elemento de HTML5 más apropiado para ubicar enlaces externos (artículos o sitios recomendados, redes sociales, etc.)
+::3:: Indicar el elemento de HTML5 mas apropiado para ubicar enlaces externos (articulos o sitios recomendados, redes sociales, etc.)
 { 
-~section # Incorrecto. 
+~section # Incorrecto.
 ~div # Incorrecto.
 ~nav # Incorrecto.
 =aside # Correcto!
 }
-::4:: Cuál de los atributos de tabla indicados a continuación no existe en HTML5
+::4:: Cual de los atributos de tabla indicados a continuacion no existe en HTML5
 { 
-=summary # Correcto! 
+=summary # Correcto!
 ~border # Incorrecto.
 ~rowspan # Incorrecto.
 ~colspan # Incorrecto.
 }
-::5:: Indica cuál de los siguientes valores no es válido para el atributo type de un input
+::5:: Indica cual de los siguientes valores no es valido para el atributo type de un input
 { 
 ="textarea" # Correcto!
-~"hidden" # Incorrecto. 
+~"hidden" # Incorrecto.
 ~"submit" # Incorrecto.
 ~"checkbox" # Incorrecto.
 }

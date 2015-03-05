@@ -19,7 +19,7 @@ public class JuegoConsola {
 		this.entrada = new BufferedReader(new InputStreamReader(System.in));
 	}
 
-	public void jugar() throws NumberFormatException, IOException {
+	public int jugar() throws NumberFormatException, IOException {
 		for (Pregunta p : this.preguntas) {
 			System.out.println(p.toString());
 			System.out.println("Escoja la respuesta: ");
@@ -31,6 +31,8 @@ public class JuegoConsola {
 		}
 		System.out.println("\nHa acertado: " + contador + " de "
 				+ this.preguntas.size() + " preguntas.");
+		
+		return contador;
 	}
 
 }
