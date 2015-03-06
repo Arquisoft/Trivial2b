@@ -8,6 +8,10 @@ Software Architecture course - [University of Oviedo](http://www.uniovi.es), 201
 Curso de Arquitectura de Software - [Universidad de Oviedo](http://www.uniovi.es), 2014-15
 
 =======
+
+[Web page/página web](http://arquisoft.github.io/Trivial2b/)
+
+=======
 Developers/Desarrolladores:
 * Arenal Pereira Adrián
 * Cabañeros Blanco José Antonio
