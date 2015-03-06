@@ -31,7 +31,7 @@ public class ExtractorTest {
 
 		Pregunta pregunta0 = new PreguntaMulti(
 				"1",
-				" ¿Cual de los elementos indicados no es un elemento de HTML5?",
+				" Cual de los elementos indicados no es un elemento de HTML5?",
 				respuestas, contestacion, 0);
 		assertEquals(preguntas.get(0), pregunta0);
 		
