@@ -1,5 +1,6 @@
 Trivial2b
 =============
+[![Build Status](https://travis-ci.org/Arquisoft/Trivial2b.svg?branch=master)](https://travis-ci.org/Arquisoft/Trivial2b)
 
 Repository for Trivial programs. 
 Repositorio para los programas Trivial.
