@@ -17,6 +17,9 @@ public class ExtractorTest {
 	public void testPreguntas() throws IOException {
 		ArrayList<Pregunta> preguntas = Main
 				.parserGIFTtoPregunta("files/preguntasGIFT.gift");
+		
+		System.out.println("Cargado fichero de pruebas preguntasGIFT\n");
+		
 		String[] respuestas = new String[4];
 		respuestas[0] = "center ";
 		respuestas[1] = "audio ";
@@ -28,6 +31,8 @@ public class ExtractorTest {
 		contestacion[1] = " Incorrecto.";
 		contestacion[2] = " Incorrecto.";
 		contestacion[3] = " Incorrecto.";
+		
+		System.out.println("Prueba sobre la primera pregunta del fichero");
 
 		Pregunta pregunta0 = new PreguntaMulti(
 				"1",
@@ -35,8 +40,9 @@ public class ExtractorTest {
 				respuestas, contestacion, 0);
 		assertEquals(preguntas.get(0), pregunta0);
 		
-		
-		
+		System.out.println("Primera pregunta guardada en formato intermedio");
+		System.out.println("Formato de pregunta con datos extraidos:");
+		System.out.println(preguntas.get(0).toStringDebug());
 
 		respuestas = new String[4];
 		respuestas[0] = "Comentarios ";
@@ -49,6 +55,8 @@ public class ExtractorTest {
 		contestacion[1] = " Incorrecto.";
 		contestacion[2] = " Correcto!";
 		contestacion[3] = " Incorrecto.";
+		
+		System.out.println("Prueba sobre la segunda pregunta del fichero");
 
 		Pregunta pregunta1 = new PreguntaMulti(
 				"2",
@@ -56,8 +64,9 @@ public class ExtractorTest {
 				respuestas, contestacion, 2);
 		assertEquals(preguntas.get(1), pregunta1);
 		
-		
-		
+		System.out.println("Segunda pregunta guardada en formato intermedio");
+		System.out.println("Formato de pregunta con datos extraidos:");
+		System.out.println(preguntas.get(1).toStringDebug());
 
 		respuestas = new String[4];
 		respuestas[0] = "section ";
@@ -70,15 +79,18 @@ public class ExtractorTest {
 		contestacion[1] = " Incorrecto.";
 		contestacion[2] = " Incorrecto.";
 		contestacion[3] = " Correcto!";
+		
+		System.out.println("Prueba sobre la tercera pregunta del fichero");
 
 		Pregunta pregunta2 = new PreguntaMulti(
 				"3",
 				" Indicar el elemento de HTML5 mas apropiado para ubicar enlaces externos (articulos o sitios recomendados, redes sociales, etc.)",
 				respuestas, contestacion, 3);
-		assertEquals(preguntas.get(2), pregunta2);
+		assertEquals(preguntas.get(2), pregunta2);	
 		
-		
-		
+		System.out.println("Tercera pregunta guardada en formato intermedio");
+		System.out.println("Formato de pregunta con datos extraidos:");
+		System.out.println(preguntas.get(2).toStringDebug());
 		
 		respuestas = new String[4];
 		respuestas[0] = "summary ";
@@ -91,15 +103,18 @@ public class ExtractorTest {
 		contestacion[1] = " Incorrecto.";
 		contestacion[2] = " Incorrecto.";
 		contestacion[3] = " Incorrecto.";
+		
+		System.out.println("Prueba sobre la cuarta pregunta del fichero");
 
 		Pregunta pregunta3 = new PreguntaMulti(
 				"4",
 				" Cual de los atributos de tabla indicados a continuacion no existe en HTML5",
 				respuestas, contestacion, 0);
-		assertEquals(preguntas.get(3), pregunta3);
+		assertEquals(preguntas.get(3), pregunta3);	
 		
-		
-		
+		System.out.println("Cuarta pregunta guardada en formato intermedio");
+		System.out.println("Formato de pregunta con datos extraidos:");
+		System.out.println(preguntas.get(3).toStringDebug());
 		
 		respuestas = new String[4];
 		respuestas[0] = "\"textarea\" ";
@@ -112,12 +127,18 @@ public class ExtractorTest {
 		contestacion[1] = " Incorrecto.";
 		contestacion[2] = " Incorrecto.";
 		contestacion[3] = " Incorrecto.";
+		
+		System.out.println("Prueba sobre la quinta pregunta del fichero");
 
 		Pregunta pregunta4 = new PreguntaMulti(
 				"5",
 				" Indica cual de los siguientes valores no es valido para el atributo type de un input",
 				respuestas, contestacion, 0);
 		assertEquals(preguntas.get(4), pregunta4);
+		
+		System.out.println("Quinta pregunta guardada en formato intermedio");
+		System.out.println("Formato de pregunta con datos extraidos:");
+		System.out.println(preguntas.get(4).toStringDebug());
 	}
 	
 	
