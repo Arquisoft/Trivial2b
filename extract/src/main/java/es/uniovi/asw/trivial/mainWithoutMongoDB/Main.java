@@ -22,10 +22,6 @@ public class Main {
 		System.out.println("Introduzca la ruta del fichero: ");
 		String ruta = entrada.readLine();
 
-		// parseadores
-		// ParserXMLtoJSON xml;
-		// ParserToJSON json;
-
 		int contador = 0;
 		// Preguntas
 		ArrayList<Pregunta> preguntas;
