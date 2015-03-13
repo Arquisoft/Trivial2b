@@ -16,7 +16,7 @@ public class ExtractorTest {
 	@Test
 	public void testPreguntas() throws IOException {
 		ArrayList<Pregunta> preguntas = Main
-				.parserGIFTtoPregunta("files/preguntasGIFT.gift");
+				.parserGIFTtoPregunta("src/test/java/resources/preguntasGIFT.gift");
 		
 		System.out.println("Cargado fichero de pruebas preguntasGIFT\n");
 		
