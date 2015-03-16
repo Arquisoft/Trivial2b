@@ -30,6 +30,7 @@ public class Menuprincipal extends JFrame {
 	private JButton btnSalir;
 	private JPanel panel_2;
 	private JLabel lblBienvenidoATrivial;
+	private JButton btnRegistro;
 
 	/**
 	 * Launch the application.
@@ -86,6 +87,7 @@ public class Menuprincipal extends JFrame {
 			panel_1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 			panel_1.add(getBtnJugar());
 			panel_1.add(getBtnEstadisticas());
+			panel_1.add(getBtnRegistro());
 			panel_1.add(getBtnSalir());
 		}
 		return panel_1;
@@ -142,6 +144,19 @@ public class Menuprincipal extends JFrame {
 			lblBienvenidoATrivial.setHorizontalAlignment(SwingConstants.CENTER);
 		}
 		return lblBienvenidoATrivial;
+	}
+	private JButton getBtnRegistro() {
+		if (btnRegistro == null) {
+			btnRegistro = new JButton("Registro");
+			btnRegistro.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					 new Registro().setVisible(true);
+			            dispose();
+					
+				}
+			});
+		}
+		return btnRegistro;
 	}
 }
 

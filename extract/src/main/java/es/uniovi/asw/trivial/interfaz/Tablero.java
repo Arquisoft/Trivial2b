@@ -38,8 +38,10 @@ public class Tablero extends JFrame {
 	private JLabel lblNewLabel_1;
 	private JTextField textField;
 	private JPanel panelTablero;
+	private int tamTablero=9;
+	private int numJugadores=2;
 	private HashMap<Integer, HashMap<Color, Integer>> cuentaColores = new HashMap<Integer, HashMap<Color, Integer>>();
-	private JButton[][] botones = new JButton[9][9];
+	private JButton[][] botones = new JButton[tamTablero][tamTablero];
 	private boolean defaultColors = true;
 	private JPanel panel_3;
 	private JLabel lblPuntuacin;
@@ -52,6 +54,7 @@ public class Tablero extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					
 					Tablero frame = new Tablero();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -65,6 +68,20 @@ public class Tablero extends JFrame {
 	 * Create the frame.
 	 */
 	public Tablero() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("/img/tab.png")));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.add(getPanel(), BorderLayout.WEST);
+		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
+	}
+	public Tablero(int tam, int numJugadores) {
+		tamTablero=tam;
+		this.numJugadores=numJugadores;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("/img/tab.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -147,7 +164,7 @@ public class Tablero extends JFrame {
 		if (panelTablero == null) {
 			panelTablero = new JPanel();
 
-			panelTablero.setLayout(new GridLayout(9, 9, 0, 0));
+			panelTablero.setLayout(new GridLayout(tamTablero, tamTablero, 0, 0));
 			asignarColores();
 			rellenarBotones();
 			for (int i = 0; i < botones.length; i++) {
@@ -219,13 +236,18 @@ public class Tablero extends JFrame {
 			
 		}
 	}
+	private  int getNumeroColoreables(){
+		int num=0;
+		num= (tamTablero*tamTablero) -((tamTablero-3)*(tamTablero-3)+5);
+		return num;
+	}
 
 	private void pintarAleatorio(JButton but,
 			HashMap<Integer, HashMap<Color, Integer>> colores, int key) {
 		Set<Color> arg = cuentaColores.get(key).keySet();
 		for (Color color : arg) {
 
-			if (cuentaColores.get(key).get(color) < (40 / cuentaColores.size())) {
+			if (cuentaColores.get(key).get(color) < (getNumeroColoreables() / cuentaColores.size())) {
 				but.setBackground(color);
 				cuentaColores.get(key).put(color,
 						cuentaColores.get(key).get(color) + 1);

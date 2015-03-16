@@ -11,8 +11,10 @@ import java.util.List;
 
 import javax.swing.BoxLayout;
 import javax.swing.DefaultCellEditor;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -28,8 +30,6 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
 import modelo.Usuario;
-import javax.swing.JSlider;
-import javax.swing.JSpinner;
 
 public class Playerschoice extends JFrame {
 
@@ -51,7 +51,9 @@ public class Playerschoice extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
+					// UIManager
+					// .setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
+
 					Playerschoice frame = new Playerschoice();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -67,7 +69,7 @@ public class Playerschoice extends JFrame {
 	public Playerschoice() {
 		setTitle("Trivial Pursuit\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 722, 476);
+		setBounds(100, 100, 835, 476);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -98,8 +100,6 @@ public class Playerschoice extends JFrame {
 		textContra.setColumns(10);
 		panel.add(panel_1, BorderLayout.NORTH);
 
-	
-
 		JPanel panelTabla = new JPanel();
 		panelTabla.setLayout(new BorderLayout(0, 0));
 
@@ -111,31 +111,39 @@ public class Playerschoice extends JFrame {
 
 		JLabel lblNumeroDeJugadores = new JLabel("Numero de jugadores:");
 		panel_2.add(lblNumeroDeJugadores);
-		
+
 		textField_2_1 = new JTextField();
 		textField_2_1.setEditable(false);
 		textField_2_1.setEnabled(false);
 		panel_2.add(textField_2_1);
 		textField_2_1.setColumns(10);
-		
+
 		JLabel lblNmeroDeCategoras = new JLabel("Categor\u00EDas\r\n");
 		panel_2.add(lblNmeroDeCategoras);
-		
+
 		JCheckBox chckbxDeportes = new JCheckBox("Deportes");
 		chckbxDeportes.setSelected(true);
 		panel_2.add(chckbxDeportes);
-		
+
 		JCheckBox chckbxCiencia = new JCheckBox("Ciencia");
 		chckbxCiencia.setSelected(true);
 		panel_2.add(chckbxCiencia);
-		
+
 		JCheckBox chckbxHistoria = new JCheckBox("Historia");
 		chckbxHistoria.setSelected(true);
 		panel_2.add(chckbxHistoria);
-		
+
 		JCheckBox chckbxCine = new JCheckBox("Cine");
 		chckbxCine.setSelected(true);
 		panel_2.add(chckbxCine);
+
+		JLabel lblTamaoDelTablero = new JLabel("Tablero");
+		panel_2.add(lblTamaoDelTablero);
+
+		final JComboBox<String> comboBox = new JComboBox<String>();
+		comboBox.setModel(new DefaultComboBoxModel<String>(new String[] {
+				"Normal", "Grande" }));
+		panel_2.add(comboBox);
 		JButton btnUnirse = new JButton("Unirse");
 		btnUnirse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -154,19 +162,35 @@ public class Playerschoice extends JFrame {
 			}
 		});
 		panel_1.add(btnUnirse);
-		
 
 		JButton btnComenzarLaPartida = new JButton("Comenzar la partida");
+		btnComenzarLaPartida.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Playerschoice.ExampleTableModel model = (Playerschoice.ExampleTableModel) tablero
+						.getModel();
+				if (model.getRowCount() < 2)
+					JOptionPane.showMessageDialog(null,
+							"Mínimo para jugar 2 jugadores");
+				if (comboBox.getSelectedItem().toString().equals("Normal"))
+					new Tablero(9, model.getRowCount()).setVisible(true);
+				/*if (comboBox.getSelectedItem().toString().equals("Grande"))
+					new Tablero(13, model.getRowCount()).setVisible(true);*/
+				//a implementar 
+				dispose();
+
+			}
+		});
 		panel.add(btnComenzarLaPartida, BorderLayout.SOUTH);
 
 		lblSeleccinDeJugadores = new JLabel("Selecci\u00F3n de jugadores");
 		contentPane.add(lblSeleccinDeJugadores, BorderLayout.NORTH);
-		
+
 		JButton btnNewButton = new JButton("Volver al men\u00FA");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 new Menuprincipal().setVisible(true);
-		            dispose();
+				new Menuprincipal().setVisible(true);
+
+				dispose();
 			}
 		});
 		contentPane.add(btnNewButton, BorderLayout.SOUTH);
@@ -210,7 +234,6 @@ public class Playerschoice extends JFrame {
 				addRow(user.getNombre());
 			}
 
-			
 		}
 
 		public void añadirUser(Usuario user) {
@@ -229,7 +252,6 @@ public class Playerschoice extends JFrame {
 
 			}
 			data = new Object[usuarios.size()][usuarios.size()];
-		
 
 		}
 
@@ -242,20 +264,14 @@ public class Playerschoice extends JFrame {
 		}
 
 		public void removeRow(int row) {
-			Usuario user= usuarios.get(row);
-			if(usuarios.size()>2){
-			
-				JOptionPane.showMessageDialog(
-						null, "Jugador expulsado de la partida: " + user.getNombre());
+			Usuario user = usuarios.get(row);
+
+			JOptionPane.showMessageDialog(null,
+					"Jugador expulsado de la partida: " + user.getNombre());
 			usuarios.remove(row);
 			fireTableRowsDeleted(row, row);
 			textField_2_1.setText(Integer.toString(usuarios.size()));
-			
-			}
-			else
-				JOptionPane.showMessageDialog(
-						null, "No se puede expulsar a: " + user.getNombre()+ " mínimo para jugar 2 jugadores");
-				
+
 		}
 
 		@Override
