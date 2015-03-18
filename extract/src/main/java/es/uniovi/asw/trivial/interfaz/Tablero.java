@@ -80,7 +80,26 @@ public class Tablero extends JFrame {
 		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
 	}
 	public Tablero(int tam, int numJugadores) {
-		tamTablero=tam;
+		this.tamTablero=tam;
+		this.botones = new JButton[tamTablero][tamTablero];
+		this.numJugadores=numJugadores;
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("/img/tab.png")));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.add(getPanel(), BorderLayout.WEST);
+		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
+	}
+
+	public Tablero(int tam, int numJugadores, Color[] colors) {
+		this.tamTablero=tam;
+		this.botones = new JButton[tamTablero][tamTablero];
+		this.defaultColors=false;
+		asignarColores(colors);
 		this.numJugadores=numJugadores;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("/img/tab.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -165,7 +184,7 @@ public class Tablero extends JFrame {
 			panelTablero = new JPanel();
 
 			panelTablero.setLayout(new GridLayout(tamTablero, tamTablero, 0, 0));
-			asignarColores();
+			//asignarColores();
 			rellenarBotones();
 			for (int i = 0; i < botones.length; i++) {
 				for (int j = 0; j < botones[i].length; j++) {
@@ -231,7 +250,13 @@ public class Tablero extends JFrame {
 			color3.put(Color.green, 0);
 			cuentaColores.put(3, color3);
 		} else {
-			
+			int i=0;
+			for(Color color : colors){
+				HashMap<Color, Integer> colorMap = new HashMap<Color, Integer>();
+				colorMap.put(color, 0);
+				cuentaColores.put(i, colorMap);
+				i++;
+				}
 			//Aqui iria el codigo para que recuperase los colores con el que el jugador quiere jugar y los meta al array de colores
 			
 		}

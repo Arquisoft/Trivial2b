@@ -109,40 +109,47 @@ public class Playerschoice extends JFrame {
 		JPanel panel_2 = new JPanel();
 		panelTabla.add(panel_2, BorderLayout.NORTH);
 
-		JLabel lblNumeroDeJugadores = new JLabel("Numero de jugadores:");
+		JLabel lblNumeroDeJugadores = new JLabel("NumJugadores:");
 		panel_2.add(lblNumeroDeJugadores);
 
 		textField_2_1 = new JTextField();
 		textField_2_1.setEditable(false);
 		textField_2_1.setEnabled(false);
 		panel_2.add(textField_2_1);
-		textField_2_1.setColumns(10);
+		textField_2_1.setColumns(2);
 
 		JLabel lblNmeroDeCategoras = new JLabel("Categor\u00EDas\r\n");
 		panel_2.add(lblNmeroDeCategoras);
 
-		JCheckBox chckbxDeportes = new JCheckBox("Deportes");
+		final JPanel panelCategorias = new JPanel();
+		panel_2.add(panelCategorias);
+
+		final JCheckBox chckbxDeportes = new JCheckBox("Deportes");
+		panelCategorias.add(chckbxDeportes);
 		chckbxDeportes.setSelected(true);
-		panel_2.add(chckbxDeportes);
 
-		JCheckBox chckbxCiencia = new JCheckBox("Ciencia");
+		final JCheckBox chckbxCiencia = new JCheckBox("Ciencia");
+		panelCategorias.add(chckbxCiencia);
 		chckbxCiencia.setSelected(true);
-		panel_2.add(chckbxCiencia);
 
-		JCheckBox chckbxHistoria = new JCheckBox("Historia");
+		final JCheckBox chckbxHistoria = new JCheckBox("Historia");
+		panelCategorias.add(chckbxHistoria);
 		chckbxHistoria.setSelected(true);
-		panel_2.add(chckbxHistoria);
 
-		JCheckBox chckbxCine = new JCheckBox("Cine");
+		final JCheckBox chckbxCine = new JCheckBox("Cine");
+		panelCategorias.add(chckbxCine);
 		chckbxCine.setSelected(true);
-		panel_2.add(chckbxCine);
+
+		final JCheckBox chckbxMatemticas = new JCheckBox("Matem\u00E1ticas");
+		panelCategorias.add(chckbxMatemticas);
+
 
 		JLabel lblTamaoDelTablero = new JLabel("Tablero");
 		panel_2.add(lblTamaoDelTablero);
 
 		final JComboBox<String> comboBox = new JComboBox<String>();
 		comboBox.setModel(new DefaultComboBoxModel<String>(new String[] {
-				"Normal", "Grande" }));
+				"Normal", "Grande", "Pequeño" }));
 		panel_2.add(comboBox);
 		JButton btnUnirse = new JButton("Unirse");
 		btnUnirse.addActionListener(new ActionListener() {
@@ -171,13 +178,69 @@ public class Playerschoice extends JFrame {
 				if (model.getRowCount() < 2)
 					JOptionPane.showMessageDialog(null,
 							"Mínimo para jugar 2 jugadores");
-				if (comboBox.getSelectedItem().toString().equals("Normal"))
-					new Tablero(9, model.getRowCount()).setVisible(true);
-				/*if (comboBox.getSelectedItem().toString().equals("Grande"))
-					new Tablero(13, model.getRowCount()).setVisible(true);*/
-				//a implementar 
-				dispose();
+				Color[] colors = getColoresPartida();
+				if (comboBox.getSelectedItem().toString().equals("Normal")
+						&& isTableroPosible(9, colors.length)) {
+					new Tablero(9, model.getRowCount(), colors)
+							.setVisible(true);
+					dispose();
+				}
+				if (comboBox.getSelectedItem().toString().equals("Grande")
+						&& isTableroPosible(13, colors.length)) {
+					new Tablero(13, model.getRowCount(), colors)
+							.setVisible(true);
+					dispose();
+				}
+				if (comboBox.getSelectedItem().toString().equals("Pequeño")
+						&& isTableroPosible(7, colors.length)) {
+					new Tablero(7, model.getRowCount(), colors)
+							.setVisible(true);
+					dispose();
+				}
+				
 
+			}
+
+			private boolean isTableroPosible(int tamTablero, int numColores) {
+				int num = 0;
+				num = (tamTablero * tamTablero)
+						- ((tamTablero - 3) * (tamTablero - 3) + 5);
+				if (num % numColores == 0)
+					return true;
+				else {
+					JOptionPane.showMessageDialog(null,
+							"Numero de categorias en esa dimension no válido");
+					return false;
+				}
+			}
+
+			private Color[] getColoresPartida() {
+				Color[] colores = new Color[getNumCategoriasSelected()];
+				List<Color> coloresArrayList = new ArrayList<Color>();
+
+				if (chckbxDeportes.isSelected())
+					coloresArrayList.add(Color.RED);
+				if (chckbxCiencia.isSelected())
+					coloresArrayList.add(Color.YELLOW);
+				if (chckbxCine.isSelected())
+					coloresArrayList.add(Color.GREEN);
+				if (chckbxHistoria.isSelected())
+					coloresArrayList.add(Color.BLUE);
+				if (chckbxMatemticas.isSelected())
+					coloresArrayList.add(Color.CYAN);
+
+
+				return coloresArrayList.toArray(colores);
+			}
+
+			private int getNumCategoriasSelected() {
+				Component[] checkBoxes = panelCategorias.getComponents();
+				int num = 0;
+				for (Component comp : checkBoxes)
+					if (((JCheckBox) comp).isSelected())
+						num++;
+
+				return num;
 			}
 		});
 		panel.add(btnComenzarLaPartida, BorderLayout.SOUTH);
