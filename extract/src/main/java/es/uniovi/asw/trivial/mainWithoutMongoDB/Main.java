@@ -33,6 +33,7 @@ public class Main {
 			contador = juegoConsola.jugar();
 		} else {
 			System.err.println("No se ha podido cargar el archivo(debe ser formato gift)");
+			System.out.println("El programa se cerrará");
 		}
 		
 		return contador;

@@ -11,6 +11,8 @@ import es.uniovi.asw.trivial.model.PreguntaMulti;
 
 public class ParserGIFT {
 	
+	private final static int OPCIONES = 4;
+	
 	public ArrayList<Pregunta> parsear(String archivo) throws IOException {
 		
 		FileReader reader = new FileReader(new File(archivo));
@@ -21,8 +23,8 @@ public class ParserGIFT {
 		String id = "";
 		int correcta = 0;
 		String pregunta = "";
-		String[] respuestas = new String[4];
-		String[] contestacion = new String[4];
+		String[] respuestas = new String[OPCIONES];
+		String[] contestacion = new String[OPCIONES];
 		
 		String linea;
 		int cont = 0;
@@ -41,8 +43,8 @@ public class ParserGIFT {
 			} else if (linea.equals("}")) {
 				cont = 0;
 				preguntas.add(new PreguntaMulti(id, pregunta, respuestas, contestacion, correcta));
-				respuestas = new String[4];
-				contestacion = new String[4];
+				respuestas = new String[OPCIONES];
+				contestacion = new String[OPCIONES];
 			} else {}
 		}
 		

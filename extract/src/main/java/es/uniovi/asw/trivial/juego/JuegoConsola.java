@@ -23,18 +23,32 @@ public class JuegoConsola {
 		for (Pregunta p : this.preguntas) {
 			System.out.println(p.toString());
 			System.out.println("Escoja la respuesta: ");
-			int solucion;
-			while ((solucion = Integer.parseInt(entrada.readLine())) > p.getContestacion().length)
-				System.out.println("Debe introducir un valor entre 0 y " + p.getContestacion().length);
-			System.out.println(p.getContestacion()[solucion]);
-			if (solucion == p.getCorrecta()) {
+			String solucion;
+			while (!isNum(solucion = entrada.readLine())
+					|| Integer.parseInt(solucion) > p
+							.getContestacion().length - 1
+					|| Integer.parseInt(solucion) < 0)
+				System.out.println("Debe introducir un valor entre 0 y "
+						+ (p.getContestacion().length - 1)
+						+ ". Escoja la respuesta: ");
+			System.out.println(p.getContestacion()[Integer.parseInt(solucion)]);
+			if (Integer.parseInt(solucion) == p.getCorrecta()) {
 				contador++;
 			}
 		}
 		System.out.println("\nHa acertado: " + contador + " de "
 				+ this.preguntas.size() + " preguntas.");
-		
+
 		return contador;
+	}
+	
+	private boolean isNum(String num) {
+		try {
+			Integer.parseInt(num);
+			return true;
+		} catch (Exception e){
+			return false;
+		}
 	}
 
 }
