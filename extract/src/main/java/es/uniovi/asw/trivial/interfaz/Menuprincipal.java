@@ -1,6 +1,7 @@
 package interfaz;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -39,7 +40,12 @@ public class Menuprincipal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
+					for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels()){
+			            if("Nimbus".equals(laf.getName()))
+			                try {
+			                UIManager.setLookAndFeel(laf.getClassName());
+			            } catch (Exception ex) {
+			            }}
 					Menuprincipal frame = new Menuprincipal();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -60,6 +66,7 @@ public class Menuprincipal extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.setBackground(Color.WHITE);
 		setContentPane(contentPane);
 		contentPane.add(getPanel(), BorderLayout.CENTER);
 		contentPane.add(getPanel_2(), BorderLayout.SOUTH);
@@ -77,6 +84,7 @@ public class Menuprincipal extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
+			panel.setBackground(Color.WHITE);
 			panel.add(getLabel());
 		}
 		return panel;
@@ -84,6 +92,7 @@ public class Menuprincipal extends JFrame {
 	private JPanel getPanel_1() {
 		if (panel_1 == null) {
 			panel_1 = new JPanel();
+			panel_1.setBackground(Color.WHITE);
 			panel_1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 			panel_1.add(getBtnJugar());
 			panel_1.add(getBtnEstadisticas());
@@ -140,7 +149,7 @@ public class Menuprincipal extends JFrame {
 	}
 	private JLabel getLblBienvenidoATrivial() {
 		if (lblBienvenidoATrivial == null) {
-			lblBienvenidoATrivial = new JLabel("Bienvenido a Trivial Pursuit");
+			lblBienvenidoATrivial = new JLabel("Bienvenido a Treevial");
 			lblBienvenidoATrivial.setHorizontalAlignment(SwingConstants.CENTER);
 		}
 		return lblBienvenidoATrivial;

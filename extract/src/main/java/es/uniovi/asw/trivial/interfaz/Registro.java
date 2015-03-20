@@ -40,7 +40,12 @@ public class Registro extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
+					for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels()){
+			            if("Nimbus".equals(laf.getName()))
+			                try {
+			                UIManager.setLookAndFeel(laf.getClassName());
+			            } catch (Exception ex) {
+			            }}
 					Registro frame = new Registro();
 					frame.setVisible(true);
 				} catch (Exception e) {

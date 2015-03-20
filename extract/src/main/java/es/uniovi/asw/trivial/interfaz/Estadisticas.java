@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
 public class Estadisticas extends JFrame {
@@ -39,6 +40,12 @@ public class Estadisticas extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels()){
+			            if("Nimbus".equals(laf.getName()))
+			                try {
+			                UIManager.setLookAndFeel(laf.getClassName());
+			            } catch (Exception ex) {
+			            }}
 					Estadisticas frame = new Estadisticas();
 					frame.setVisible(true);
 				} catch (Exception e) {

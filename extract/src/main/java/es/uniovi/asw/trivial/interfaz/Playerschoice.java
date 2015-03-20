@@ -43,6 +43,10 @@ public class Playerschoice extends JFrame {
 	private JTextField textContra;
 	public JTable tablero;
 	private JTextField textField_2_1;
+	private final int TABLERO_PEQUENO = 7;
+	private final int TABLERO_NORMAL = 9;
+	private final int TABLERO_GRANDE = 13;
+	private final int MIN_PLAYERS = 2;
 
 	/**
 	 * Launch the application.
@@ -51,9 +55,15 @@ public class Playerschoice extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					// UIManager
-					// .setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
 
+					for (UIManager.LookAndFeelInfo laf : UIManager
+							.getInstalledLookAndFeels()) {
+						if ("Nimbus".equals(laf.getName()))
+							try {
+								UIManager.setLookAndFeel(laf.getClassName());
+							} catch (Exception ex) {
+							}
+					}
 					Playerschoice frame = new Playerschoice();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -91,7 +101,7 @@ public class Playerschoice extends JFrame {
 		panel_1.add(textNombre);
 		textNombre.setColumns(8);
 
-		JLabel lblContrasea = new JLabel("Contrase\u00F1a");
+		JLabel lblContrasea = new JLabel("Password");
 		panel_1.add(lblContrasea);
 
 		textContra = new JTextField();
@@ -143,13 +153,12 @@ public class Playerschoice extends JFrame {
 		final JCheckBox chckbxMatemticas = new JCheckBox("Matem\u00E1ticas");
 		panelCategorias.add(chckbxMatemticas);
 
-
 		JLabel lblTamaoDelTablero = new JLabel("Tablero");
 		panel_2.add(lblTamaoDelTablero);
 
 		final JComboBox<String> comboBox = new JComboBox<String>();
 		comboBox.setModel(new DefaultComboBoxModel<String>(new String[] {
-				"Normal", "Grande", "Pequeño" }));
+				"Normal", "Grande", "Pequeno" }));
 		panel_2.add(comboBox);
 		JButton btnUnirse = new JButton("Unirse");
 		btnUnirse.addActionListener(new ActionListener() {
@@ -162,7 +171,7 @@ public class Playerschoice extends JFrame {
 												// por ejemplo
 				if (!textNombre.getText().equals("")) {
 					user.setNombre(textNombre.getText());
-					model.añadirUser(user);
+					model.anadirUser(user);
 					model.addRow(user.getNombre());
 				}
 
@@ -175,29 +184,32 @@ public class Playerschoice extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				Playerschoice.ExampleTableModel model = (Playerschoice.ExampleTableModel) tablero
 						.getModel();
-				if (model.getRowCount() < 2)
+				List<Usuario> usuarios = model.getUsuarios();
+				if (model.getRowCount() < MIN_PLAYERS)
 					JOptionPane.showMessageDialog(null,
 							"Mínimo para jugar 2 jugadores");
 				Color[] colors = getColoresPartida();
 				if (comboBox.getSelectedItem().toString().equals("Normal")
-						&& isTableroPosible(9, colors.length)) {
-					new Tablero(9, model.getRowCount(), colors)
-							.setVisible(true);
+						&& isTableroPosible(TABLERO_NORMAL, colors.length)) {
+					Tablero tab = new Tablero(TABLERO_NORMAL, colors, usuarios);
+					tab.setExtendedState(JFrame.MAXIMIZED_BOTH);
+					tab.setVisible(true);
 					dispose();
 				}
 				if (comboBox.getSelectedItem().toString().equals("Grande")
-						&& isTableroPosible(13, colors.length)) {
-					new Tablero(13, model.getRowCount(), colors)
-							.setVisible(true);
+						&& isTableroPosible(TABLERO_GRANDE, colors.length)) {
+					Tablero tab = new Tablero(TABLERO_GRANDE, colors, usuarios);
+					tab.setExtendedState(JFrame.MAXIMIZED_BOTH);
+					tab.setVisible(true);
 					dispose();
 				}
-				if (comboBox.getSelectedItem().toString().equals("Pequeño")
-						&& isTableroPosible(7, colors.length)) {
-					new Tablero(7, model.getRowCount(), colors)
-							.setVisible(true);
+				if (comboBox.getSelectedItem().toString().equals("Pequeno")
+						&& isTableroPosible(TABLERO_PEQUENO, colors.length)) {
+					Tablero tab = new Tablero(TABLERO_PEQUENO, colors, usuarios);
+					tab.setExtendedState(JFrame.MAXIMIZED_BOTH);
+					tab.setVisible(true);
 					dispose();
 				}
-				
 
 			}
 
@@ -209,7 +221,7 @@ public class Playerschoice extends JFrame {
 					return true;
 				else {
 					JOptionPane.showMessageDialog(null,
-							"Numero de categorias en esa dimension no válido");
+							"Numero de categorias en esa dimension no valido");
 					return false;
 				}
 			}
@@ -228,7 +240,6 @@ public class Playerschoice extends JFrame {
 					coloresArrayList.add(Color.BLUE);
 				if (chckbxMatemticas.isSelected())
 					coloresArrayList.add(Color.CYAN);
-
 
 				return coloresArrayList.toArray(colores);
 			}
@@ -291,7 +302,7 @@ public class Playerschoice extends JFrame {
 		public final Object[] longValues = { "Usuario", "Eliminar" };
 
 		public ExampleTableModel() {
-			añadirUsuarios();
+			anadirUsuarios();
 
 			for (Usuario user : usuarios) {
 				addRow(user.getNombre());
@@ -299,16 +310,20 @@ public class Playerschoice extends JFrame {
 
 		}
 
-		public void añadirUser(Usuario user) {
+		public void anadirUser(Usuario user) {
 			usuarios.add(user);
 			data = new Object[usuarios.size()][usuarios.size()];
 			textField_2_1.setText(Integer.toString(usuarios.size()));
 		}
 
-		public void añadirUsuarios() {
+		public List<Usuario> getUsuarios() {
+			return usuarios;
+		}
+
+		public void anadirUsuarios() {
 			// llamar a este metodo cada vez que un usuario se logea con exito
-			// y se añade a la partida
-			for (int i = 0; i < 5; i++) {
+			// y se anade a la partida
+			for (int i = 0; i < 6; i++) {//anadidos estos a modo de ejemplo
 				Usuario user = new Usuario();
 				user.setNombre("usuario" + i);
 				usuarios.add(user);

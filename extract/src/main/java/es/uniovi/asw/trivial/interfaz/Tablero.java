@@ -4,12 +4,13 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dialog;
 import java.awt.EventQueue;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -21,7 +22,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
+
+import modelo.Usuario;
 
 public class Tablero extends JFrame {
 
@@ -34,18 +38,17 @@ public class Tablero extends JFrame {
 	private JPanel panel_1;
 	private JLabel lblDado;
 	private JButton btnNewButton;
-	private JPanel panel_2;
 	private JLabel lblNewLabel_1;
 	private JTextField textField;
 	private JPanel panelTablero;
-	private int tamTablero=9;
-	private int numJugadores=2;
+	private int tamTablero = 9;
+	List<Usuario> usuarios = new ArrayList<Usuario>();
 	private HashMap<Integer, HashMap<Color, Integer>> cuentaColores = new HashMap<Integer, HashMap<Color, Integer>>();
 	private JButton[][] botones = new JButton[tamTablero][tamTablero];
 	private boolean defaultColors = true;
+	private JPanel panelJugadores;
 	private JPanel panel_3;
-	private JLabel lblPuntuacin;
-	private JTextField textField_1;
+	private JPanel panel_4;
 
 	/**
 	 * Launch the application.
@@ -54,7 +57,14 @@ public class Tablero extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					
+					for (UIManager.LookAndFeelInfo laf : UIManager
+							.getInstalledLookAndFeels()) {
+						if ("Nimbus".equals(laf.getName()))
+							try {
+								UIManager.setLookAndFeel(laf.getClassName());
+							} catch (Exception ex) {
+							}
+					}
 					Tablero frame = new Tablero();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -69,22 +79,8 @@ public class Tablero extends JFrame {
 	 */
 	public Tablero() {
 		asignarColores();
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("/img/tab.png")));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBackground(Color.WHITE);
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(new BorderLayout(0, 0));
-		contentPane.add(getPanel(), BorderLayout.WEST);
-		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
-	}
-	public Tablero(int tam, int numJugadores) {
-		this.tamTablero=tam;
-		this.botones = new JButton[tamTablero][tamTablero];
-		this.numJugadores=numJugadores;
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("/img/tab.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(
+				Tablero.class.getResource("/img/tab.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -96,13 +92,14 @@ public class Tablero extends JFrame {
 		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
 	}
 
-	public Tablero(int tam, int numJugadores, Color[] colors) {
-		this.tamTablero=tam;
+	public Tablero(int tam, Color[] colors, List<Usuario> usuarios) {
+		this.tamTablero = tam;
 		this.botones = new JButton[tamTablero][tamTablero];
-		this.defaultColors=false;
+		this.defaultColors = false;
 		asignarColores(colors);
-		this.numJugadores=numJugadores;
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Tablero.class.getResource("/img/tab.png")));
+		this.usuarios = usuarios;
+		setIconImage(Toolkit.getDefaultToolkit().getImage(
+				Tablero.class.getResource("/img/tab.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -118,10 +115,9 @@ public class Tablero extends JFrame {
 		if (panel == null) {
 			panel = new JPanel();
 			panel.setBackground(Color.WHITE);
-			panel.setLayout(new GridLayout(0, 1, 0, 0));
-			panel.add(getPanel_1());
-			panel.add(getPanel_2());
-			panel.add(getPanel_3());
+			panel.setLayout(new BorderLayout(0, 0));
+			panel.add(getPanel_1(), BorderLayout.NORTH);
+			panel.add(getPanelJugadores());
 		}
 		return panel;
 	}
@@ -130,9 +126,9 @@ public class Tablero extends JFrame {
 		if (panel_1 == null) {
 			panel_1 = new JPanel();
 			panel_1.setBackground(Color.WHITE);
-			panel_1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-			panel_1.add(getLblDado());
-			panel_1.add(getBtnNewButton());
+			panel_1.setLayout(new BorderLayout(0, 0));
+			panel_1.add(getPanel_3(), BorderLayout.CENTER);
+			panel_1.add(getPanel_4(), BorderLayout.NORTH);
 		}
 		return panel_1;
 	}
@@ -140,7 +136,8 @@ public class Tablero extends JFrame {
 	private JLabel getLblDado() {
 		if (lblDado == null) {
 			lblDado = new JLabel("");
-			lblDado.setIcon(new ImageIcon(Tablero.class.getResource("/img/icono-dado.jpg")));
+			lblDado.setIcon(new ImageIcon(Tablero.class
+					.getResource("/img/icono-dado.jpg")));
 		}
 		return lblDado;
 	}
@@ -150,17 +147,6 @@ public class Tablero extends JFrame {
 			btnNewButton = new JButton("Tirar Dado!\r\n");
 		}
 		return btnNewButton;
-	}
-
-	private JPanel getPanel_2() {
-		if (panel_2 == null) {
-			panel_2 = new JPanel();
-			panel_2.setBackground(Color.WHITE);
-			panel_2.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-			panel_2.add(getLblNewLabel_1());
-			panel_2.add(getTextField());
-		}
-		return panel_2;
 	}
 
 	private JLabel getLblNewLabel_1() {
@@ -183,9 +169,11 @@ public class Tablero extends JFrame {
 	private JPanel getPanelTablero() {
 		if (panelTablero == null) {
 			panelTablero = new JPanel();
+			panelTablero.setBackground(Color.WHITE);
 
-			panelTablero.setLayout(new GridLayout(tamTablero, tamTablero, 0, 0));
-			//asignarColores();
+			panelTablero
+					.setLayout(new GridLayout(tamTablero, tamTablero, 0, 0));
+			// asignarColores();
 			rellenarBotones();
 			for (int i = 0; i < botones.length; i++) {
 				for (int j = 0; j < botones[i].length; j++) {
@@ -200,36 +188,39 @@ public class Tablero extends JFrame {
 
 		for (int i = 0; i < botones.length; i++) {
 			for (int j = 0; j < botones[i].length; j++) {
+
 				botones[i][j] = new JButton("n" + "[" + i + "][" + j + "]");
+
 				if ((i == 0 && j == botones.length - 1) || (i == 0 && j == 0)
 						|| (i == botones.length - 1 && j == botones.length - 1)
 						|| (i == botones.length - 1 && j == 0)
-						|| (i == botones.length / 2 && j == botones.length / 2)){
+						|| (i == botones.length / 2 && j == botones.length / 2)) {
 					botones[i][j].setBackground(Color.WHITE);
-					botones[i][j].setBorder(BorderFactory.createLineBorder(Color.ORANGE));
-					botones[i][j].addActionListener(new ActionListener() { 
-			            public void actionPerformed(ActionEvent e)
-			            {
-			               
-			               new PreguntaDialog(Color.WHITE).setVisible(true);
-			               
-			            }
-			        });      
-					}
-				else if ((i != 0 && i != botones.length / 2 && i != botones.length - 1)
+					botones[i][j].setBorder(BorderFactory
+							.createLineBorder(Color.ORANGE));
+					botones[i][j].addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent e) {
+
+							new PreguntaDialog(Color.WHITE).setVisible(true);
+
+						}
+					});
+				} else if ((i != 0 && i != botones.length / 2 && i != botones.length - 1)
 						&& (j != 0 && j != botones.length / 2 && j != botones.length - 1)) {
-					botones[i][j].setBackground(Color.black);
+					botones[i][j].setBackground(Color.WHITE);
 					botones[i][j].setEnabled(false);
 					botones[i][j].setBorder(null);
 				} else
 					while (botones[i][j].getBackground().equals(
 							UIManager.getColor("Button.background"))) {
-						botones[i][j].setBorder(BorderFactory.createLineBorder(Color.ORANGE));
+						botones[i][j].setBorder(BorderFactory
+								.createLineBorder(Color.ORANGE));
 						Random rm = new Random();
 						int key = rm.nextInt(cuentaColores.size());
 						pintarAleatorio(botones[i][j], cuentaColores, key);
+
 					}
-			
+
 				botones[i][j].setText(null);
 			}
 		}
@@ -251,73 +242,92 @@ public class Tablero extends JFrame {
 			color3.put(Color.green, 0);
 			cuentaColores.put(3, color3);
 		} else {
-			int i=0;
-			for(Color color : colors){
+			int i = 0;
+			for (Color color : colors) {
 				HashMap<Color, Integer> colorMap = new HashMap<Color, Integer>();
 				colorMap.put(color, 0);
 				cuentaColores.put(i, colorMap);
 				i++;
-				}
-			//Aqui iria el codigo para que recuperase los colores con el que el jugador quiere jugar y los meta al array de colores
-			
+			}
+			// Aqui iria el codigo para que recuperase los colores con el que el
+			// jugador quiere jugar y los meta al array de colores
+
 		}
 	}
-	private  int getNumeroColoreables(){
-		int num=0;
-		num= (tamTablero*tamTablero) -((tamTablero-3)*(tamTablero-3)+5);
+
+	private int getNumeroColoreables() {
+		int num = 0;
+		num = (tamTablero * tamTablero)
+				- ((tamTablero - 3) * (tamTablero - 3) + 5);
 		return num;
 	}
 
 	private void pintarAleatorio(JButton but,
 			HashMap<Integer, HashMap<Color, Integer>> colores, int key) {
 		Set<Color> arg = cuentaColores.get(key).keySet();
+
 		for (Color color : arg) {
 
-			if (cuentaColores.get(key).get(color) < (getNumeroColoreables() / cuentaColores.size())) {
+			if (cuentaColores.get(key).get(color) < (getNumeroColoreables() / cuentaColores
+					.size())) {
 				but.setBackground(color);
+
 				cuentaColores.get(key).put(color,
 						cuentaColores.get(key).get(color) + 1);
 				final Color colorDialog = color;
 				but.addActionListener(new ActionListener() {
-					 
-		            public void actionPerformed(ActionEvent e)
-		            {
-		               
-		               PreguntaDialog dialog=new PreguntaDialog(colorDialog);
-		               //descomentar esto cuando se acabe la funcionalidad
-		              // dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-		         
-		               dialog.setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
-		               dialog.setVisible(true);
-		               
-		            }
-		        });      
+
+					public void actionPerformed(ActionEvent e) {
+
+						PreguntaDialog dialog = new PreguntaDialog(colorDialog);
+						// descomentar esto cuando se acabe la funcionalidad
+						//
+						dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+
+						dialog.setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
+						dialog.setVisible(true);
+
+					}
+				});
 
 			}
 		}
 	}
+
+	private JPanel getPanelJugadores() {
+		if (panelJugadores == null) {
+			panelJugadores = new JPanel();
+			panelJugadores.setBackground(Color.WHITE);
+			panelJugadores.setLayout(new GridLayout(usuarios.size(), 1, 0, 0));
+
+			for (Usuario user : usuarios) {
+				JTextField nombreJugador = new JTextField(user.getNombre());
+				nombreJugador.setEditable(false);
+				panelJugadores.add(nombreJugador);
+				panelJugadores.add(new JLabel(new ImageIcon(Tablero.class
+						.getResource("/img/arbolIni.jpg"))));
+			}
+		}
+		return panelJugadores;
+	}
+
 	private JPanel getPanel_3() {
 		if (panel_3 == null) {
 			panel_3 = new JPanel();
 			panel_3.setBackground(Color.WHITE);
-			panel_3.add(getLblPuntuacin());
-			panel_3.add(getTextField_1());
+			panel_3.add(getLblDado());
+			panel_3.add(getBtnNewButton());
 		}
 		return panel_3;
 	}
-	private JLabel getLblPuntuacin() {
-		if (lblPuntuacin == null) {
-			lblPuntuacin = new JLabel("Puntuaci\u00F3n:");
+
+	private JPanel getPanel_4() {
+		if (panel_4 == null) {
+			panel_4 = new JPanel();
+			panel_4.setBackground(Color.WHITE);
+			panel_4.add(getLblNewLabel_1());
+			panel_4.add(getTextField());
 		}
-		return lblPuntuacin;
-	}
-	private JTextField getTextField_1() {
-		if (textField_1 == null) {
-			textField_1 = new JTextField();
-			textField_1.setEnabled(false);
-			textField_1.setEditable(false);
-			textField_1.setColumns(10);
-		}
-		return textField_1;
+		return panel_4;
 	}
 }
