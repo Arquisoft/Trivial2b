@@ -23,7 +23,9 @@ public class JuegoConsola {
 		for (Pregunta p : this.preguntas) {
 			System.out.println(p.toString());
 			System.out.println("Escoja la respuesta: ");
-			int solucion = Integer.parseInt(entrada.readLine());
+			int solucion;
+			while ((solucion = Integer.parseInt(entrada.readLine())) > p.getContestacion().length)
+				System.out.println("Debe introducir un valor entre 0 y " + p.getContestacion().length);
 			System.out.println(p.getContestacion()[solucion]);
 			if (solucion == p.getCorrecta()) {
 				contador++;
