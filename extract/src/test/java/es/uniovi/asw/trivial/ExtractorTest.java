@@ -12,9 +12,9 @@ import es.uniovi.asw.trivial.model.Pregunta;
 import es.uniovi.asw.trivial.model.PreguntaMulti;
 
 public class ExtractorTest {
-
+	
 	@Test
-	public void testPreguntas() throws IOException {
+	public void testPreguntaPrimera() throws IOException {
 		ArrayList<Pregunta> preguntas = Main
 				.parserGIFTtoPregunta("src/test/java/resources/preguntasGIFT.gift");
 		
@@ -43,14 +43,22 @@ public class ExtractorTest {
 		System.out.println("Primera pregunta guardada en formato intermedio");
 		System.out.println("Formato de pregunta con datos extraidos:");
 		System.out.println(preguntas.get(0).toStringDebug());
-
-		respuestas = new String[4];
+	}
+	
+	@Test
+	public void testPreguntaSegunda() throws IOException {
+		ArrayList<Pregunta> preguntas = Main
+				.parserGIFTtoPregunta("src/test/java/resources/preguntasGIFT.gift");
+		
+		System.out.println("Cargado fichero de pruebas preguntasGIFT\n");
+		
+		String[] respuestas = new String[4];
 		respuestas[0] = "Comentarios ";
 		respuestas[1] = "Entidades ";
 		respuestas[2] = "Instrucciones de procesamiento ";
 		respuestas[3] = "Atributos ";
 
-		contestacion = new String[4];
+		String[] contestacion = new String[4];
 		contestacion[0] = " Incorrecto.";
 		contestacion[1] = " Incorrecto.";
 		contestacion[2] = " Correcto!";
@@ -67,14 +75,23 @@ public class ExtractorTest {
 		System.out.println("Segunda pregunta guardada en formato intermedio");
 		System.out.println("Formato de pregunta con datos extraidos:");
 		System.out.println(preguntas.get(1).toStringDebug());
-
-		respuestas = new String[4];
+		
+	}
+	
+	@Test
+	public void testPreguntaTercera() throws IOException {
+		ArrayList<Pregunta> preguntas = Main
+				.parserGIFTtoPregunta("src/test/java/resources/preguntasGIFT.gift");
+		
+		System.out.println("Cargado fichero de pruebas preguntasGIFT\n");
+		
+		String[] respuestas = new String[4];
 		respuestas[0] = "section ";
 		respuestas[1] = "div ";
 		respuestas[2] = "nav ";
 		respuestas[3] = "aside ";
 
-		contestacion = new String[4];
+		String[] contestacion = new String[4];
 		contestacion[0] = " Incorrecto.";
 		contestacion[1] = " Incorrecto.";
 		contestacion[2] = " Incorrecto.";
@@ -92,13 +109,22 @@ public class ExtractorTest {
 		System.out.println("Formato de pregunta con datos extraidos:");
 		System.out.println(preguntas.get(2).toStringDebug());
 		
-		respuestas = new String[4];
+	}
+	
+	@Test
+	public void testPreguntaCuarta() throws IOException {
+		ArrayList<Pregunta> preguntas = Main
+				.parserGIFTtoPregunta("src/test/java/resources/preguntasGIFT.gift");
+		
+		System.out.println("Cargado fichero de pruebas preguntasGIFT\n");
+		
+		String[] respuestas = new String[4];
 		respuestas[0] = "summary ";
 		respuestas[1] = "border ";
 		respuestas[2] = "rowspan ";
 		respuestas[3] = "colspan ";
 
-		contestacion = new String[4];
+		String[] contestacion = new String[4];
 		contestacion[0] = " Correcto!";
 		contestacion[1] = " Incorrecto.";
 		contestacion[2] = " Incorrecto.";
@@ -116,13 +142,22 @@ public class ExtractorTest {
 		System.out.println("Formato de pregunta con datos extraidos:");
 		System.out.println(preguntas.get(3).toStringDebug());
 		
-		respuestas = new String[4];
+	}
+	
+	@Test
+	public void testPreguntaQuinta() throws IOException {
+		ArrayList<Pregunta> preguntas = Main
+				.parserGIFTtoPregunta("src/test/java/resources/preguntasGIFT.gift");
+		
+		System.out.println("Cargado fichero de pruebas preguntasGIFT\n");
+		
+		String[] respuestas = new String[4];
 		respuestas[0] = "\"textarea\" ";
 		respuestas[1] = "\"hidden\" ";
 		respuestas[2] = "\"submit\" ";
 		respuestas[3] = "\"checkbox\" ";
 
-		contestacion = new String[4];
+		String[] contestacion = new String[4];
 		contestacion[0] = " Correcto!";
 		contestacion[1] = " Incorrecto.";
 		contestacion[2] = " Incorrecto.";
@@ -140,7 +175,7 @@ public class ExtractorTest {
 		System.out.println("Formato de pregunta con datos extraidos:");
 		System.out.println(preguntas.get(4).toStringDebug());
 	}
-	
+
 	
 //	@Test
 //	public void preguntasCorrectas() throws IOException, InterruptedException {
