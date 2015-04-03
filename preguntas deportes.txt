@@ -1,0 +1,359 @@
+::1:: ¿En qué año se incorpora el nado sincronizado como disciplina olímpica?
+{
+~Barcelona 1992 # Incorrecto.
+~Ciudad de México 1964 # Incorrecto.
+=Los Angeles 1984 # Correcto!
+~Seúl 1988 # Incorrecto.
+}
+
+::1:: ¿Cómo se llama la jugadora de vóley cubana que obtuvo más medallas olímpicas?
+{
+~Regla Torres # Incorrecto.
+=Ana Ibis Fernández # Correcto!
+~Regla Maritz Bell # Incorrecto.
+~Ninguna de las anteriores # Incorrecto.
+}
+
+::1:: En el sistema de puntos olímpicos ¿cuántos puntos se concede por cada medalla de bronce obtenida en una prueba?
+{
+=4 # Correcto!
+~3 # Incorrecto.
+~10 # Incorrecto.
+~5 # Incorrecto.
+}
+
+::1:: Kyong-go es un término utilizado en Taekwondo. ¿Qué denomina?
+{
+~Una categoría # Incorrecto.
+=Un tipo de penalización # Correcto!
+~Un tipo de golpe # Incorrecto.
+~Ninguna de las anteriores # Incorrecto.
+}
+
+::1:: ¿Qué equipo obtuvo la medalla de plata en baloncesto en los Juegos de Los Ángeles 1984?
+{
+~Brasil # Incorrecto.
+~Estados Unidos # Incorrecto.
+~Alemania # Incorrecto.
+=España # Correcto!
+}
+
+::1:: ¿Cuántos animales fueron las mascotas en los Juegos de Pekín 2008?
+{
+=5 # Correcto!
+~2 # Incorrecto.
+~3 # Incorrecto.
+~9 # Incorrecto.
+}
+
+::1:: ¿En qué edición de los Juegos Olímpicos obtuvo la medalla de oro en 400 m vallas, el dominicano Félix Sánchez?
+{
+=Atenas 2004 # Correcto!
+~Barcelona 1992 # Incorrecto.
+~Moscú 1980 # Incorrecto.
+~Seúl 1988 # Incorrecto.
+}
+
+::1:: ¿Cuánto duran los juegos olímpicos para la juventud de invierno?
+{
+~40 días # Incorrecto.
+=9 días # Correcto!
+~30 días # Incorrecto.
+~15 días # Incorrecto.
+}
+
+::1:: ¿Cuántas fueron las mascotas de los Juegos Olímpicos de Londres 2012?
+{
+~5 # Incorrecto.
+~3 # Incorrecto.
+=2 # Correcto!
+~1 # Incorrecto.
+}
+
+::1:: ¿Qué duración tienen los Juegos de la Juventud de verano?
+{
+~40 días # Incorrecto.
+~20 días # Incorrecto.
+=12 días # Correcto!
+~7 días # Incorrecto.
+}
+
+::1:: ¿Qué medifondista logró la medalla de oro en los Juegos de México 68 y en Munich 72?
+{
+=Kip Keino # Correcto!
+~Jose Luis Rodriguez Zapatero # Incorrecto.
+~Nicolas Sarkosy # Incorrecto.
+~Giuliano Amato # Incorrecto.
+}
+
+::1:: ¿Qué patinador artístico obtuvo la medalla de oro el los Juegos Olímpicos de Invierno celebrados en Calgary en 1988?
+{
+~Livio Berruti # Incorrecto.
+~Juan Manuel Fangio # Incorrecto.
+~Al oerter # Incorrecto.
+=Brian Boitano # Correcto!
+}
+
+::1:: ¿Cuál es el único deporte acuático que estuvo presente en todos los Juegos Olímpicos?
+{
+=Natación # Correcto!
+~Salto # Incorrecto.
+~Waterpolo # Incorrecto.
+~Natación sincronizada # Incorrecto.
+}
+
+::1:: ¿Quién dirigió la ceremonia de apertura de los Juegos Olímpicos de Londres 2012?
+{
+~James Cameron # Incorrecto.
+=Danny Boyle # Correcto!
+~Tim Burton # Incorrecto.
+~Steven Spielberg # Incorrecto.
+}
+
+::1:: ¿Cuántos años tenía la gimnasta Nadia Comaneci cuando encantó al mundo en los Juegos Olímpicos de Canadá, en 1976?
+{
+~17 # Incorrecto.
+~11 # Incorrecto.
+~21 # Incorrecto.
+=14 # Correcto!
+}
+
+::1:: ¿Qué animal fue la mascota olímpica de los Juegos de Moscú de 1980?
+{
+~Un castor # Incorrecto.
+~Un reno # Incorrecto.
+~Un águila # Incorrecto.
+=Un oso # Correcto!
+}
+
+::1:: ¿Qué animal fue la mascota olímpica de los Juegos de Moscú de 1980?
+{
+~China # Incorrecto.
+~Rusia # Incorrecto.
+=Estados Unidos # Correcto!
+~Francia # Incorrecto.
+}
+
+::1:: ¿Cuál es la primera nación que debe ingresar en el estadio en la ceremonia de apertura de cada edición de los Juegos Olímpicos?
+{
+~La nación que más medallas haya acumulado en los Juegos Olímpicos anteriores. # Incorrecto.
+~La que rpesente un mayor número de habitantes # Incorrecto.
+=Grecia # Correcto!
+~Se sortea # Incorrecto.
+}
+
+::1:: ¿Cuál es la primera nación que debe ingresar en el estadio en la ceremonia de apertura de cada edición de los Juegos Olímpicos?
+{
+=Atlanta y Atenas # Correcto!
+~Atlanta y Sydney # Incorrecto.
+~Atenas y Sydney # Incorrecto.
+~Atenas y Pekin # Incorrecto.
+}
+
+::1:: ¿En qué mes se han celebrado normalmente los Juegos Olímpicos de Invierno, hasta 1994?
+{
+~Agosto # Incorrecto.
+~Diciembre # Incorrecto.
+~Mayo # Incorrecto.
+=Febrero # Correcto!
+}
+
+::1:: ¿Cuál de los siguientes deportes NO se disputa en los Juegos Olímpicos?
+{
+~Vela # Incorrecto.
+~BMX # Incorrecto.
+~Triátlon # Incorrecto.
+=Hockey sobre hielo # Correcto!
+}
+
+::1:: ¿Cómo se llamaba el águila que fue mascota en los Juegos Olímpicos de Los Ángeles 1984?
+{
+~Solico # Incorrecto.
+=Sam # Correcto!
+~Tabul # Incorrecto.
+~Peter # Incorrecto.
+}
+
+::1:: ¿Cuál es la ciudad griega que dio inicio al transporte de la antorcha olímpica?
+{
+~Esparta # Incorrecto.
+~Atenas # Incorrecto.
+=Olimpia # Correcto!
+~Creta # Incorrecto.
+}
+
+::1:: ¿Con qué nombre es conocido el Himno Paralímpico?
+{
+=Himno del futuro # Correcto!
+~Himno de la hermanidad # Incorrecto.
+~Himno de la gloria # Incorrecto.
+~Himno del coraje # Incorrecto.
+}
+
+::1:: Después de Estados Unidos, ¿qué selección se encuentra segunda en el medallero olímpico de Baloncesto?
+{
+~Argentina # Incorrecto.
+=Unión Soviética # Correcto!
+~yugoslavia # Incorrecto.
+~España # Incorrecto.
+}
+
+::1:: ¿Qué selección latinoamericana de Hockey sobre césped femenino obtuvo medallas en las últimas 4 olimpiadas?
+{
+~Uruguay # Incorrecto.
+~Brasil # Incorrecto.
+~Chile # Incorrecto.
+=Argentina # Correcto!
+}
+
+::1:: ¿Cuál fue el primer país asiático en que se realizó una edición de los Juegos Olímpicos en 1968?
+{
+~Corea del sur # Incorrecto.
+~Singapur # Incorrecto.
+=Japón # Correcto!
+~Malasia # Incorrecto.
+}
+
+::1:: ¿De qué país es originario el Curling, practicado en los Juegos Olímpicos de Invierno?
+{
+=Escocia y Paises Bajos # Correcto!
+~Brasil # Incorrecto.
+~Republica Checa # Incorrecto.
+~Dinamarca # Incorrecto.
+}
+
+::1:: ¿En qué continente nunca se ha realizado una edición de los Juegos Olímpicos?
+{
+~Asia # Incorrecto.
+~Oceania # Incorrecto.
+~América # Incorrecto.
+=África # Correcto!
+}
+
+::1:: ¿Quién obtuvo la medalla de oro en ciclismo en los juegos de Atlantaa 1996, en la prueba contrareloj individual?
+{
+=Miguel Induráin # Correcto!
+~Lionel Mesi # Incorrecto.
+~Jorge Rafael Videla # Incorrecto.
+~Efraín Ríos # Incorrecto.
+}
+
+::1:: ¿Qué atleta estadounidense fue el primer campeón olímpico de la historia?
+{
+~Stephen Harper # Incorrecto.
+=James Connolly # Correcto!
+~Alfedo Di # Incorrecto.
+~Mummhamad Alí # Incorrecto.
+}
+
+::1:: ¿Cuáles fueron los primeros Juegos Olímpicos en ser transmitidos por televisión?
+{
+~México 1968 # Incorrecto.
+~Londres 2012 # Incorrecto.
+~Tokio 1964 # Incorrecto.
+=Berlín 1936 # Correcto!
+}
+
+::1:: ¿En qué edición de los Juegos Olímpicos participaron por primera vez las mujeres en Gimnasia Olímpica?
+{
+~Barcelona 1992 # Incorrecto.
+~Tokio 1964 # Incorrecto.
+=Amsterdam 1928 # Correcto!
+~Atenas 1896 # Incorrecto.
+}
+
+::1:: ¿Quién fundó en 1960 los juegos Paralímpicos?
+{
+~Harry S. Truman # Incorrecto.
+~George Clinton # Incorrecto.
+=Ludwig Guttmann # Correcto!
+~Edgar Hoover # Incorrecto.
+}
+
+::1:: ¿Cuánto debe pesar el disco en la disciplina olímpica de Lanzamiento de disco?
+{
+=2 # Correcto!
+~4 # Incorrecto.
+~8 # Incorrecto.
+~3 # Incorrecto.
+}
+
+::1:: ¿De qué nacionalidad es el campeón olímpico de esquí, en 1972, Gustavo Thoeni?
+{
+~Croata # Incorrecto.
+~Ruso # Incorrecto.
+=Italiano # Correcto!
+~Frances # Incorrecto.
+}
+
+::1:: ¿Cómo se llama la deportista que obtuvo más medallas olímpicas en la disciplina Ciclismo de ruta?
+{
+~Hanka Kupfernagel # Incorrecto.
+~Sara Carrigan # Incorrecto.
+=Leontien Van Moorsel # Correcto!
+~Diana Tzili # Incorrecto.
+}
+
+::1:: ¿Qué esquiador sueco ganó dos medallas de oro en los Juegos Olímpicos de Invierno de 1890 en Lake Placid?
+{
+~Carlos Monzón # Incorrecto.
+=Ingemar Stenmark # Correcto!
+~Julio Cesar Chavez # Incorrecto.
+~Alexis Argüello # Incorrecto.
+}
+
+::1:: ¿Qué mascotas fueron escogidas para los juegos paralímpicos 2014?
+{
+~Reno con bufanda # Incorrecto.
+~Hombrecito en eski # Incorrecto.
+~Trineo y bola de nieve # Incorrecto.
+=Rayo de sol y muñeco de nieve # Correcto!
+}
+
+::1:: ¿Qué atleta italiano ganó la medalla de oro en los 200 metros llanos, en los Juegos Olímpicos de Roma de 1960?
+{
+~Habbas Hilmi # Incorrecto.
+~Fuad I # Incorrecto.
+=Livio Berruti # Correcto!
+~Nazli Sabri # Incorrecto.
+}
+
+::1:: ¿De qué jugador de fútbol el ex velocista Ben Johnson fue entrenador personal, en 1997?
+{
+~George Best # Incorrecto.
+=Maradona # Correcto!
+~Cannigia # Incorrecto.
+~Ibrahimovic # Incorrecto.
+}
+
+::1:: ¿Cual de estos deportes se practica dentro del agua?
+{
+=Natación # Correcto!
+~Gimnasia # Incorrecto.
+~Esgrima # Incorrecto.
+~Equitación # Incorrecto.
+}
+
+::1:: En los Juegos de Los Ángeles, en 1984, ¿cuántos países del bloque soviético no participaron en las competencias?
+{
+=15 # Correcto!
+~30 # Incorrecto.
+~21 # Incorrecto.
+~10 # Incorrecto.
+}
+
+::1:: ¿En qué ciudad se celebraron los Juegos Olímpicos de 1984?
+{
+=Los Ángeles # Correcto!
+~Barcelona # Incorrecto.
+~Atlanta # Incorrecto.
+~Londres # Incorrecto.
+}
+
+::1:: ¿Qué deporte debutó como deporte olímpico en los Juegos de Berlín 1936?
+{
+=Balonmano # Correcto!
+~Tenis # Incorrecto.
+~Natación # Incorrecto.
+~Atletismo # Incorrecto.
+}
