@@ -1,0 +1,359 @@
+::1:: ¿Cómo se llamaba realmente el famoso nativo americano "Gerónimo"?
+{
+~Triyula # Incorrecto.
+=Goyahkla # Correcto!
+~Giyukaty # Incorrecto.
+~Gamuzkla # Incorrecto.
+}
+
+::2:: ¿Cuanto llegó a medir el gigante de Altzo?
+{
+~3 metros # Incorrecto.
+~2.6 metros # Incorrecto.
+=2.4 metros # Correcto!
+~1.8 metros # Incorrecto.
+}
+
+::3:: ¿Quién fue la primera cientifica de la historia?.
+{
+~Ada Lovelace # Incorrecto.
+~Atenea # Incorrecto.
+=Agnocide # Correcto!
+~Marie Curie # Incorrecto.
+}
+
+::4:: ¿Cuántos años duro la guerra de los 100 años?
+{
+=116 años # Correcto!
+~100 años # Incorrecto.
+~97 años # Incorrecto.
+~100 meses # Incorrecto.
+}
+
+::5:: ¿Cuántos países africanos eran independientes en el año 1900?
+{
+~13 # Incorrecto.
+=2 # Correcto!
+~8 # Incorrecto.
+~5 # Incorrecto.
+}
+
+::6:: ¿Qué fue la niebla asesina?
+{
+~Una leyenda escocesa # Incorrecto.
+~Un fenómeno atmosférico Norteamericano # Incorrecto.
+=Un producto de la contaminación que mató a 12.000 personas # Correcto!
+~Un grupo de rock de los 60 bastante polémico # Incorrecto.
+}
+
+::7:: ¿Quiénes eran los shogunes?
+{
+~Señores feudales europeos # Incorrecto.
+~Los escritores del libro "El arte de la guerra" # Incorrecto.
+~Grandes soldados del imperio Chino de 1687 # Incorrecto.
+=Dictadores militares en el Japón medieval # Correcto!
+}
+
+::8:: ¿Cuántas personas fueron ejecutadas en los juicios de Salem en 1692?
+{
+=20 # Correcto!
+~30 # Incorrecto.
+~50 # Incorrecto.
+~100 # Incorrecto.
+}
+
+::9:: ¿Qué rey creó la Inquisición?
+{
+~Tito I # Incorrecto.
+=Los reyes católicos # Correcto!
+~Juan II # Incorrecto.
+~Pio XI # Incorrecto.
+}
+
+::10:: ¿Quien creó el primer coche del mundo?.
+{
+~Frank Frizgäul # Incorrecto.
+~Henry Ford # Incorrecto.
+~Maxwel # Incorrecto.
+=Karl Benz # Correcto!
+}
+
+::11:: ¿En que año se descubrió la máscara de Agamenón?
+{
+~1958 # Incorrecto.
+=1876 # Correcto!
+~1898 # Incorrecto.
+~1624 # Incorrecto.
+}
+
+::12:: ¿Cuando terminó la segunda guerra mundial?
+{
+~1943 # Incorrecto.
+~1944 # Incorrecto.
+=1945 # Correcto!
+~1946 # Incorrecto.
+}
+
+::12:: ¿Quién fue el más poderoso rey de la tribu de los Hunos?
+{
+~Aecio # Incorrecto.
+~Mundzuk # Incorrecto.
+~Elac # Incorrecto.
+=Atila # Correcto!
+}
+
+::12:: ¿Cuál de estas ciudades fue designada capital de la colonia francesa en el territorio americano en 1722?
+{
+~Nuevo Mexico # Incorrecto.
+~Dallas # Incorrecto.
+=Nueva Orleans # Correcto!
+~San Francisco # Incorrecto.
+}
+
+::12:: ¿Qué papa presidió el IV Concilio de Letrán?
+{
+=Inocencio III # Correcto!
+~Calixto VI # Incorrecto.
+~Pio IV # Incorrecto.
+~Julio III # Incorrecto.
+}
+
+::12:: ¿Cómo se llamaba en la España del 1400 a los judíos que por coerción o presión social se habían convertido al cristianismo?
+{
+~Ortodoxos # Incorrecto.
+~Reformistas # Incorrecto.
+=Marranos # Correcto!
+~Herejes # Incorrecto.
+}
+
+::12:: ¿Cómo se llamaba el barco en el que los peregrinos (puritanos ingleses) escaparon al nuevo mundo en 1620?
+{
+~Carpathia # Incorrecto.
+~Santa María # Incorrecto.
+~Nautilus # Incorrecto.
+=Mayflower # Correcto!
+}
+
+::12:: ¿Cómo se conoce a la persecusión sufrida por artistas norteamericanos por su posible afiliación al partido comunista?
+{
+~Socialismo # Incorrecto.
+~Inquisicion # Incorrecto.
+=Caza de brujas # Correcto!
+~Nazismo # Incorrecto.
+}
+
+::12:: ¿Qué papa confirmó la creación de la Orden de Santa María de la Merced, para la redención de los cautivos?
+{
+~Inocencio III # Incorrecto.
+=Gregorio IX # Correcto!
+~Bonifacio IV # Incorrecto.
+~Juan Pablo V # Incorrecto.
+}
+
+::12:: ¿De qué color era la cinta de cuero que ataba las varas de los fasces romanos?
+{
+~Violeta # Incorrecto.
+~Naranja # Incorrecto.
+~verde # Incorrecto.
+=Rojo # Correcto!
+}
+
+::12:: De acuerdo al antiguo testamento ¿Cuál es el nombre de la esposa de David y madre del rey Salomón?
+{
+=Betsabé # Correcto!
+~Amanda # Incorrecto.
+~Sabina # Incorrecto.
+~Sara # Incorrecto.
+}
+
+::12:: ¿De qué origen era el rey de Babilonia, Nabopolasar?
+{
+=Caldeo # Correcto!
+~Griego # Incorrecto.
+~Egipcio # Incorrecto.
+~Persa # Incorrecto.
+}
+
+::12:: ¿Quién fue el primer presidente que presentó una dimisión de la historia de Estados Unidos?
+{
+~George W.Bush # Incorrecto.
+~george washington # Incorrecto.
+=Richard Nixon # Correcto!
+~Bill Clinton # Incorrecto.
+}
+
+::12:: ¿Cómo se llamaban en la mitología griega las divinidades inspiradoras de las artes?
+{
+~Erinias # Incorrecto.
+=Musas # Correcto!
+~Parcas # Incorrecto.
+~Moiras # Incorrecto.
+}
+
+::12:: De acuerdo a la historiografía alemana ¿qué imperio desarrollado entre el 800 y 1806, equivaldría al I Reich?
+{
+~Imperio Carolingio # Incorrecto.
+~Imperio persa # Incorrecto.
+~Imperio egipcio # Incorrecto.
+=Sacro imperio romano germánico # Correcto!
+}
+
+::12:: ¿A qué general independentista cedió el mando de sus tropas Manuel Belgrano en 1814?
+{
+~Domingo Faustino Sarmiento # Incorrecto.
+~Augusto Cesar # Incorrecto.
+~Cornelio Saavedra # Incorrecto.
+=José de San Martín # Correcto!
+}
+
+::12:: ¿Qué zar ruso ordenó la edificación de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tártaros?
+{
+=Ivan IV, el terrible # Correcto!
+~Alejandro I # Incorrecto.
+~Nicolás I # Incorrecto.
+~Pedro el Grande # Incorrecto.
+}
+
+::12:: ¿Qué actual territorio fue tomado por Pedro Álvares Cabral en el 1500, en nombre del rey Manuel de Portugal?
+{
+~Cuba # Incorrecto.
+~Buenos Aires # Incorrecto.
+=Bahia # Correcto!
+~Amazonas # Incorrecto.
+}
+
+::12:: ¿Quién fue el primer emperador del Sacro Imperio Romano Germánico?
+{
+~Carlomagno # Incorrecto.
+~Jose I # Incorrecto.
+=Nabacudonsor II # Correcto!
+~Otón XVI # Incorrecto.
+}
+
+::12:: ¿Que tipo de gobierno se implanta en Francia en 1791 al comienzo de la revolución francesa?
+{
+~República parlamentaria # Incorrecto.
+=Monarquía Constitucional # Correcto!
+~Democracia Popular # Incorrecto.
+~Republica Imperial # Incorrecto.
+}
+
+::12:: ¿Cómo se llama el libro sagrado propio de la tradición católica?
+{
+~Pantateuco # Incorrecto.
+=La Biblia # Correcto!
+~El apocalipsis # Incorrecto.
+~Las palabras de Dios # Incorrecto.
+}
+
+::12:: ¿Qué teólogo y fraile alemán fue el principal líder de la reforma protestante?
+{
+~Jhon Wycliff # Incorrecto.
+~Jan Hus # Incorrecto.
+=Matín Lutero # Correcto!
+~Jacques Derrida # Incorrecto.
+}
+
+::12:: ¿Quién lideró la resistencia que derrotó al ejército chino en 1428, restaurando la independencia de Vietnam?
+{
+=Le Loi # Correcto!
+~Just Fontaine # Incorrecto.
+~James Watt # Incorrecto.
+~James Naismith # Incorrecto.
+}
+
+::12:: ¿Cuál de estos países NO firmó la Paz de Breda en 1667?
+{
+=Grecia # Correcto!
+~Inglaterra # Incorrecto.
+~Francia # Incorrecto.
+~Dinamarca # Incorrecto.
+}
+
+::12:: ¿Qué rey de Babilonia entre el 605 y 562 a.C.es conocido como el gran constructor de las principales ciudades de Babilonia?
+{
+=Nabucodonosor II # Correcto!
+~Ciro el Grande # Incorrecto.
+~Pitágoras # Incorrecto.
+~Tiyto Livio # Incorrecto.
+}
+
+::12:: Napoleón Bonaparte nombró a su hermano José I rey ¿de qué país?
+{
+~Inglaterra # Incorrecto.
+~Italia # Incorrecto.
+~Bélgica # Incorrecto.
+=España # Correcto!
+}
+
+::12:: ¿Cuál fue el invento fundamental con el que el hombre pudo transportar sus implementos de un lugar a otro?
+{
+~El fuego # Incorrecto.
+~La lanza # Incorrecto.
+~La escritura # Incorrecto.
+=La rueda # Correcto!
+}
+
+::12:: ¿Quién fue el primer soberano germánico de la península itálica?
+{
+~Teodosio # Incorrecto.
+~Cayo Julio Cesar # Incorrecto.
+~Cómodo # Incorrecto.
+=Constantino I # Correcto!
+}
+
+::12:: ¿Qué emperador romano convocó al concilio de Nicea, en el año 325?
+{
+~León I # Incorrecto.
+~Teucidides # Incorrecto.
+=Odoacro # Correcto!
+~Zenón # Incorrecto.
+}
+
+::12:: De acuerdo al antiguo testamento ¿Cuál es el nombre de la esposa de David y madre del rey Salomón?
+{
+~Sabina # Incorrecto.
+=Betsabé # Correcto!
+~Sara # Incorrecto.
+~Amanda # Incorrecto.
+}
+
+::12:: ¿Durante el gobierno de qué monarca francés fue firmada la Paz de los Pirineos con España?
+{
+~Felipe II # Incorrecto.
+~Fernando I # Incorrecto.
+=Luis XIV # Correcto!
+~Enrique IV # Incorrecto.
+}
+
+::12:: ¿Cuál era el nombre del décimo faraón de la dinastía XVIII de Egipto, esposo de Nefertiti?
+{
+~Tutankamón # Incorrecto.
+~Ramses II # Incorrecto.
+=Akenatón # Correcto!
+~Amenhotep III # Incorrecto.
+}
+
+::12:: De estas formas de gobierno, ¿en cual de estas el poder lo comparten cuatro personas?
+{
+=Tetrarquía # Correcto!
+~Democracia # Incorrecto.
+~Monarquía # Incorrecto.
+~Anarquía # Incorrecto.
+}
+
+::12:: ¿Qué rey Borbón promulgó el edicto de Nantes en 1598, que favorecía la tolerancia hacia los hugonotes o protestantes?
+{
+=Enrique IV # Correcto!
+~Luis XVI # Incorrecto.
+~Felipe II # Incorrecto.
+~Guillermo III # Incorrecto.
+}
+
+::12:: ¿Qué rey Borbón promulgó el edicto de Nantes en 1598, que favorecía la tolerancia hacia los hugonotes o protestantes?
+{
+~Plutarco # Incorrecto.
+~Sófocles # Incorrecto.
+~Rómulo # Incorrecto.
+=Tiberio Julio César # Correcto!
+}
