@@ -46,7 +46,7 @@
 =Espana # Correcto!
 }
 
-::12:: ¿Cómo se llama el libro sagrado propio de la tradicion catolica?
+::12:: ¿Como se llama el libro sagrado propio de la tradicion catolica?
 {
 ~Pantateuco # Incorrecto.
 =La Biblia # Correcto!
@@ -54,11 +54,11 @@
 ~Las palabras de Dios # Incorrecto.
 }
 
-::12:: ¿Qué zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
+::12:: ¿Que zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
 {
 =Ivan IV, el terrible # Correcto!
 ~Alejandro I # Incorrecto.
-~Nicolás I # Incorrecto.
+~Nicolas I # Incorrecto.
 ~Pedro el Grande # Incorrecto.
 }
 
@@ -110,7 +110,7 @@
 =Espana # Correcto!
 }
 
-::12:: ¿Cómo se llama el libro sagrado propio de la tradicion catolica?
+::12:: ¿Como se llama el libro sagrado propio de la tradicion catolica?
 {
 ~Pantateuco # Incorrecto.
 =La Biblia # Correcto!
@@ -118,11 +118,11 @@
 ~Las palabras de Dios # Incorrecto.
 }
 
-::12:: ¿Qué zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
+::12:: ¿Que zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
 {
 =Ivan IV, el terrible # Correcto!
 ~Alejandro I # Incorrecto.
-~Nicolás I # Incorrecto.
+~Nicolas I # Incorrecto.
 ~Pedro el Grande # Incorrecto.
 }
 
@@ -174,7 +174,7 @@
 =Espana # Correcto!
 }
 
-::12:: ¿Cómo se llama el libro sagrado propio de la tradicion catolica?
+::12:: ¿Como se llama el libro sagrado propio de la tradicion catolica?
 {
 ~Pantateuco # Incorrecto.
 =La Biblia # Correcto!
@@ -182,11 +182,11 @@
 ~Las palabras de Dios # Incorrecto.
 }
 
-::12:: ¿Qué zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
+::12:: ¿Que zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
 {
 =Ivan IV, el terrible # Correcto!
 ~Alejandro I # Incorrecto.
-~Nicolás I # Incorrecto.
+~Nicolas I # Incorrecto.
 ~Pedro el Grande # Incorrecto.
 }
 
@@ -238,7 +238,7 @@
 =Espana # Correcto!
 }
 
-::12:: ¿Cómo se llama el libro sagrado propio de la tradicion catolica?
+::12:: ¿Como se llama el libro sagrado propio de la tradicion catolica?
 {
 ~Pantateuco # Incorrecto.
 =La Biblia # Correcto!
@@ -246,11 +246,11 @@
 ~Las palabras de Dios # Incorrecto.
 }
 
-::12:: ¿Qué zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
+::12:: ¿Que zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
 {
 =Ivan IV, el terrible # Correcto!
 ~Alejandro I # Incorrecto.
-~Nicolás I # Incorrecto.
+~Nicolas I # Incorrecto.
 ~Pedro el Grande # Incorrecto.
 }
 
@@ -302,7 +302,7 @@
 =Espana # Correcto!
 }
 
-::12:: ¿Cómo se llama el libro sagrado propio de la tradicion catolica?
+::12:: ¿Como se llama el libro sagrado propio de la tradicion catolica?
 {
 ~Pantateuco # Incorrecto.
 =La Biblia # Correcto!
@@ -310,11 +310,11 @@
 ~Las palabras de Dios # Incorrecto.
 }
 
-::12:: ¿Qué zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
+::12:: ¿Que zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
 {
 =Ivan IV, el terrible # Correcto!
 ~Alejandro I # Incorrecto.
-~Nicolás I # Incorrecto.
+~Nicolas I # Incorrecto.
 ~Pedro el Grande # Incorrecto.
 }
 
@@ -366,7 +366,7 @@
 =Espana # Correcto!
 }
 
-::12:: ¿Cómo se llama el libro sagrado propio de la tradicion catolica?
+::12:: ¿Como se llama el libro sagrado propio de la tradicion catolica?
 {
 ~Pantateuco # Incorrecto.
 =La Biblia # Correcto!
@@ -374,11 +374,11 @@
 ~Las palabras de Dios # Incorrecto.
 }
 
-::12:: ¿Qué zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
+::12:: ¿Que zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
 {
 =Ivan IV, el terrible # Correcto!
 ~Alejandro I # Incorrecto.
-~Nicolás I # Incorrecto.
+~Nicolas I # Incorrecto.
 ~Pedro el Grande # Incorrecto.
 }
 
@@ -430,7 +430,7 @@
 =Espana # Correcto!
 }
 
-::12:: ¿Cómo se llama el libro sagrado propio de la tradicion catolica?
+::12:: ¿Como se llama el libro sagrado propio de la tradicion catolica?
 {
 ~Pantateuco # Incorrecto.
 =La Biblia # Correcto!
@@ -438,11 +438,11 @@
 ~Las palabras de Dios # Incorrecto.
 }
 
-::12:: ¿Qué zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
+::12:: ¿Que zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
 {
 =Ivan IV, el terrible # Correcto!
 ~Alejandro I # Incorrecto.
-~Nicolás I # Incorrecto.
+~Nicolas I # Incorrecto.
 ~Pedro el Grande # Incorrecto.
 }
 
@@ -494,7 +494,7 @@
 =Espana # Correcto!
 }
 
-::12:: ¿Cómo se llama el libro sagrado propio de la tradicion catolica?
+::12:: ¿Como se llama el libro sagrado propio de la tradicion catolica?
 {
 ~Pantateuco # Incorrecto.
 =La Biblia # Correcto!
@@ -502,10 +502,10 @@
 ~Las palabras de Dios # Incorrecto.
 }
 
-::12:: ¿Qué zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
+::12:: ¿Que zar ruso ordeno la edificacion de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tartaros?
 {
 =Ivan IV, el terrible # Correcto!
 ~Alejandro I # Incorrecto.
-~Nicolás I # Incorrecto.
+~Nicolas I # Incorrecto.
 ~Pedro el Grande # Incorrecto.
 }
