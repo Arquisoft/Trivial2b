@@ -1,0 +1,359 @@
+::1:: En la serie Hora De Aventuras ¿Cuantos hijos tiene Jake?
+{
+~10 # Incorrecto.
+=Ninguna es correcta # Correcto!
+~3 # Incorrecto.
+~1 # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras ¿Como se llama el corazón del Rey Helado?
+{
+~Alejandro # Incorrecto.
+~Romeo # Incorrecto.
+=Ricardio # Correcto!
+~Corazón de leon # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras ¿Cuantas veces murió Jake?
+{
+=1 # Correcto!
+~Ninguna respuesta es correcta # Incorrecto.
+~2 # Incorrecto.
+~0 # Incorrecto.
+}
+
+::1:: Quién es el creador y cual fueé la fecha de lanzamiento de Hora De Aventuras
+{
+~Michel Krotmin, 2007 # Incorrecto.
+~Persy Jmaes, 2009 # Incorrecto.
+~Aaron Morgan, 2011 # Incorrecto.
+=Pendleton Ward, 2010 # Correcto!
+}
+
+::1:: En la serie Hora De Aventuras ¿Como se llama la princesa chicle?
+{
+~Belibom # Incorrecto.
+=Bonibelle # Correcto!
+~Lillian # Incorrecto.
+~Leyla # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras ¿Como se lalma el episodio donde Jake conoce a los padres de Lady Arcoiris?
+{
+~La mision imposible de Jkae # Incorrecto.
+~Los padres de mi novia # Incorrecto.
+=Los suegros # Correcto!
+~Ah! Nanita # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras ¿De quién está enamorado Finn?
+{
+~Princesa llama # Incorrecto.
+=Princesa Llama # Correcto!
+~No está enamorado de nadie # Incorrecto.
+~Marceline # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras ¿Como se llama el libro de los heroes?
+{
+~El Grimorio # Incorrecto.
+=El Enchiridión # Correcto!
+~El Epictetus # Incorrecto.
+~El Enkheiridion # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras ¿como se llama Marseline cuando se convierte en chico?
+{
+=Marshall Lee # Correcto!
+~Vampirito Lee # Incorrecto.
+~Mare de Lees # Incorrecto.
+~Ninguna respuesta es correcta # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras, cuando la princesa lodo le dice a Finn que quiere casarse con él, ¿que le dice Jake para quitarle esa idea de la cabeza?
+{
+~No dice nada, sale huyendo # Incorrecto.
+~La verdad, que Finn no quiere casarse # Incorrecto.
+~Que es otro quién quiere casarse con ella # Incorrecto.
+=Que Finn se mea encima todo el rato # Correcto!
+}
+
+::1:: En la serie Hora De Aventuras ¿cuantos años tiene Finn?
+{
+~16 # Incorrecto.
+~Es inmortal # Incorrecto.
+=13 # Correcto!
+~12 # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras ¿que otro animal sale en todos los capitulos aparte de Jake?
+{
+=Un caracol saludando # Correcto!
+~Un zorro # Incorrecto.
+~Ninguno de los tres # Incorrecto.
+~Un pez de colores # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras ¿en que pais viven lso protagonistas?
+{
+=En el país de Ooo # Correcto!
+~En el país de Nunca Jamás # Incorrecto.
+~En el reino helado # Incorrecto.
+~En el país de Oroo # Incorrecto.
+}
+
+::1:: En la serie Hora De Aventuras ¿como se llama la consola de Finn y Jake?
+{
+~No tiene nombre # Incorrecto.
+~Beemo # Incorrecto.
+~Bimo # Incorrecto.
+=Bmo # Correcto!
+}
+
+::1:: En la serie de los Simpsons ¿que está escrito en las escaleras de la comisaría?
+{
+~El Homo # Incorrecto.
+=El Barto # Correcto!
+~Homero # Incorrecto.
+~Nada # Incorrecto.
+}
+
+::1:: En la serie de los Simpsons ¿a que jeugan Homer y sus amigos cuando Marge es oficial de policía?
+{
+~A nada, beben cerveza # Incorrecto.
+~A la peseta # Incorrecto.
+=Poker # Correcto!
+~Chichón # Incorrecto.
+}
+
+::1:: En la serie de los Simpsons ¿cuantos hijos tienen Homer y Marge?
+{
+~Ninguno # Incorrecto.
+~5 # Incorrecto.
+~1 # Incorrecto.
+=3 # Correcto!
+}
+
+::1:: En la serie de los Simpsons ¿como se apellida el tabernero Moe?
+{
+~Nunca lo dijo # Incorrecto.
+=Sislark # Correcto!
+~Boubier # Incorrecto.
+~Simpsons # Incorrecto.
+}
+
+::1:: ¿Como se lalma el matón de Phineas y Ferb?
+{
+=Buford # Correcto!
+~Doofenshmirtz # Incorrecto.
+~Baljeet # Incorrecto.
+~Ferb # Incorrecto.
+}
+
+::1:: En al serie de Phineas y Ferb que construyen en el priemr día de vacaciones?
+{
+~Un perro mecánico # Incorrecto.
+~Crean el Invierano # Incorrecto.
+=Una montaña rusa # Correcto!
+~Copias robóticas de si mismos # Incorrecto.
+}
+
+::1:: En al serie de Pokemon ¿a que pokemon evoluciona Dratini?
+{
+~Dragonite # Incorrecto.
+=Dragonair # Correcto!
+~Milotic # Incorrecto.
+~No evoluciona # Incorrecto.
+}
+
+::1:: En al serie de Pokemon ¿como se llama el protagonista principal?
+{
+~oak # Incorrecto.
+~Brock # Incorrecto.
+~Julio # Incorrecto.
+=Ash # Correcto!
+}
+
+::1:: En al serie de Pokemon ¿cual es el pokemon que siempre acompaña a Ash en todos sus episodios?
+{
+~Charmander # Incorrecto.
+~Bulbasaur # Incorrecto.
+=Pikachu # Correcto!
+~Squirtle # Incorrecto.
+}
+
+::1:: En el juego de Mario Bross ¿como se llama, en ingles, la princesa que ha de rescatar el jugador que controla a Mario?
+{
+~Manzana # Incorrecto
+=Melocotón # Correcto!
+~Sandía # Incorrecto.
+~Pera # Incorrecto.
+}
+
+::1:: ¿Quién es Koji Kondo en relación a Super Mario Bross?
+{
+~El diseñador de Mario # Incorrecto.
+~El actual campeón del mundo # Incorrecto.
+~La voz en la versión original japonesa # Incorrecto.
+=El creador de la BSO # Correcto!
+}
+
+::1:: ¿Que pasa si Mario bross coge una flor roja?
+{
+=Lanza bolas de fuego # Correcto!
+~Se hace invisible # Incorrecto.
+~Puede volar # Incorrecto.
+~Aumenta de tamaño # Incorrecto.
+}
+
+::1:: ¿Quién es Luigi, el personaje que siempre acompaña a Mario Bross en casi todas sus aventuras?
+{
+~Su padre # Incorrecto.
+~Su novio # Incorrecto.
+~un amigo # Incorrecto.
+=Su hermano # Correcto!
+}
+
+::1:: ¿?Como se llama el reino por el que se mueven Mario Bross y sus amigos?
+{
+~Reino Toad # Incorrecto.
+=Reino Champiñón # Correcto!
+~Reino Encantado # Incorrecto.
+~Reino del volcán # Incorrecto.
+}
+
+::1:: ¿Cual es la profesión de Mario Bross?
+{
+~Ladrón de bancos # Incorrecto.
+~Bombero # Incorrecto.
+=Fontanero # Correcto!
+~Ladrón de champiñones # Incorrecto.
+}
+
+::1:: ¿E la música de que compositor se basó Disney para realizar la película El aprendiz de brujo?
+{
+~Mussorgsky # Incorrecto.
+=Dukas # Correcto!
+~Falla # Incorrecto.
+~Bach # Incorrecto.
+}
+
+::1:: ¿En que número del Paseo de la Fama de Hollywood tiene su huella Mickey Mouse?
+{
+~8394 # Incorrecto.
+~7315 # Incorrecto.
+~5913 # Incorrecto.
+=6925 # Correcto!
+}
+
+::1:: ¿Quién puso la voz de Mickey Mouse los primeros años de vida del personaje?
+{
+~Salvador Dalí # Incorrecto.
+~Charles Chaplin # Incorrecto.
+=Walt Disney # Correcto!
+~Walter Lantz # Incorrecto.
+}
+
+::1:: ¿Como se llama el perro de Mickey Moise?
+{
+=Pluto # Correcto!
+~Donald # Incorrecto.
+~Goofy # Incorrecto.
+~Peter # Incorrecto.
+}
+
+::1:: En la serie de animada de Heidi ¿de que raza de pero es Niebla?
+{
+~Pastor Alemán # Incorrecto.
+=San Bernardo # Correcto!
+~Boxer # Incorrecto.
+~Terranova # Incorrecto.
+}
+
+::1:: ¿En que año aparecio el libro de Heidi?
+{
+~1930 # Incorrecto.
+~1921 # Incorrecto.
+~1900 # Incorrecto.
+=1880 # Correcto!
+}
+
+::1:: ¿En qué año se estrenó la película de Disney "Pinocho"?
+{
+~1950 # Incorrecto.
+~1935 # Incorrecto.
+=1940 # Correcto!
+~1945 # Incorrecto.
+}
+
+::1:: ¿Cómo se llamaba el personaje que interpretaba John Travolta en "Grease"?
+{
+=Danny Zuko # Correcto!
+~Danny Puño # Incorrecto.
+~Danny Suko # Incorrecto.
+~Danny Chulo # Incorrecto.
+}
+
+::1:: ¿Quién es la mascota de SEGA?
+{
+~Ryu # Incorrecto.
+=Sonic # Correcto!
+~Mario # Incorrecto.
+~Pac Man # Incorrecto.
+}
+
+::1:: ¿Quién es Bella en la saga “Crepúsculo”?
+{
+~Cristina Ricci # Incorrecto.
+~Emma Watson # Incorrecto.
+=Kristen Stewart # Correcto!
+~Dakota Fanning # Incorrecto.
+}
+
+::1:: ¿A qué película de Disney pertenece la canción "Un mundo ideal"?
+{
+~Pocahontas # Incorrecto.
+~Mulán # Incorrecto.
+~Hércules # Incorrecto.
+=Aladdín # Correcto!
+}
+
+::1:: ¿Cómo se llama el protagonista de la saga Indiana Jones?
+{
+~Jack Nicholson # Incorrecto.
+=Harrison Ford # Correcto!
+~Michael Fox # Incorrecto.
+~Robin Williams # Incorrecto.
+}
+
+::1:: ¿A quién se considera el Rey del Pop?
+{
+=Michael Jackson # Correcto!
+~Justin Bieber # Incorrecto.
+~Zayn Malik # Incorrecto.
+~Zac Efron # Incorrecto.
+}
+
+::1:: ¿Cómo se llama el actor protagonista de "Solo en casa"?
+{
+~Keanu Reeves # Incorrecto.
+~Johnny Depp # Incorrecto.
+=Macaulay Culkin # Correcto!
+~Leonardo DiCaprio # Incorrecto.
+}
+
+::1::  ¿Cómo se llama el pájaro símbolo de los Juegos del Hambre?
+{
+~Lechuza # Incorrecto.
+~Gale # Incorrecto.
+~Llamas  # Incorrecto.
+=Sinsajo # Correcto!
+}
+
+::1:: ¿Qué grupo cómico dobló al español a los protagonistas de "Shrek"?
+{
+~Martes y 13 # Incorrecto.
+=Cruz y Raya # Correcto!
+~Tip y Coll # Incorrecto.
+~Los Morancos  # Incorrecto.
+}
