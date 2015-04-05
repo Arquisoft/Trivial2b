@@ -81,7 +81,7 @@
 ::1:: ¿Dónde realizan las plantas la fotosíntesis?
 {
 ~En el tallo # Incorrecto.
-~En las raices # Incorrecto.
+~En las raíces # Incorrecto.
 =En las hojas # Correcto!
 ~En el aire # Incorrecto.
 }
@@ -94,7 +94,7 @@
 =El número de especies # Correcto!
 }
 
-::1:: ¿Que es la suceción ecológica?
+::1:: ¿Que es la sucesión ecológica?
 {
 ~Lo que sucede dentro de un ecosistema # Incorrecto.
 ~La urbanización de un terreno natural # Incorrecto.
@@ -118,7 +118,7 @@
 ~1840 # Incorrecto.
 }
 
-::1:: ¿Que pasó con al primera edición de "El origen de las especies", en el que Darwin explicaba su teoría de la evolución?
+::1:: ¿Que pasó con la primera edición de "El origen de las especies", en el que Darwin explicaba su teoría de la evolución?
 {
 ~Su edición fue prohibida y retirada # Incorrecto.
 =Se agotó el primer día # Correcto!
@@ -126,7 +126,7 @@
 ~Fue recibida sin mucho entusiasmo # Incorrecto.
 }
 
-::1:: El oxigeno es el comburente mas habitual,¿Que porcentaje hay de este en el aire?
+::1:: El oxigeno es el comburente mas habitual, ¿Que porcentaje hay de este en el aire?
 {
 ~37% # Incorrecto.
 =21% # Correcto!
@@ -139,7 +139,7 @@
 =Cortan el oxígeno del fuego # Correcto!
 ~Aumentan el comburente del aire # Incorrecto.
 ~Expulsa agua y aire para esparcir el fuego # Incorrecto.
-~Enfrian el objeto inflamado # Incorrecto.
+~Enfrían el objeto inflamado # Incorrecto.
 }
 
 ::1:: ¿Que es el pistilo de una flor?
@@ -154,7 +154,7 @@
 {
 ~Anterozoides # Incorrecto.
 ~Granos de polen # Incorrecto.
-=Nucleos espermáticos # Correcto!
+=Núcleos espermáticos # Correcto!
 ~Espermatozoides # Incorrecto.
 }
 
@@ -170,24 +170,24 @@
 {
 ~En el fruto en capsula # Incorrecto.
 ~En las hojas # Incorrecto.
-~En los petalos de la flor # Incorrecto.
+~En los pétalos de la flor # Incorrecto.
 =En el interior del óvulo # Correcto!
 }
 
 ::1:: ¿Que función tiene la semilla de una planta?
 {
-~La superación por la palnta del invierno # Incorrecto.
+~La superación por la planta del invierno # Incorrecto.
 ~La germinación del embrión # Incorrecto.
 =La dispersión y nacimiento de la futura planta # Correcto!
-~La conquita de nuevas tierras # Incorrecto.
+~La conquista de nuevas tierras # Incorrecto.
 }
 
-::1:: Un triángulo equilatero se caracteriza por tener...
+::1:: Un triángulo equilátero se caracteriza por tener...
 {
 =Sus tres lados son iguales # Correcto!
 ~Dos de sus lados son iguales # Incorrecto.
-~Tener un angulo de 90 grados # Incorrecto.
-~Ninguno de sus angulos presenta los mismos grados # Incorrecto.
+~Tener un ángulo de 90 grados # Incorrecto.
+~Ninguno de sus ángulos presenta los mismos grados # Incorrecto.
 }
 
 ::1:: ¿Que han de tener dos objetos para que entre ellos exista gravedad?
@@ -206,7 +206,7 @@
 ~0,98 m/s2 # Incorrecto.
 }
 
-::1:: ¿Debajo de que árbol se encontraba Newton cuando, según al leyenda, descubrió la ley de la gravedad?
+::1:: ¿Debajo de que árbol se encontraba Newton cuando, según la leyenda, descubrió la ley de la gravedad?
 {
 ~Peral # Incorrecto.
 =Manzano # Correcto!
@@ -222,7 +222,7 @@
 =En el centro # Correcto!
 }
 
-::1:: La gravedade es una de las "fuerzas fundamentales" que considera la Física moderna. ¿Cuantas son en total?
+::1:: La gravedad es una de las "fuerzas fundamentales" que considera la Física moderna. ¿Cuantas son en total?
 {
 =4 # Correcto!
 ~8 # Incorrecto.
@@ -238,7 +238,7 @@
 =Fémur # Correcto!
 }
 
-::1:: ¿Que son lso hematíes?
+::1:: ¿Que son los hematíes?
 {
 ~Plaquetas # Incorrecto.
 ~Glóbulos blancos # Incorrecto.
@@ -246,7 +246,7 @@
 ~Linfocitos # Incorrecto.
 }
 
-::1:: ¿Como se llama la prmera capa de las meninges?
+::1:: ¿Como se llama la primera capa de las meninges?
 {
 ~Aracnoides # Incorrecto.
 ~Piamadre  # Incorrecto.
@@ -254,7 +254,7 @@
 =Duramadre # Correcto!
 }
 
-::1:: ¿Que tipo de musculo es el biceps?
+::1:: ¿Que tipo de musculo es el bíceps?
 {
 =Esquelético estriado # Correcto!
 ~Esquelético liso  # Incorrecto.
@@ -264,7 +264,7 @@
 
 ::1:: ¿Como se llama la arteria mas grande del cuerpo humano?
 {
-~Caródita # Incorrecto.
+~Carótida # Incorrecto.
 ~Yugular # Incorrecto.
 =Aorta # Correcto!
 ~Cardiaco # Incorrecto.
@@ -294,9 +294,9 @@
 ~Depende de la edad # Incorrecto.
 }
 
-::1:: ¿Que instrumento mide la presion atmosférica?
+::1:: ¿Que instrumento mide la presión atmosférica?
 {
-~Pluviometro # Incorrecto.
+~Pluviómetro # Incorrecto.
 ~Higrómetro # Incorrecto.
 =Barómetro # Correcto!
 ~Barógrafo # Incorrecto.
@@ -323,7 +323,7 @@
 ~Cetonas # Incorrecto.
 ~Esteres # Incorrecto.
 =Aminas # Correcto!
-~Aldehidos # Incorrecto.
+~Aldehídos # Incorrecto.
 }
 
 ::1:: El elemento presente en todos los compuestos orgánicos es el...
@@ -334,7 +334,7 @@
 ~Oxigeno # Incorrecto.
 }
 
-::1:: ¿De que tio de reptiles surgieron los mamiferos?
+::1:: ¿De que tipo de reptiles surgieron los mamíferos?
 {
 ~Tecodontos # Incorrecto.
 ~Dinosaurios # Incorrecto.
@@ -352,8 +352,9 @@
 
 ::1:: ¿Como se formó la Tierra?
 {
-~Por un proceso de disgregaciñon planetaria # Incorrecto.
+~Por un proceso de disgregación planetaria # Incorrecto.
 =Por un proceso de acreción gravitatoria # Correcto!
 ~Por fragmentación a partir del Sol # Incorrecto.
 ~Por un fenómeno de gravitación centrípeta # Incorrecto.
 }
+

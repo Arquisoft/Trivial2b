@@ -11,7 +11,7 @@
 ~Alejandro # Incorrecto.
 ~Romeo # Incorrecto.
 =Ricardio # Correcto!
-~Corazón de leon # Incorrecto.
+~Corazón de león # Incorrecto.
 }
 
 ::1:: En la serie Hora De Aventuras ¿Cuantas veces murió Jake?
@@ -22,11 +22,11 @@
 ~0 # Incorrecto.
 }
 
-::1:: Quién es el creador y cual fueé la fecha de lanzamiento de Hora De Aventuras
+::1:: Quién es el creador y cual fue la fecha de lanzamiento de Hora De Aventuras
 {
 ~Michel Krotmin, 2007 # Incorrecto.
-~Persy Jmaes, 2009 # Incorrecto.
-~Aaron Morgan, 2011 # Incorrecto.
+~Persy James, 2009 # Incorrecto.
+~Aarón Morgan, 2011 # Incorrecto.
 =Pendleton Ward, 2010 # Correcto!
 }
 
@@ -38,9 +38,9 @@
 ~Leyla # Incorrecto.
 }
 
-::1:: En la serie Hora De Aventuras ¿Como se lalma el episodio donde Jake conoce a los padres de Lady Arcoiris?
+::1:: En la serie Hora De Aventuras ¿Como se llama el episodio donde Jake conoce a los padres de Lady Arcoíris?
 {
-~La mision imposible de Jkae # Incorrecto.
+~La misión imposible de Jake # Incorrecto.
 ~Los padres de mi novia # Incorrecto.
 =Los suegros # Correcto!
 ~Ah! Nanita # Incorrecto.
@@ -54,7 +54,7 @@
 ~Marceline # Incorrecto.
 }
 
-::1:: En la serie Hora De Aventuras ¿Como se llama el libro de los heroes?
+::1:: En la serie Hora De Aventuras ¿Como se llama el libro de los héroes?
 {
 ~El Grimorio # Incorrecto.
 =El Enchiridión # Correcto!
@@ -86,7 +86,7 @@
 ~12 # Incorrecto.
 }
 
-::1:: En la serie Hora De Aventuras ¿que otro animal sale en todos los capitulos aparte de Jake?
+::1:: En la serie Hora De Aventuras ¿que otro animal sale en todos los capítulos aparte de Jake?
 {
 =Un caracol saludando # Correcto!
 ~Un zorro # Incorrecto.
@@ -94,7 +94,7 @@
 ~Un pez de colores # Incorrecto.
 }
 
-::1:: En la serie Hora De Aventuras ¿en que pais viven lso protagonistas?
+::1:: En la serie Hora De Aventuras ¿en que país viven los protagonistas?
 {
 =En el país de Ooo # Correcto!
 ~En el país de Nunca Jamás # Incorrecto.
@@ -118,11 +118,11 @@
 ~Nada # Incorrecto.
 }
 
-::1:: En la serie de los Simpsons ¿a que jeugan Homer y sus amigos cuando Marge es oficial de policía?
+::1:: En la serie de los Simpsons ¿a que juegan Homer y sus amigos cuando Marge es oficial de policía?
 {
 ~A nada, beben cerveza # Incorrecto.
 ~A la peseta # Incorrecto.
-=Poker # Correcto!
+=Póker # Correcto!
 ~Chichón # Incorrecto.
 }
 
@@ -142,7 +142,7 @@
 ~Simpsons # Incorrecto.
 }
 
-::1:: ¿Como se lalma el matón de Phineas y Ferb?
+::1:: ¿Como se llama el matón de Phineas y Ferb?
 {
 =Buford # Correcto!
 ~Doofenshmirtz # Incorrecto.
@@ -150,15 +150,15 @@
 ~Ferb # Incorrecto.
 }
 
-::1:: En al serie de Phineas y Ferb que construyen en el priemr día de vacaciones?
+::1:: En la serie de Phineas y Ferb que construyen en el primer día de vacaciones?
 {
 ~Un perro mecánico # Incorrecto.
 ~Crean el Invierano # Incorrecto.
 =Una montaña rusa # Correcto!
-~Copias robóticas de si mismos # Incorrecto.
+~Copias robóticas de sí mismos # Incorrecto.
 }
 
-::1:: En al serie de Pokemon ¿a que pokemon evoluciona Dratini?
+::1:: En la serie de Pokemon ¿a que pokemon evoluciona Dratini?
 {
 ~Dragonite # Incorrecto.
 =Dragonair # Correcto!
@@ -166,7 +166,7 @@
 ~No evoluciona # Incorrecto.
 }
 
-::1:: En al serie de Pokemon ¿como se llama el protagonista principal?
+::1:: En la serie de Pokemon ¿como se llama el protagonista principal?
 {
 ~oak # Incorrecto.
 ~Brock # Incorrecto.
@@ -174,7 +174,7 @@
 =Ash # Correcto!
 }
 
-::1:: En al serie de Pokemon ¿cual es el pokemon que siempre acompaña a Ash en todos sus episodios?
+::1:: En la serie de Pokemon ¿cual es el pokemon que siempre acompaña a Ash en todos sus episodios?
 {
 ~Charmander # Incorrecto.
 ~Bulbasaur # Incorrecto.
@@ -190,7 +190,7 @@
 ~Pera # Incorrecto.
 }
 
-::1:: ¿Quién es Koji Kondo en relación a Super Mario Bross?
+::1:: ¿Quién es Koji Kondo en relación a Súper Mario Bross?
 {
 ~El diseñador de Mario # Incorrecto.
 ~El actual campeón del mundo # Incorrecto.
@@ -198,7 +198,7 @@
 =El creador de la BSO # Correcto!
 }
 
-::1:: ¿Que pasa si Mario bross coge una flor roja?
+::1:: ¿Que pasa si Mario Bross coge una flor roja?
 {
 =Lanza bolas de fuego # Correcto!
 ~Se hace invisible # Incorrecto.
@@ -254,7 +254,7 @@
 ~Walter Lantz # Incorrecto.
 }
 
-::1:: ¿Como se llama el perro de Mickey Moise?
+::1:: ¿Como se llama el perro de Mickey Mouse?
 {
 =Pluto # Correcto!
 ~Donald # Incorrecto.
@@ -266,11 +266,11 @@
 {
 ~Pastor Alemán # Incorrecto.
 =San Bernardo # Correcto!
-~Boxer # Incorrecto.
+~Bóxer # Incorrecto.
 ~Terranova # Incorrecto.
 }
 
-::1:: ¿En que año aparecio el libro de Heidi?
+::1:: ¿En que año apareció el libro de Heidi?
 {
 ~1930 # Incorrecto.
 ~1921 # Incorrecto.

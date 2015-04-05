@@ -2,8 +2,8 @@
 {
 ~Nueva York # Incorrecto.
 =Brasilia # Correcto!
-~Mégico # Incorrecto.
-~Sofia # Incorrecto.
+~México # Incorrecto.
+~Sofía # Incorrecto.
 }
 
 ::1:: La capital de Bulgaria es...
@@ -11,18 +11,18 @@
 =Sofía # Correcto!
 ~Ottawa # Incorrecto.
 ~México # Incorrecto.
-~Sofia # Incorrecto.
+~Sofía # Incorrecto.
 }
 
 ::1:: La capital de Camerún es...
 {
-~Sofia # Incorrecto.
+~Sofía # Incorrecto.
 ~Ottawa # Incorrecto.
 ~Rio de Janeiro # Incorrecto.
-=Yaounde # Correcto!
+=Yaundé # Correcto!
 }
 
-::1:: La capital de Canada es...
+::1:: La capital de Canadá es...
 {
 =Ottawa # Correcto!
 ~Sofía # Incorrecto.
@@ -46,7 +46,7 @@
 ~Roma # Incorrecto.
 }
 
-::1:: La capital de el Congo es...
+::1:: La capital del Congo es...
 {
 ~Nueva York # Incorrecto.
 ~Bogotá # Incorrecto.
@@ -56,7 +56,7 @@
 
 ::1:: La capital de Corea del sur es...
 {
-=Seul # Correcto!
+=Seúl # Correcto!
 ~Bogotá # Incorrecto.
 ~Paris # Incorrecto.
 ~Bogotá # Incorrecto.
@@ -64,7 +64,7 @@
 
 ::1:: La capital de Costa de Marfil es...
 {
-=Yamusco # Correcto!
+=Yamusukro # Correcto!
 ~Viena # Incorrecto.
 ~León # Incorrecto.
 ~Praga # Incorrecto.
@@ -72,7 +72,7 @@
 
 ::1:: La capital de Croacia es...
 {
-~Yamusco # Incorrecto.
+~Yamusrkro # Incorrecto.
 ~Viena # Incorrecto.
 ~León # Incorrecto.
 =Zagreb # Correcto!
@@ -82,11 +82,11 @@
 {
 ~Madrid # Incorrecto.
 ~Viena # Incorrecto.
-=Havana # Correcto!
+=Habana # Correcto!
 ~Nueva York # Incorrecto.
 }
 
-::1:: ¿Cual es el río mas alrgo del Asia?
+::1:: ¿Cual es el río mas largo del Asia?
 {
 ~Amur # Incorrecto.
 =Yangtsé # Correcto!
@@ -94,7 +94,7 @@
 ~Mekong # Incorrecto.
 }
 
-::1:: ¿Cual es la cadena montañosa considerada mas antigua y de menor relieve de entre las siguientes?
+::1:: ¿Cual es la cadena montañosa considerada más antigua y de menor relieve de entre las siguientes?
 {
 ~Montes Escandinavos # Incorrecto.
 ~Pirineos # Incorrecto.
@@ -126,15 +126,15 @@
 =A ninguno # Correcto!
 }
 
-::1:: ¿Cuál de estos tipos de climas no se encuentra entre los mas habituales en Europa?
+::1:: ¿Cuál de estos tipos de climas no se encuentra entre los más habituales en Europa?
 {
 ~Oceánico # Incorrecto.
-~Mediterraneo # Incorrecto.
+~Mediterráneo # Incorrecto.
 =Ecuatorial # Correcto!
 ~Continental # Incorrecto.
 }
 
-::1:: ¿Que tio de climas predominan en el norte del continente americano?
+::1:: ¿Que tipo de climas predominan en el norte del continente americano?
 {
 ~Cálidos # Incorrecto.
 =Templados # Correcto!
@@ -150,7 +150,7 @@
 ~Columbia # Incorrecto.
 }
 
-::1:: ¿Cual de estos ríos europeos no desemboca en la vertiente atrlántica?
+::1:: ¿Cual de estos ríos europeos no desemboca en la vertiente atlántica?
 {
 =Danubio # Correcto!
 ~Tajo# Incorrecto.
@@ -168,7 +168,7 @@
 
 ::1:: ¿Sobre qué mar tiene sus costas Níger?
 {
-~Mediterrnaeo # Incorrecto.
+~Mediterráneo # Incorrecto.
 ~Blanco # Incorrecto.
 ~Rojo # Incorrecto.
 =Ninguno # Correcto!
@@ -178,14 +178,14 @@
 {
 =Inn # Correcto!
 ~Támesis # Incorrecto.
-~Eúfrates # Incorrecto.
+~Éufrates # Incorrecto.
 ~Tigris # Incorrecto.
 }
 
 ::1:: ¿Cuál es la capital de la República Centroafricana?
 {
 ~Barbados # Incorrecto.
-~Puerto principe # Incorrecto.
+~Puerto príncipe # Incorrecto.
 =Bangui # Correcto!
 ~Praga # Incorrecto.
 }
@@ -193,7 +193,7 @@
 ::1:: ¿En dónde desemboca el río europeo Bug Meridional?
 {
 ~Mar Egeo # Incorrecto.
-~Mar Mediterraneo # Incorrecto.
+~Mar Mediterráneo # Incorrecto.
 ~Mar Muerto # Incorrecto.
 =Mar Negro # Correcto!
 }
@@ -227,7 +227,7 @@
 ~Índico # Incorrecto.
 =Pacífico # Correcto!
 ~Atlántico # Incorrecto.
-~Glaciál Artico # Incorrecto.
+~Glacial Ártico # Incorrecto.
 }
 
 ::1:: ¿Cuál es el mayor río que fluye por Brasil?
@@ -250,7 +250,7 @@
 {
 ~Everest # Incorrecto.
 ~Teide # Incorrecto.
-~Acancagua # Incorrecto.
+~Aconcagua # Incorrecto.
 =Ismail Samani # Correcto!
 }
 
@@ -289,12 +289,12 @@
 ::1:: ¿En qué país nace el río Kabul?
 {
 ~Vietnam # Incorrecto.
-~Nuruega # Incorrecto.
+~Noruega # Incorrecto.
 ~Alemania # Incorrecto.
-=Afganistan # Correcto!
+=Afganistán # Correcto!
 }
 
-::1:: ¿Cuántas islas componen el grupo de las Islas Vírgenes de los Estados Undios?
+::1:: ¿Cuántas islas componen el grupo de las Islas Vírgenes de los Estados Unidos?
 {
 ~15 # Incorrecto.
 ~8 # Incorrecto.
@@ -310,7 +310,7 @@
 ~África # Incorrecto.
 }
 
-::1:: ¿Cuál es el país más pequeño de centroamérica?
+::1:: ¿Cuál es el país más pequeño de Centroamérica?
 {
 ~Nicaragua # Incorrecto.
 ~Panamá # Incorrecto.
@@ -326,7 +326,7 @@
 ~Dinamarca # Incorrecto.
 }
 
-::1:: ¿En qué país se encuentra la ciudad de Avignon?
+::1:: ¿En qué país se encuentra la ciudad de Aviñón?
 {
 ~Alemania # Incorrecto.
 =Francia # Correcto!

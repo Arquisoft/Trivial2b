@@ -2,7 +2,7 @@
 {
 ~Barcelona 1992 # Incorrecto.
 ~Ciudad de México 1964 # Incorrecto.
-=Los Angeles 1984 # Correcto!
+=Los Ángeles 1984 # Correcto!
 ~Seúl 1988 # Incorrecto.
 }
 
@@ -78,18 +78,18 @@
 ~7 días # Incorrecto.
 }
 
-::1:: ¿Qué medifondista logró la medalla de oro en los Juegos de México 68 y en Munich 72?
+::1:: ¿Qué mediofondista logró la medalla de oro en los Juegos de México 68 y en Múnich 72?
 {
 =Kip Keino # Correcto!
-~Jose Luis Rodriguez Zapatero # Incorrecto.
-~Nicolas Sarkosy # Incorrecto.
+~Jose Luis Rodríguez Zapatero # Incorrecto.
+~Nicolás Sarkosy # Incorrecto.
 ~Giuliano Amato # Incorrecto.
 }
 
-::1:: ¿Qué patinador artístico obtuvo la medalla de oro el los Juegos Olímpicos de Invierno celebrados en Calgary en 1988?
+::1:: ¿Qué patinador artístico obtuvo la medalla de oro en los Juegos Olímpicos de Invierno celebrados en Calgary en 1988?
 {
 ~Livio Berruti # Incorrecto.
-~Juan Manuel Fangio # Incorrecto.
+~Juan Manuel Fingió # Incorrecto.
 ~Al oerter # Incorrecto.
 =Brian Boitano # Correcto!
 }
@@ -137,7 +137,7 @@
 ::1:: ¿Cuál es la primera nación que debe ingresar en el estadio en la ceremonia de apertura de cada edición de los Juegos Olímpicos?
 {
 ~La nación que más medallas haya acumulado en los Juegos Olímpicos anteriores. # Incorrecto.
-~La que rpesente un mayor número de habitantes # Incorrecto.
+~La que presente un mayor número de habitantes # Incorrecto.
 =Grecia # Correcto!
 ~Se sortea # Incorrecto.
 }
@@ -147,7 +147,7 @@
 =Atlanta y Atenas # Correcto!
 ~Atlanta y Sydney # Incorrecto.
 ~Atenas y Sydney # Incorrecto.
-~Atenas y Pekin # Incorrecto.
+~Atenas y Pekín # Incorrecto.
 }
 
 ::1:: ¿En qué mes se han celebrado normalmente los Juegos Olímpicos de Invierno, hasta 1994?
@@ -162,7 +162,7 @@
 {
 ~Vela # Incorrecto.
 ~BMX # Incorrecto.
-~Triátlon # Incorrecto.
+~Triatlón # Incorrecto.
 =Hockey sobre hielo # Correcto!
 }
 
@@ -185,7 +185,7 @@
 ::1:: ¿Con qué nombre es conocido el Himno Paralímpico?
 {
 =Himno del futuro # Correcto!
-~Himno de la hermanidad # Incorrecto.
+~Himno de la hermandad # Incorrecto.
 ~Himno de la gloria # Incorrecto.
 ~Himno del coraje # Incorrecto.
 }
@@ -194,7 +194,7 @@
 {
 ~Argentina # Incorrecto.
 =Unión Soviética # Correcto!
-~yugoslavia # Incorrecto.
+~Yugoslavia # Incorrecto.
 ~España # Incorrecto.
 }
 
@@ -216,21 +216,21 @@
 
 ::1:: ¿De qué país es originario el Curling, practicado en los Juegos Olímpicos de Invierno?
 {
-=Escocia y Paises Bajos # Correcto!
+=Escocia y Países Bajos # Correcto!
 ~Brasil # Incorrecto.
-~Republica Checa # Incorrecto.
+~República Checa # Incorrecto.
 ~Dinamarca # Incorrecto.
 }
 
 ::1:: ¿En qué continente nunca se ha realizado una edición de los Juegos Olímpicos?
 {
 ~Asia # Incorrecto.
-~Oceania # Incorrecto.
+~Oceanía # Incorrecto.
 ~América # Incorrecto.
 =África # Correcto!
 }
 
-::1:: ¿Quién obtuvo la medalla de oro en ciclismo en los juegos de Atlantaa 1996, en la prueba contrareloj individual?
+::1:: ¿Quién obtuvo la medalla de oro en ciclismo en los juegos de Atlanta 1996, en la prueba contrarreloj individual?
 {
 =Miguel Induráin # Correcto!
 ~Lionel Mesi # Incorrecto.
@@ -242,7 +242,7 @@
 {
 ~Stephen Harper # Incorrecto.
 =James Connolly # Correcto!
-~Alfedo Di # Incorrecto.
+~Alfredo Di # Incorrecto.
 ~Mummhamad Alí # Incorrecto.
 }
 
@@ -258,7 +258,7 @@
 {
 ~Barcelona 1992 # Incorrecto.
 ~Tokio 1964 # Incorrecto.
-=Amsterdam 1928 # Correcto!
+=Ámsterdam 1928 # Correcto!
 ~Atenas 1896 # Incorrecto.
 }
 
@@ -283,7 +283,7 @@
 ~Croata # Incorrecto.
 ~Ruso # Incorrecto.
 =Italiano # Correcto!
-~Frances # Incorrecto.
+~Francés # Incorrecto.
 }
 
 ::1:: ¿Cómo se llama la deportista que obtuvo más medallas olímpicas en la disciplina Ciclismo de ruta?
@@ -298,14 +298,14 @@
 {
 ~Carlos Monzón # Incorrecto.
 =Ingemar Stenmark # Correcto!
-~Julio Cesar Chavez # Incorrecto.
+~Julio Cesar Chávez # Incorrecto.
 ~Alexis Argüello # Incorrecto.
 }
 
 ::1:: ¿Qué mascotas fueron escogidas para los juegos paralímpicos 2014?
 {
 ~Reno con bufanda # Incorrecto.
-~Hombrecito en eski # Incorrecto.
+~Hombrecito en esquí # Incorrecto.
 ~Trineo y bola de nieve # Incorrecto.
 =Rayo de sol y muñeco de nieve # Correcto!
 }

@@ -14,7 +14,7 @@
 ~1.8 metros # Incorrecto.
 }
 
-::3:: ¿Quién fue la primera cientifica de la historia?.
+::3:: ¿Quién fue la primera científica de la historia?.
 {
 ~Ada Lovelace # Incorrecto.
 ~Atenea # Incorrecto.
@@ -74,7 +74,7 @@
 {
 ~Frank Frizgäul # Incorrecto.
 ~Henry Ford # Incorrecto.
-~Maxwel # Incorrecto.
+~Maxwell # Incorrecto.
 =Karl Benz # Correcto!
 }
 
@@ -104,7 +104,7 @@
 
 ::12:: ¿Cuál de estas ciudades fue designada capital de la colonia francesa en el territorio americano en 1722?
 {
-~Nuevo Mexico # Incorrecto.
+~Nuevo México # Incorrecto.
 ~Dallas # Incorrecto.
 =Nueva Orleans # Correcto!
 ~San Francisco # Incorrecto.
@@ -134,10 +134,10 @@
 =Mayflower # Correcto!
 }
 
-::12:: ¿Cómo se conoce a la persecusión sufrida por artistas norteamericanos por su posible afiliación al partido comunista?
+::12:: ¿Cómo se conoce a la persecución sufrida por artistas norteamericanos por su posible afiliación al partido comunista?
 {
 ~Socialismo # Incorrecto.
-~Inquisicion # Incorrecto.
+~Inquisición # Incorrecto.
 =Caza de brujas # Correcto!
 ~Nazismo # Incorrecto.
 }
@@ -177,7 +177,7 @@
 ::12:: ¿Quién fue el primer presidente que presentó una dimisión de la historia de Estados Unidos?
 {
 ~George W.Bush # Incorrecto.
-~george washington # Incorrecto.
+~George Washington # Incorrecto.
 =Richard Nixon # Correcto!
 ~Bill Clinton # Incorrecto.
 }
@@ -208,25 +208,25 @@
 
 ::12:: ¿Qué zar ruso ordenó la edificación de la catedral San Basilio en 1555 para conmemorar la victoria sobre los tártaros?
 {
-=Ivan IV, el terrible # Correcto!
+=Iván IV, el terrible # Correcto!
 ~Alejandro I # Incorrecto.
 ~Nicolás I # Incorrecto.
 ~Pedro el Grande # Incorrecto.
 }
 
-::12:: ¿Qué actual territorio fue tomado por Pedro Álvares Cabral en el 1500, en nombre del rey Manuel de Portugal?
+::12:: ¿Qué actual territorio fue tomado por Pedro Álvarez Cabral en el 1500, en nombre del rey Manuel de Portugal?
 {
 ~Cuba # Incorrecto.
 ~Buenos Aires # Incorrecto.
-=Bahia # Correcto!
+=Bahía # Correcto!
 ~Amazonas # Incorrecto.
 }
 
 ::12:: ¿Quién fue el primer emperador del Sacro Imperio Romano Germánico?
 {
-~Carlomagno # Incorrecto.
+~Nabucodonosor II # Incorrecto.
 ~Jose I # Incorrecto.
-=Nabacudonsor II # Correcto!
+=Carlomagno # Correcto!
 ~Otón XVI # Incorrecto.
 }
 
@@ -235,7 +235,7 @@
 ~República parlamentaria # Incorrecto.
 =Monarquía Constitucional # Correcto!
 ~Democracia Popular # Incorrecto.
-~Republica Imperial # Incorrecto.
+~República Imperial # Incorrecto.
 }
 
 ::12:: ¿Cómo se llama el libro sagrado propio de la tradición católica?
@@ -248,7 +248,7 @@
 
 ::12:: ¿Qué teólogo y fraile alemán fue el principal líder de la reforma protestante?
 {
-~Jhon Wycliff # Incorrecto.
+~John Wycliff # Incorrecto.
 ~Jan Hus # Incorrecto.
 =Matín Lutero # Correcto!
 ~Jacques Derrida # Incorrecto.
@@ -329,7 +329,7 @@
 ::12:: ¿Cuál era el nombre del décimo faraón de la dinastía XVIII de Egipto, esposo de Nefertiti?
 {
 ~Tutankamón # Incorrecto.
-~Ramses II # Incorrecto.
+~Ramsés II # Incorrecto.
 =Akenatón # Correcto!
 ~Amenhotep III # Incorrecto.
 }
