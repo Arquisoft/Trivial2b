@@ -78,12 +78,12 @@
 ~4.000 millones de veces # Incorrecto.
 }
 
-::1:: ¿Cuantas veces se calcula que latirá el corazón a lo largo de toda la vida de un humano?
+::1:: ¿Dónde realizan las plantas la fotosíntesis?
 {
-~1.000 millones de veces # Incorrecto.
-~2.000 millones de veces # Incorrecto.
-=3.000 millones de veces # Correcto!
-~4.000 millones de veces # Incorrecto.
+~En el tallo # Incorrecto.
+~En las raices # Incorrecto.
+=En las hojas # Correcto!
+~En el aire # Incorrecto.
 }
 
 ::1:: ¿Que es la biodiversidad o riqueza de un ecosistema?
