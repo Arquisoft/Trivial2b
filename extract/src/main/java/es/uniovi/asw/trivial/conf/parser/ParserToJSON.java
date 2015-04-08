@@ -25,9 +25,9 @@ public class ParserToJSON {
 		return preguntasJson;
 	}
 	
-	public void generateJson(ArrayList<Pregunta> preguntas) throws IOException {
-		
-		File file = new File("files/preguntasFromIntermedio.json");
+	public void generateJson(ArrayList<Pregunta> preguntas, String nombre) throws IOException {
+
+		File file = new File("src/main/java/es/uniovi/asw/trivial/resources/" + nombre + ".json");
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
 		ArrayList<String> json = toJson(preguntas);

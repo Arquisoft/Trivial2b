@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import es.uniovi.asw.trivial.business.juego.JuegoConsola;
 import es.uniovi.asw.trivial.conf.parser.ParserGIFT;
+import es.uniovi.asw.trivial.conf.parser.ParserToJSON;
 import es.uniovi.asw.trivial.model.Pregunta;
 
 public class Main {
@@ -29,8 +30,10 @@ public class Main {
 			preguntas = parserGIFTtoPregunta(ruta);
 			
 			// Juego
-			JuegoConsola juegoConsola = new JuegoConsola(preguntas);
-			contador = juegoConsola.jugar();
+			//JuegoConsola juegoConsola = new JuegoConsola(preguntas);
+			//contador = juegoConsola.jugar();
+			ParserToJSON j = new ParserToJSON();
+			j.generateJson(preguntas, "Prueba");
 		} else {
 			System.err.println("No se ha podido cargar el archivo(debe ser formato gift)");
 			System.out.println("El programa se cerrará");
