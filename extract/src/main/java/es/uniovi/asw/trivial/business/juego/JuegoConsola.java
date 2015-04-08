@@ -1,4 +1,4 @@
-package es.uniovi.asw.trivial.juego;
+package es.uniovi.asw.trivial.business.juego;
 
 import java.io.BufferedReader;
 import java.io.IOException;

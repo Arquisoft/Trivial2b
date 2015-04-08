@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import es.uniovi.asw.trivial.mainWithoutMongoDB.Main;
+import es.uniovi.asw.trivial.metralla.mainWithoutMongoDB.Main;
 import es.uniovi.asw.trivial.model.Pregunta;
 import es.uniovi.asw.trivial.model.PreguntaMulti;
 

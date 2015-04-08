@@ -1,4 +1,4 @@
-package es.uniovi.asw.trivial.mainToMondoDB;
+package es.uniovi.asw.trivial.metralla.mainToMondoDB;
 
 import es.uniovi.asw.trivial.persistence.Connection;
 

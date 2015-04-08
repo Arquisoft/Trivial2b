@@ -1,13 +1,13 @@
-package es.uniovi.asw.trivial.mainWithoutMongoDB;
+package es.uniovi.asw.trivial.metralla.mainWithoutMongoDB;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import es.uniovi.asw.trivial.juego.JuegoConsola;
+import es.uniovi.asw.trivial.business.juego.JuegoConsola;
+import es.uniovi.asw.trivial.conf.parser.ParserGIFT;
 import es.uniovi.asw.trivial.model.Pregunta;
-import es.uniovi.asw.trivial.parser.ParserGIFT;
 
 public class Main {
 
