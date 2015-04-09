@@ -19,6 +19,14 @@ public class PreguntaMulti implements Pregunta {
 		this.contestacion = contestacion;
 	}
 
+	public String getPregunta() {
+		return pregunta;
+	}
+	
+	public String[] getRespuestas() {
+		return respuestas;
+	}
+	
 	public String[] getContestacion() {
 		return contestacion;
 	}
@@ -86,8 +94,6 @@ public class PreguntaMulti implements Pregunta {
 		if (!Arrays.equals(respuestas, other.respuestas))
 			return false;
 		return true;
-	}
-	
-	
+	}	
 
 }

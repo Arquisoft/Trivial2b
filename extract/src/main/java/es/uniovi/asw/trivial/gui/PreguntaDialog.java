@@ -15,8 +15,9 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import javax.swing.Timer;
-import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
+
+import es.uniovi.asw.trivial.model.Pregunta;
 
 public class PreguntaDialog extends JDialog {
 
@@ -33,28 +34,11 @@ public class PreguntaDialog extends JDialog {
 	private final int DELAY = 1000;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		try {
-			for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels()){
-	            if("Nimbus".equals(laf.getName()))
-	                try {
-	                UIManager.setLookAndFeel(laf.getClassName());
-	            } catch (Exception ex) {
-	            }}
-			PreguntaDialog dialog = new PreguntaDialog();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
 	 * Create the dialog.
+	 * 
+	 * @wbp.parser.constructor
 	 */
-	public PreguntaDialog() {
+	public PreguntaDialog(String categoria, Pregunta p) {
 		setResizable(false);
 		setModal(true);
 		setAlwaysOnTop(true);
@@ -75,7 +59,8 @@ public class PreguntaDialog extends JDialog {
 			{
 				textPregunta = new JTextField();
 				panel.add(textPregunta);
-				textPregunta.setColumns(10);
+				// textPregunta.setColumns(10);
+				textPregunta.setText(p.getPregunta());
 			}
 		}
 		{
@@ -83,38 +68,40 @@ public class PreguntaDialog extends JDialog {
 			contentPanel.add(panel);
 			panel.setLayout(new GridLayout(0, 2, 0, 0));
 			{
-				JButton btnPregunta1 = new JButton("Respuesta1");
-				btnPregunta1.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-					}
-				});
-				btnPregunta1.setActionCommand("Pregunta1");
-				panel.add(btnPregunta1);
+				for (int i = 0; i < p.getRespuestas().length; i++) {
+					JButton bt = new JButton(p.getRespuestas()[i]);
+					bt.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent arg0) {
+						}
+					});
+					bt.setActionCommand("Pregunta1");
+					panel.add(bt);
+				}
 			}
-			{
-				JButton btnPregunta2 = new JButton("Respuesta2");
-				btnPregunta2.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-					}
-				});
-				panel.add(btnPregunta2);
-			}
-			{
-				JButton btnPregunta3 = new JButton("Respuesta3");
-				btnPregunta3.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-					}
-				});
-				panel.add(btnPregunta3);
-			}
-			{
-				JButton btnPregunta4 = new JButton("Respuesta4");
-				btnPregunta4.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-					}
-				});
-				panel.add(btnPregunta4);
-			}
+			// {
+			// JButton btnPregunta2 = new JButton("Respuesta2");
+			// btnPregunta2.addActionListener(new ActionListener() {
+			// public void actionPerformed(ActionEvent arg0) {
+			// }
+			// });
+			// panel.add(btnPregunta2);
+			// }
+			// {
+			// JButton btnPregunta3 = new JButton("Respuesta3");
+			// btnPregunta3.addActionListener(new ActionListener() {
+			// public void actionPerformed(ActionEvent arg0) {
+			// }
+			// });
+			// panel.add(btnPregunta3);
+			// }
+			// {
+			// JButton btnPregunta4 = new JButton("Respuesta4");
+			// btnPregunta4.addActionListener(new ActionListener() {
+			// public void actionPerformed(ActionEvent arg0) {
+			// }
+			// });
+			// panel.add(btnPregunta4);
+			// }
 		}
 		{
 			JPanel buttonPane = new JPanel();
@@ -158,12 +145,13 @@ public class PreguntaDialog extends JDialog {
 				textField.setEnabled(false);
 				panel.add(textField);
 				textField.setColumns(10);
+				textField.setText(categoria);
 			}
 
 		}
 	}
 
-	public PreguntaDialog(Color color) {
+	public PreguntaDialog(Color color, String categoria, final Pregunta p) {
 		setResizable(false);
 
 		setModal(true);
@@ -188,7 +176,8 @@ public class PreguntaDialog extends JDialog {
 				textPregunta = new JTextField();
 				textPregunta.setEditable(false);
 				panel.add(textPregunta);
-				textPregunta.setColumns(10);
+				//textPregunta.setColumns(10);
+				textPregunta.setText(p.getPregunta());
 			}
 		}
 		{
@@ -197,46 +186,56 @@ public class PreguntaDialog extends JDialog {
 			contentPanel.add(panel);
 			panel.setLayout(new GridLayout(0, 2, 0, 0));
 			{
-				JButton btnPregunta1 = new JButton("Respuesta1");
-				btnPregunta1.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						timer.stop();
-						dispose();
-					}
-				});
-				btnPregunta1.setActionCommand("Pregunta1");
-				panel.add(btnPregunta1);
+				for (int i = 0; i < p.getRespuestas().length; i++) {
+					JButton bt = new JButton(p.getRespuestas()[i]);
+					final int num = i;
+					bt.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent arg0) {
+							timer.stop();
+							JOptionPane.showMessageDialog(null,
+									p.getContestacion()[num]);
+							if (p.getCorrecta() == num) {
+								//Acertadas ++
+							} else {
+								// falladas ++
+							}
+							dispose();
+						}
+					});
+					bt.setActionCommand("Pregunta1");
+					panel.add(bt);
+				}
 			}
-			{
-				JButton btnPregunta2 = new JButton("Respuesta2");
-				btnPregunta2.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						timer.stop();
-						dispose();
-					}
-				});
-				panel.add(btnPregunta2);
-			}
-			{
-				JButton btnPregunta3 = new JButton("Respuesta3");
-				btnPregunta3.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						timer.stop();
-						dispose();
-					}
-				});
-				panel.add(btnPregunta3);
-			}
-			{
-				JButton btnPregunta4 = new JButton("Respuesta4");
-				btnPregunta4.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						timer.stop();
-						dispose();
-					}
-				});
-				panel.add(btnPregunta4);
-			}
+//			{
+//				JButton btnPregunta2 = new JButton("Respuesta2");
+//				btnPregunta2.addActionListener(new ActionListener() {
+//					public void actionPerformed(ActionEvent arg0) {
+//						timer.stop();
+//						dispose();
+//					}
+//				});
+//				panel.add(btnPregunta2);
+//			}
+//			{
+//				JButton btnPregunta3 = new JButton("Respuesta3");
+//				btnPregunta3.addActionListener(new ActionListener() {
+//					public void actionPerformed(ActionEvent arg0) {
+//						timer.stop();
+//						dispose();
+//					}
+//				});
+//				panel.add(btnPregunta3);
+//			}
+//			{
+//				JButton btnPregunta4 = new JButton("Respuesta4");
+//				btnPregunta4.addActionListener(new ActionListener() {
+//					public void actionPerformed(ActionEvent arg0) {
+//						timer.stop();
+//						dispose();
+//					}
+//				});
+//				panel.add(btnPregunta4);
+//			}
 		}
 		{
 			JPanel buttonPane = new JPanel();
@@ -280,6 +279,7 @@ public class PreguntaDialog extends JDialog {
 				textField.setEnabled(false);
 				panel.add(textField);
 				textField.setColumns(10);
+				textField.setText(categoria);
 			}
 
 		}

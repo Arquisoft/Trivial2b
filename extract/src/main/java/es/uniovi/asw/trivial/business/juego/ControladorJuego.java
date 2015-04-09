@@ -15,5 +15,13 @@ public class ControladorJuego {
 		this.preguntas = preguntas;
 		this.usuarios = usuarios;
 	}
+	
+	public List<Usuario> getUsuarios() {
+		return usuarios;
+	}
+	
+	public Map<String, List<Pregunta>> getPreguntas() {
+		return preguntas;
+	}
 
 }

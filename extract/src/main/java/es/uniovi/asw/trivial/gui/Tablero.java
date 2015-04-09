@@ -4,13 +4,12 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dialog;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -21,13 +20,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
+import es.uniovi.asw.trivial.business.juego.ControladorJuego;
+import es.uniovi.asw.trivial.model.PreguntaMulti;
 import es.uniovi.asw.trivial.model.Usuario;
-import java.awt.Font;
-import javax.swing.SwingConstants;
 
 public class Tablero extends JFrame {
 
@@ -43,7 +43,7 @@ public class Tablero extends JFrame {
 	private JTextField textField;
 	private JPanel panelTablero;
 	private int tamTablero = 9;
-	List<Usuario> usuarios = new ArrayList<Usuario>();
+	private ControladorJuego cj;
 	private HashMap<Integer, HashMap<Color, Integer>> cuentaColores = new HashMap<Integer, HashMap<Color, Integer>>();
 	private JButton[][] botones = new JButton[tamTablero][tamTablero];
 	private boolean defaultColors = true;
@@ -82,7 +82,8 @@ public class Tablero extends JFrame {
 	public Tablero() {
 		asignarColores();
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
-				Tablero.class.getResource("/es/uniovi/asw/trivial/gui/img/tab.png")));
+				Tablero.class
+						.getResource("/es/uniovi/asw/trivial/gui/img/tab.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -94,14 +95,15 @@ public class Tablero extends JFrame {
 		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
 	}
 
-	public Tablero(int tam, Color[] colors, List<Usuario> usuarios) {
+	public Tablero(int tam, Color[] colors, ControladorJuego cj) {
 		this.tamTablero = tam;
 		this.botones = new JButton[tamTablero][tamTablero];
 		this.defaultColors = false;
 		asignarColores(colors);
-		this.usuarios = usuarios;
+		this.cj = cj;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
-				Tablero.class.getResource("/es/uniovi/asw/trivial/gui/img/tab.png")));
+				Tablero.class
+						.getResource("/es/uniovi/asw/trivial/gui/img/tab.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -134,7 +136,7 @@ public class Tablero extends JFrame {
 		}
 		return panel_1;
 	}
-	
+
 	private final static int MAXIMODADO = 6;
 	private final static int MINIMODADO = 1;
 
@@ -151,7 +153,10 @@ public class Tablero extends JFrame {
 			});
 			btnNewButton.setBackground(Color.WHITE);
 			btnNewButton.setForeground(Color.WHITE);
-			btnNewButton.setIcon(new ImageIcon(Tablero.class.getResource("/es/uniovi/asw/trivial/gui/img/icono-dado.jpg")));
+			btnNewButton
+					.setIcon(new ImageIcon(
+							Tablero.class
+									.getResource("/es/uniovi/asw/trivial/gui/img/icono-dado.jpg")));
 			btnNewButton.setToolTipText("Tirar Dado");
 		}
 		return btnNewButton;
@@ -208,9 +213,9 @@ public class Tablero extends JFrame {
 							.createLineBorder(Color.ORANGE));
 					botones[i][j].addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-
-							new PreguntaDialog(Color.WHITE).setVisible(true);
-
+							new PreguntaDialog(Color.WHITE, "Especial",
+									new PreguntaMulti("", "", new String[0],
+											new String[0], 0)).setVisible(true);
 						}
 					});
 				} else if ((i != 0 && i != botones.length / 2 && i != botones.length - 1)
@@ -226,7 +231,6 @@ public class Tablero extends JFrame {
 						Random rm = new Random();
 						int key = rm.nextInt(cuentaColores.size());
 						pintarAleatorio(botones[i][j], cuentaColores, key);
-
 					}
 
 				botones[i][j].setText(null);
@@ -271,7 +275,7 @@ public class Tablero extends JFrame {
 	}
 
 	private void pintarAleatorio(JButton but,
-			HashMap<Integer, HashMap<Color, Integer>> colores, int key) {
+			HashMap<Integer, HashMap<Color, Integer>> colores, final int key) {
 		Set<Color> arg = cuentaColores.get(key).keySet();
 
 		for (Color color : arg) {
@@ -279,15 +283,16 @@ public class Tablero extends JFrame {
 			if (cuentaColores.get(key).get(color) < (getNumeroColoreables() / cuentaColores
 					.size())) {
 				but.setBackground(color);
-
-				cuentaColores.get(key).put(color,
-						cuentaColores.get(key).get(color) + 1);
+				final int num = cuentaColores.get(key).get(color) + 1;
+				cuentaColores.get(key).put(color, num);
 				final Color colorDialog = color;
 				but.addActionListener(new ActionListener() {
 
 					public void actionPerformed(ActionEvent e) {
 
-						PreguntaDialog dialog = new PreguntaDialog(colorDialog);
+						PreguntaDialog dialog = new PreguntaDialog(colorDialog,
+								getCollection(num+1),	cj.getPreguntas().get(getCollection(num+1))
+								.get(new Random().nextInt(cj.getPreguntas().get(getCollection(num+1)).size())));
 						// descomentar esto cuando se acabe la funcionalidad
 						//
 						dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -302,18 +307,37 @@ public class Tablero extends JFrame {
 		}
 	}
 
+	private String getCollection(int color) {
+		switch (color) {
+		case 0:
+			return "deportes";
+		case 1:
+			return "historia";
+		case 2:
+			return "ciencias";
+		case 3:
+			return "entretenimiento";
+		default:
+			return "";
+		}
+	}
+
 	private JPanel getPanelJugadores() {
 		if (panelJugadores == null) {
 			panelJugadores = new JPanel();
 			panelJugadores.setBackground(Color.WHITE);
-			panelJugadores.setLayout(new GridLayout(usuarios.size(), 1, 0, 0));
+			panelJugadores.setLayout(new GridLayout(cj.getUsuarios().size(), 1,
+					0, 0));
 
-			for (Usuario user : usuarios) {
+			for (Usuario user : cj.getUsuarios()) {
 				JTextField nombreJugador = new JTextField(user.getNombre());
 				nombreJugador.setEditable(false);
 				panelJugadores.add(nombreJugador);
-				panelJugadores.add(new JLabel(new ImageIcon(Tablero.class
-						.getResource("/es/uniovi/asw/trivial/gui/img/arbolIni.jpg"))));
+				panelJugadores
+						.add(new JLabel(
+								new ImageIcon(
+										Tablero.class
+												.getResource("/es/uniovi/asw/trivial/gui/img/arbolIni.jpg"))));
 			}
 		}
 		return panelJugadores;
@@ -339,6 +363,7 @@ public class Tablero extends JFrame {
 		}
 		return panel_4;
 	}
+
 	private JLabel getLblNewLabel() {
 		if (lblNewLabel == null) {
 			lblNewLabel = new JLabel("");

@@ -7,7 +7,9 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.BoxLayout;
 import javax.swing.DefaultCellEditor;
@@ -29,6 +31,10 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
+import es.uniovi.asw.trivial.business.JuegoService;
+import es.uniovi.asw.trivial.business.impl.JuegoServiceImpl;
+import es.uniovi.asw.trivial.business.juego.ControladorJuego;
+import es.uniovi.asw.trivial.model.Pregunta;
 import es.uniovi.asw.trivial.model.Usuario;
 
 public class Playerschoice extends JFrame {
@@ -138,7 +144,7 @@ public class Playerschoice extends JFrame {
 		panelCategorias.add(chckbxDeportes);
 		chckbxDeportes.setSelected(true);
 
-		final JCheckBox chckbxCiencia = new JCheckBox("Ciencia");
+		final JCheckBox chckbxCiencia = new JCheckBox("Ciencias");
 		panelCategorias.add(chckbxCiencia);
 		chckbxCiencia.setSelected(true);
 
@@ -146,7 +152,7 @@ public class Playerschoice extends JFrame {
 		panelCategorias.add(chckbxHistoria);
 		chckbxHistoria.setSelected(true);
 
-		final JCheckBox chckbxCine = new JCheckBox("Cine");
+		final JCheckBox chckbxCine = new JCheckBox("Entretenimiento");
 		panelCategorias.add(chckbxCine);
 		chckbxCine.setSelected(true);
 
@@ -187,29 +193,28 @@ public class Playerschoice extends JFrame {
 				List<Usuario> usuarios = model.getUsuarios();
 				if (model.getRowCount() < MIN_PLAYERS)
 					JOptionPane.showMessageDialog(null,
-							"M�nimo para jugar 2 jugadores");
+							"Mínimo para jugar 2 jugadores");
 				Color[] colors = getColoresPartida();
-				if (comboBox.getSelectedItem().toString().equals("Normal")
-						&& isTableroPosible(TABLERO_NORMAL, colors.length)) {
-					Tablero tab = new Tablero(TABLERO_NORMAL, colors, usuarios);
-					tab.setExtendedState(JFrame.MAXIMIZED_BOTH);
-					tab.setVisible(true);
-					dispose();
-				}
+				int tam = TABLERO_NORMAL;				
 				if (comboBox.getSelectedItem().toString().equals("Grande")
 						&& isTableroPosible(TABLERO_GRANDE, colors.length)) {
-					Tablero tab = new Tablero(TABLERO_GRANDE, colors, usuarios);
-					tab.setExtendedState(JFrame.MAXIMIZED_BOTH);
-					tab.setVisible(true);
-					dispose();
+					tam = TABLERO_GRANDE;
 				}
 				if (comboBox.getSelectedItem().toString().equals("Pequeno")
 						&& isTableroPosible(TABLERO_PEQUENO, colors.length)) {
-					Tablero tab = new Tablero(TABLERO_PEQUENO, colors, usuarios);
-					tab.setExtendedState(JFrame.MAXIMIZED_BOTH);
-					tab.setVisible(true);
-					dispose();
+					tam = TABLERO_PEQUENO;
 				}
+				Map<String, List<Pregunta>> preguntas = new HashMap<>();
+				JuegoService j = new JuegoServiceImpl();
+				for (Component c : panelCategorias.getComponents()) {
+				if (((JCheckBox) c).isSelected()) {
+						preguntas.put(((JCheckBox) c).getText().toLowerCase(), j.getPreguntasCollection(((JCheckBox) c).getText().toLowerCase()));
+					}
+				}
+				Tablero tab = new Tablero(tam, colors, new ControladorJuego(preguntas, usuarios));
+				tab.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				tab.setVisible(true);
+				dispose();
 
 			}
 
@@ -323,7 +328,7 @@ public class Playerschoice extends JFrame {
 		public void anadirUsuarios() {
 			// llamar a este metodo cada vez que un usuario se logea con exito
 			// y se anade a la partida
-			for (int i = 0; i < 6; i++) {//anadidos estos a modo de ejemplo
+			for (int i = 0; i < 6; i++) {// anadidos estos a modo de ejemplo
 				Usuario user = new Usuario();
 				user.setNombre("usuario" + i);
 				usuarios.add(user);

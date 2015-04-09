@@ -4,7 +4,12 @@ public interface Pregunta {
 
 	String toStringDebug();
 
-	String[] getContestacion();
 	
+	
+	String getPregunta();
+	String[] getRespuestas();
+	String[] getContestacion();
 	int getCorrecta();
+
+	
 }
