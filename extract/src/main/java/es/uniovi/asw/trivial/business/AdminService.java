@@ -2,7 +2,7 @@ package es.uniovi.asw.trivial.business;
 
 public interface AdminService {
 	
-	void cargarEnBase(String ruta, String collection);
-	void removeDataBase();
+	String cargarEnBase(String ruta, String collection);
+	String removeDataBase();
 
 }

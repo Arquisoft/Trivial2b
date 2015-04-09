@@ -6,10 +6,12 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -133,7 +135,9 @@ public class Admin extends JFrame {
 			btnCargar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					AdminService aS = new AdminServiceImpl();
-					aS.cargarEnBase(textFieldRuta.getText(), textFieldColeccion.getText());
+					String res = aS.cargarEnBase(textFieldRuta.getText(), textFieldColeccion.getText());
+					
+					JOptionPane.showMessageDialog(null, res);
 				}
 			});
 			btnCargar.setBounds(168, 11, 102, 23);
@@ -145,8 +149,12 @@ public class Admin extends JFrame {
 			btnBorrarBaseDe = new JButton("Borrar Base de datos");
 			btnBorrarBaseDe.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
+					
 					AdminService aS = new AdminServiceImpl();
-					aS.removeDataBase();
+					String res = aS.removeDataBase();
+					
+					JOptionPane.showMessageDialog(null, res);
+						
 				}
 			});
 			btnBorrarBaseDe.setBounds(134, 48, 178, 23);

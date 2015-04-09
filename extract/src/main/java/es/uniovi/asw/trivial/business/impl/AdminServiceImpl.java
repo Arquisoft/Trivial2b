@@ -13,9 +13,11 @@ public class AdminServiceImpl implements AdminService{
 
 
 	@Override
-	public void cargarEnBase(String ruta, String collection) {
+	public String cargarEnBase(String ruta, String collection) {
 		
 		ArrayList<Pregunta> preguntas;
+		String ret = "";
+		
 		try {
 			//trasformamos el gift en objetos preguntas
 			preguntas = ParserGIFT.parsear(ruta);
@@ -23,20 +25,21 @@ public class AdminServiceImpl implements AdminService{
 			ArrayList<String> arrayJson = ParserToJSON.stringJson(preguntas);
 			
 			CollectionGatewayImpl cG = new CollectionGatewayImpl();
-			cG.newCollection(arrayJson, collection);
+			ret = cG.newCollection(arrayJson, collection);
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return "Fichero no encontrado(compruebe la ruta)";
 		}
+		
+		return ret;
 		
 	}
 
 	@Override
-	public void removeDataBase() {
+	public String removeDataBase() {
 		
 		CollectionGatewayImpl cG = new CollectionGatewayImpl();
-		cG.removeAll();
+		return cG.removeAll();
 		
 	}
 

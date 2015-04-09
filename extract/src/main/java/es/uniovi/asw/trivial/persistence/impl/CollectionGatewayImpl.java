@@ -26,7 +26,7 @@ public class CollectionGatewayImpl implements CollectionGateway{
 	}
 
 	@Override
-	public void newCollection(ArrayList<String> json, String collection) {
+	public String newCollection(ArrayList<String> json, String collection) {
 		
 		/**** Get collection / table from 'preguntas' ****/
 		// if collection doesn't exists, MongoDB will create it for you
@@ -44,11 +44,14 @@ public class CollectionGatewayImpl implements CollectionGateway{
 //		}
  
 		System.out.println("Nueva colección creada correctamente");
+		
+		return "Nueva categoría creada correctamente";
 	}
 
 	@Override
-	public void removeAll() {
+	public String removeAll() {
 		db.dropDatabase();		
+		return "Se ha borrado correctamente la base de datos";
 	}
 
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public interface CollectionGateway {
 
-	void newCollection(ArrayList<String> json, String collection);
-	void removeAll();
+	String newCollection(ArrayList<String> json, String collection);
+	String removeAll();
 	
 }

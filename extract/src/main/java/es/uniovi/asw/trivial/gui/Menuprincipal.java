@@ -6,7 +6,6 @@ import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,10 +15,6 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
-
-import es.uniovi.asw.trivial.business.JuegoService;
-import es.uniovi.asw.trivial.business.impl.JuegoServiceImpl;
-import es.uniovi.asw.trivial.model.Pregunta;
 
 public class Menuprincipal extends JFrame {
 
