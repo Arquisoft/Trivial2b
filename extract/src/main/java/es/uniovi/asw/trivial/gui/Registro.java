@@ -9,10 +9,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
+
+import es.uniovi.asw.trivial.business.UsuarioService;
+import es.uniovi.asw.trivial.business.impl.UsuarioServiceImpl;
 
 public class Registro extends JFrame {
 
@@ -28,10 +32,10 @@ public class Registro extends JFrame {
 	private JPanel panel_2;
 	private JPanel panel_3;
 	private JLabel lblNewLabel;
-	private JTextField textField;
+	private JTextField textFieldLogin;
 	private JPanel panel_4;
 	private JLabel lblNewLabel_1;
-	private JTextField textField_1;
+	private JTextField textFieldContrasena;
 
 	/**
 	 * Launch the application.
@@ -74,8 +78,11 @@ public class Registro extends JFrame {
 			btnAtras = new JButton("Registrarse");
 			btnAtras.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					//Registrarse en la bd
-					 new Menuprincipal().setVisible(true);
+					UsuarioService uS = new UsuarioServiceImpl();
+					String res = uS.newUsuario(textFieldLogin.getText(), textFieldLogin.getText());
+					
+					JOptionPane.showMessageDialog(null, res);
+					new Menuprincipal().setVisible(true);
 			            dispose();
 				}
 			});
@@ -124,7 +131,7 @@ public class Registro extends JFrame {
 		if (panel_3 == null) {
 			panel_3 = new JPanel();
 			panel_3.add(getLblNewLabel());
-			panel_3.add(getTextField());
+			panel_3.add(getTextFieldLogin());
 		}
 		return panel_3;
 	}
@@ -134,18 +141,18 @@ public class Registro extends JFrame {
 		}
 		return lblNewLabel;
 	}
-	private JTextField getTextField() {
-		if (textField == null) {
-			textField = new JTextField();
-			textField.setColumns(10);
+	private JTextField getTextFieldLogin() {
+		if (textFieldLogin == null) {
+			textFieldLogin = new JTextField();
+			textFieldLogin.setColumns(10);
 		}
-		return textField;
+		return textFieldLogin;
 	}
 	private JPanel getPanel_4() {
 		if (panel_4 == null) {
 			panel_4 = new JPanel();
 			panel_4.add(getLblNewLabel_1());
-			panel_4.add(getTextField_1());
+			panel_4.add(getTextFieldContrasena());
 		}
 		return panel_4;
 	}
@@ -155,11 +162,11 @@ public class Registro extends JFrame {
 		}
 		return lblNewLabel_1;
 	}
-	private JTextField getTextField_1() {
-		if (textField_1 == null) {
-			textField_1 = new JTextField();
-			textField_1.setColumns(10);
+	private JTextField getTextFieldContrasena() {
+		if (textFieldContrasena == null) {
+			textFieldContrasena = new JTextField();
+			textFieldContrasena.setColumns(10);
 		}
-		return textField_1;
+		return textFieldContrasena;
 	}
 }

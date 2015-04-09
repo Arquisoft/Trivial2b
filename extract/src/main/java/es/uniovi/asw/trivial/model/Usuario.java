@@ -17,6 +17,11 @@ public class Usuario {
 
 	public Usuario() {
 	}
+	
+	public Usuario(String login, String contrasena) {
+		this.login = login;
+		this.contrasena = contrasena;
+	}
 
 	public Usuario(String login, String contrasena, String nombre,
 			String apellidos) {
