@@ -14,6 +14,8 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
+import es.uniovi.asw.trivial.persistence.impl.Usuario_trivialJdbcDao;
+
 public class Registro extends JFrame {
 
 	/**
@@ -75,6 +77,9 @@ public class Registro extends JFrame {
 			btnAtras.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					//Registrarse en la bd
+					Usuario_trivialJdbcDao user=new Usuario_trivialJdbcDao();
+					user.registro(getTextField().getText(),getTextField_1().getText());
+					
 					 new Menuprincipal().setVisible(true);
 			            dispose();
 				}
