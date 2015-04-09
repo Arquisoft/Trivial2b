@@ -230,7 +230,7 @@ public class Tablero extends JFrame {
 								.createLineBorder(Color.ORANGE));
 						Random rm = new Random();
 						int key = rm.nextInt(cuentaColores.size());
-						pintarAleatorio(botones[i][j], cuentaColores, key);
+						pintarAleatorio(botones[i][j], key);
 					}
 
 				botones[i][j].setText(null);
@@ -274,8 +274,7 @@ public class Tablero extends JFrame {
 		return num;
 	}
 
-	private void pintarAleatorio(JButton but,
-			HashMap<Integer, HashMap<Color, Integer>> colores, final int key) {
+	private void pintarAleatorio(JButton but, final int key) {
 		Set<Color> arg = cuentaColores.get(key).keySet();
 
 		for (Color color : arg) {
@@ -283,23 +282,20 @@ public class Tablero extends JFrame {
 			if (cuentaColores.get(key).get(color) < (getNumeroColoreables() / cuentaColores
 					.size())) {
 				but.setBackground(color);
-				final int num = cuentaColores.get(key).get(color) + 1;
-				cuentaColores.get(key).put(color, num);
+				cuentaColores.get(key).put(color, cuentaColores.get(key).get(color) + 1);
 				final Color colorDialog = color;
 				but.addActionListener(new ActionListener() {
 
 					public void actionPerformed(ActionEvent e) {
 
 						PreguntaDialog dialog = new PreguntaDialog(colorDialog,
-								getCollection(num+1),	cj.getPreguntas().get(getCollection(num+1))
-								.get(new Random().nextInt(cj.getPreguntas().get(getCollection(num+1)).size())));
-						// descomentar esto cuando se acabe la funcionalidad
-						//
+								getCollection(colorDialog), cj.getPreguntas().get(getCollection(colorDialog))
+								.get(new Random().nextInt(cj.getPreguntas().get(getCollection(colorDialog)).size())));
+											
 						dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
 						dialog.setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
 						dialog.setVisible(true);
-
 					}
 				});
 
@@ -307,19 +303,17 @@ public class Tablero extends JFrame {
 		}
 	}
 
-	private String getCollection(int color) {
-		switch (color) {
-		case 0:
+	private String getCollection(Color color) {
+		if(color.equals(Color.RED))
 			return "deportes";
-		case 1:
+		else if (color.equals(Color.BLUE))
 			return "historia";
-		case 2:
+		else if (color.equals(Color.YELLOW))
 			return "ciencias";
-		case 3:
+		else if (color.equals(Color.GREEN))
 			return "entretenimiento";
-		default:
+		else
 			return "";
-		}
 	}
 
 	private JPanel getPanelJugadores() {
