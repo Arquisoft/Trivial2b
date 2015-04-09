@@ -15,12 +15,8 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
-<<<<<<< HEAD
 import es.uniovi.asw.trivial.business.UsuarioService;
 import es.uniovi.asw.trivial.business.impl.UsuarioServiceImpl;
-=======
-import es.uniovi.asw.trivial.persistence.impl.Usuario_trivialJdbcDao;
->>>>>>> origin/master
 
 public class Registro extends JFrame {
 
@@ -82,19 +78,12 @@ public class Registro extends JFrame {
 			btnAtras = new JButton("Registrarse");
 			btnAtras.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-<<<<<<< HEAD
 					UsuarioService uS = new UsuarioServiceImpl();
 					String res = uS.newUsuario(textFieldLogin.getText(), textFieldLogin.getText());
 					
 					JOptionPane.showMessageDialog(null, res);
+
 					new Menuprincipal().setVisible(true);
-=======
-					//Registrarse en la bd
-					Usuario_trivialJdbcDao user=new Usuario_trivialJdbcDao();
-					user.registro(getTextField().getText(),getTextField_1().getText());
-					
-					 new Menuprincipal().setVisible(true);
->>>>>>> origin/master
 			            dispose();
 				}
 			});
