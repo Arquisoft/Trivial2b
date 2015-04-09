@@ -32,6 +32,7 @@ public class Menuprincipal extends JFrame {
 	private JPanel panel_2;
 	private JLabel lblBienvenidoATrivial;
 	private JButton btnRegistro;
+	private JButton btnAdmin;
 
 	/**
 	 * Launch the application.
@@ -97,6 +98,7 @@ public class Menuprincipal extends JFrame {
 			panel_1.add(getBtnJugar());
 			panel_1.add(getBtnEstadisticas());
 			panel_1.add(getBtnRegistro());
+			panel_1.add(getBtnAdmin());
 			panel_1.add(getBtnSalir());
 		}
 		return panel_1;
@@ -166,6 +168,19 @@ public class Menuprincipal extends JFrame {
 			});
 		}
 		return btnRegistro;
+	}
+	private JButton getBtnAdmin() {
+		if (btnAdmin == null) {
+			btnAdmin = new JButton("Admin");
+			btnAdmin.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					
+					new Admin().setVisible(true);
+		            dispose();
+				}
+			});
+		}
+		return btnAdmin;
 	}
 }
 

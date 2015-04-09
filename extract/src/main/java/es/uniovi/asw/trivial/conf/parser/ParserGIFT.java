@@ -13,7 +13,7 @@ public class ParserGIFT {
 	
 	private final static int OPCIONES = 4;
 	
-	public ArrayList<Pregunta> parsear(String archivo) throws IOException {
+	public static ArrayList<Pregunta> parsear(String archivo) throws IOException {
 		
 		FileReader reader = new FileReader(new File(archivo));
 		BufferedReader buffer = new BufferedReader(reader);

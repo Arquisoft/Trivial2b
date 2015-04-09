@@ -12,20 +12,21 @@ import es.uniovi.asw.trivial.model.Pregunta;
 
 public class ParserToJSON {
 	
-	Gson gson;
+	static Gson gson;
 	
 	public ParserToJSON() {
 		gson = new Gson();
 	}
 	
-	private ArrayList<String> toJson(ArrayList<Pregunta> preguntas) {
+	private static ArrayList<String> toJson(ArrayList<Pregunta> preguntas) {
+		gson = new Gson();
 		ArrayList<String> preguntasJson = new ArrayList<>();
 		for (Pregunta p: preguntas)
 			preguntasJson.add(gson.toJson(p));
 		return preguntasJson;
 	}
 	
-	public void generateJson(ArrayList<Pregunta> preguntas, String nombre) throws IOException {
+	public static void generateJson(ArrayList<Pregunta> preguntas, String nombre) throws IOException {
 
 		File file = new File("src/main/java/es/uniovi/asw/trivial/resources/" + nombre + ".json");
 		FileWriter fw = new FileWriter(file.getAbsoluteFile());
@@ -37,6 +38,12 @@ public class ParserToJSON {
 			fichero += s + "\n";
 		bw.write(fichero);
 		bw.close();
+	}
+	
+	public static ArrayList<String> stringJson(ArrayList<Pregunta> preguntas){
+		
+		return toJson(preguntas);
+		
 	}
 
 }
