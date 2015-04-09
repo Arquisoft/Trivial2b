@@ -7,7 +7,7 @@ import es.uniovi.asw.trivial.business.AdminService;
 import es.uniovi.asw.trivial.conf.parser.ParserGIFT;
 import es.uniovi.asw.trivial.conf.parser.ParserToJSON;
 import es.uniovi.asw.trivial.model.Pregunta;
-import es.uniovi.asw.trivial.persistence.admin.impl.CollectionGatewayImpl;
+import es.uniovi.asw.trivial.persistence.impl.CollectionGatewayImpl;
 
 public class AdminServiceImpl implements AdminService{
 

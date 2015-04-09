@@ -1,4 +1,4 @@
-package es.uniovi.asw.trivial.persistence.admin;
+package es.uniovi.asw.trivial.persistence;
 
 import java.util.ArrayList;
 

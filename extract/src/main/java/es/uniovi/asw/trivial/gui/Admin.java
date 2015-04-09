@@ -16,6 +16,7 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
+import es.uniovi.asw.trivial.business.AdminService;
 import es.uniovi.asw.trivial.business.impl.AdminServiceImpl;
 
 public class Admin extends JFrame {
@@ -131,7 +132,7 @@ public class Admin extends JFrame {
 			btnCargar = new JButton("Cargar");
 			btnCargar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					AdminServiceImpl aS = new AdminServiceImpl();
+					AdminService aS = new AdminServiceImpl();
 					aS.cargarEnBase(textFieldRuta.getText(), textFieldColeccion.getText());
 				}
 			});
@@ -144,7 +145,7 @@ public class Admin extends JFrame {
 			btnBorrarBaseDe = new JButton("Borrar Base de datos");
 			btnBorrarBaseDe.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					AdminServiceImpl aS = new AdminServiceImpl();
+					AdminService aS = new AdminServiceImpl();
 					aS.removeDataBase();
 				}
 			});
