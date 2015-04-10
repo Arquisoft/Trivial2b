@@ -25,7 +25,6 @@ import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
 import es.uniovi.asw.trivial.business.juego.ControladorJuego;
-import es.uniovi.asw.trivial.model.PreguntaMulti;
 import es.uniovi.asw.trivial.model.Usuario;
 
 public class Tablero extends JFrame {
@@ -51,6 +50,14 @@ public class Tablero extends JFrame {
 	private JLabel lblNewLabel;
 	private int colorActual = 0;
 	private List<Color> colores = new ArrayList<Color>();
+
+	public List<Color> getColores() {
+		return colores;
+	}
+
+	public void setColores(List<Color> colores) {
+		this.colores = colores;
+	}
 
 	private int usuarioJugando = 0;
 
@@ -204,7 +211,7 @@ public class Tablero extends JFrame {
 
 			panelTablero
 					.setLayout(new GridLayout(tamTablero, tamTablero, 0, 0));
-		
+
 			rellenarBotones();
 			for (int i = 0; i < botones.length; i++) {
 				for (int j = 0; j < botones[i].length; j++) {
@@ -214,8 +221,6 @@ public class Tablero extends JFrame {
 		}
 		return panelTablero;
 	}
-
-
 
 	private void rellenarBotones() {
 
@@ -231,12 +236,18 @@ public class Tablero extends JFrame {
 					botones[i][j].setBackground(Color.WHITE);
 					botones[i][j].setBorder(BorderFactory
 							.createLineBorder(Color.ORANGE));
+
 					botones[i][j].addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-
-							new PreguntaDialog(Color.WHITE, "Especial",
-									new PreguntaMulti("", "", new String[0],
-											new String[0], 0), Tablero.this)
+							Color tipopreg = colores.get(new Random()
+									.nextInt(colores.size()));
+							new PreguntaDialog(Color.WHITE, "Especial "
+									+ getCollection(tipopreg), cj
+									.getPreguntas()
+									.get(getCollection(tipopreg))
+									.get(new Random().nextInt(cj.getPreguntas()
+											.get(getCollection(tipopreg))
+											.size())), Tablero.this)
 									.setVisible(true);
 
 						}
@@ -326,7 +337,7 @@ public class Tablero extends JFrame {
 
 	}
 
-	private String getCollection(Color color) {
+	public String getCollection(Color color) {
 		if (color.equals(Color.RED))
 			return "deportes";
 		else if (color.equals(Color.BLUE))
@@ -335,11 +346,25 @@ public class Tablero extends JFrame {
 			return "ciencias";
 		else if (color.equals(Color.GREEN))
 			return "entretenimiento";
+		else if (color.equals(Color.CYAN))
+			return "geografia";
+		else if (color.equals(Color.WHITE))
+			return "Especial";
 		else
 			return "";
 	}
 
 	List<JTextField> nombresUsuarios = new ArrayList<JTextField>();
+	List<JPanel> panelesUsuarios = new ArrayList<JPanel>();
+
+
+	public List<JPanel> getPanelesUsuarios() {
+		return panelesUsuarios;
+	}
+
+	public void setPanelesUsuarios(List<JPanel> panelesUsuarios) {
+		this.panelesUsuarios = panelesUsuarios;
+	}
 
 	public List<JTextField> getNombresUsuarios() {
 		return nombresUsuarios;
@@ -349,7 +374,7 @@ public class Tablero extends JFrame {
 		this.nombresUsuarios = nombresUsuarios;
 	}
 
-	private JPanel getPanelJugadores() {
+	public JPanel getPanelJugadores() {
 		if (panelJugadores == null) {
 			panelJugadores = new JPanel();
 			panelJugadores.setBackground(Color.WHITE);
@@ -360,6 +385,10 @@ public class Tablero extends JFrame {
 			for (Usuario user : cj.getUsuarios()) {
 
 				JTextField nombreJugador = new JTextField(user.getLogin());
+				JPanel panelJugador = new JPanel();
+				panelJugador.setBackground(Color.WHITE);
+				panelJugador.setLayout(new GridLayout((colores.size()/2), (colores.size()/2),
+						0, 0));
 				JLabel lblProfile = new JLabel("");
 				lblProfile
 						.setIcon(new ImageIcon(
@@ -373,15 +402,12 @@ public class Tablero extends JFrame {
 					nombreJugador.setBackground(Color.yellow);
 					cj.getUsuarios().get(usuarioJugando).setTocaJugar(true);
 				}
-
+				panelesUsuarios.add(panelJugador);
 				nombresUsuarios.add(nombreJugador);
 				panelJugadores.add(nombreJugador);
 				panelJugadores.add(lblProfile);
-				panelJugadores
-						.add(new JLabel(
-								new ImageIcon(
-										Tablero.class
-												.getResource("/es/uniovi/asw/trivial/gui/img/arbolIni.jpg"))));
+				panelJugadores.add(panelJugador);
+
 				i++;
 			}
 

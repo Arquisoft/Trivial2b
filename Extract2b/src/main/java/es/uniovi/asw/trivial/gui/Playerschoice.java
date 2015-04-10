@@ -156,8 +156,8 @@ public class Playerschoice extends JFrame {
 		panelCategorias.add(chckbxCine);
 		chckbxCine.setSelected(true);
 
-		final JCheckBox chckbxMatemticas = new JCheckBox("Matem\u00E1ticas");
-		panelCategorias.add(chckbxMatemticas);
+		final JCheckBox checkboxGeografia = new JCheckBox("Geografia");
+		panelCategorias.add(checkboxGeografia);
 
 		JLabel lblTamaoDelTablero = new JLabel("Tablero");
 		panel_2.add(lblTamaoDelTablero);
@@ -270,7 +270,7 @@ public class Playerschoice extends JFrame {
 					coloresArrayList.add(Color.GREEN);
 				if (chckbxHistoria.isSelected())
 					coloresArrayList.add(Color.BLUE);
-				if (chckbxMatemticas.isSelected())
+				if (checkboxGeografia.isSelected())
 					coloresArrayList.add(Color.CYAN);
 
 				return coloresArrayList.toArray(colores);

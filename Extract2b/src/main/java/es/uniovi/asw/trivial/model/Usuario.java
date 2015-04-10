@@ -1,5 +1,8 @@
 package es.uniovi.asw.trivial.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Usuario {
 	
 	private String login;
@@ -7,6 +10,8 @@ public class Usuario {
 	private String nombre;
 	private String apellidos;
 	private boolean tocaJugar = false;
+
+	private List<String> categoriasGanadas= new ArrayList<String>();
 
 	public String getLogin() {
 		return login;
@@ -63,6 +68,22 @@ public class Usuario {
 	public void setTocaJugar(boolean tocaJugar) {
 		this.tocaJugar = tocaJugar;
 	}
+
+	public boolean isGanador(int size) {
+		if (categoriasGanadas.size()==size)
+			return true;
+		return false;
+	}
+
+	public List<String> getCategoriasGanadas() {
+		return categoriasGanadas;
+	}
+
+	public void setCategoriasGanadas(List<String> categoriasGanadas) {
+		this.categoriasGanadas = categoriasGanadas;
+	}
+
+
 	
 	
 
