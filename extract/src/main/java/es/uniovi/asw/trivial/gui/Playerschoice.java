@@ -32,10 +32,14 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
 import es.uniovi.asw.trivial.business.JuegoService;
+import es.uniovi.asw.trivial.business.UsuarioService;
 import es.uniovi.asw.trivial.business.impl.JuegoServiceImpl;
+import es.uniovi.asw.trivial.business.impl.UsuarioServiceImpl;
 import es.uniovi.asw.trivial.business.juego.ControladorJuego;
 import es.uniovi.asw.trivial.model.Pregunta;
 import es.uniovi.asw.trivial.model.Usuario;
+
+import javax.swing.JPasswordField;
 
 public class Playerschoice extends JFrame {
 
@@ -46,13 +50,14 @@ public class Playerschoice extends JFrame {
 	private JPanel contentPane;
 	private JLabel lblSeleccinDeJugadores;
 	private JTextField textNombre;
-	private JTextField textContra;
 	public JTable tablero;
 	private JTextField textField_2_1;
-	private final int TABLERO_PEQUENO = 7;
-	private final int TABLERO_NORMAL = 9;
-	private final int TABLERO_GRANDE = 13;
-	private final int MIN_PLAYERS = 2;
+	
+	private final static int TABLERO_PEQUENO = 7;
+	private final static int TABLERO_NORMAL = 9;
+	private final static int TABLERO_GRANDE = 13;
+	private final static int MIN_PLAYERS = 2;
+	private JPasswordField textContra;
 
 	/**
 	 * Launch the application.
@@ -109,11 +114,6 @@ public class Playerschoice extends JFrame {
 
 		JLabel lblContrasea = new JLabel("Password");
 		panel_1.add(lblContrasea);
-
-		textContra = new JTextField();
-
-		panel_1.add(textContra);
-		textContra.setColumns(10);
 		panel.add(panel_1, BorderLayout.NORTH);
 
 		JPanel panelTabla = new JPanel();
@@ -168,21 +168,48 @@ public class Playerschoice extends JFrame {
 		panel_2.add(comboBox);
 		JButton btnUnirse = new JButton("Unirse");
 		btnUnirse.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
 
 				Playerschoice.ExampleTableModel model = (Playerschoice.ExampleTableModel) tablero
 						.getModel();
-				Usuario user = new Usuario();// este usuario seria sacado de la
-												// BD con findbyLogin(string)
-												// por ejemplo
-				if (!textNombre.getText().equals("")) {
-					user.setNombre(textNombre.getText());
-					model.anadirUser(user);
-					model.addRow(user.getNombre());
+				UsuarioService us = new UsuarioServiceImpl();
+				if (textNombre.getText().equals("")) {
+					JOptionPane.showMessageDialog(null,
+							"El campo del login no puede ser vacio");
+					return;
 				}
+				if (textContra.getText().equals("")) {
+					JOptionPane.showMessageDialog(null,
+							"El campo de la contraseña no puede ser vacio");
+					return;
+				}
+					
+				Usuario u = us.login(textNombre.getText(), textContra.getText());
+				textNombre.setText(""); textContra.setText("");
+				
+				if (u != null) {
+					model.anadirUser(u);
+					model.addRow(u.getLogin());
+				}
+				else
+					JOptionPane.showMessageDialog(null,
+							"El usuario no está registrado");
+//				Usuario user = new Usuario();// este usuario seria sacado de la
+//												// BD con findbyLogin(string)
+//												// por ejemplo
+//				if (!textNombre.getText().equals("")) {
+//					user.setNombre(textNombre.getText());
+//					model.anadirUser(user);
+//					model.addRow(user.getNombre());
+//				}
 
 			}
 		});
+		
+		textContra = new JPasswordField();
+		textContra.setColumns(10);
+		panel_1.add(textContra);
 		panel_1.add(btnUnirse);
 
 		JButton btnComenzarLaPartida = new JButton("Comenzar la partida");
@@ -302,22 +329,22 @@ public class Playerschoice extends JFrame {
 		private String[] columnNames = { "Usuario", "Eliminar" };
 		public List<Usuario> usuarios = new ArrayList<Usuario>();
 
-		private Object[][] data;
+//		private Object[][] data;
 
 		public final Object[] longValues = { "Usuario", "Eliminar" };
 
-		public ExampleTableModel() {
-			anadirUsuarios();
-
-			for (Usuario user : usuarios) {
-				addRow(user.getNombre());
-			}
-
-		}
+//		public ExampleTableModel() {
+//			anadirUsuarios();
+//
+//			for (Usuario user : usuarios) {
+//				addRow(user.getNombre());
+//			}
+//
+//		}
 
 		public void anadirUser(Usuario user) {
 			usuarios.add(user);
-			data = new Object[usuarios.size()][usuarios.size()];
+//			data = new Object[usuarios.size()][usuarios.size()];
 			textField_2_1.setText(Integer.toString(usuarios.size()));
 		}
 
@@ -325,36 +352,33 @@ public class Playerschoice extends JFrame {
 			return usuarios;
 		}
 
-		public void anadirUsuarios() {
-			// llamar a este metodo cada vez que un usuario se logea con exito
-			// y se anade a la partida
-			for (int i = 0; i < 6; i++) {// anadidos estos a modo de ejemplo
-				Usuario user = new Usuario();
-				user.setNombre("usuario" + i);
-				usuarios.add(user);
-
-			}
-			data = new Object[usuarios.size()][usuarios.size()];
-
-		}
+//		public void anadirUsuarios() {
+//			// llamar a este metodo cada vez que un usuario se logea con exito
+//			// y se anade a la partida
+//			for (int i = 0; i < 6; i++) {// anadidos estos a modo de ejemplo
+//				Usuario user = new Usuario();
+//				user.setNombre("usuario" + i);
+//				usuarios.add(user);
+//
+//			}
+//			data = new Object[usuarios.size()][usuarios.size()];
+//
+//		}
 
 		public void addRow(String value) {
-
 			fireTableRowsInserted(usuarios.size() - 1, usuarios.size() - 1);
 			int row = usuarios.size() - 1;
-			int col = 0;
-			setValueAt(value, row, col);
+			setValueAt(value, row, 0);
 		}
 
 		public void removeRow(int row) {
 			Usuario user = usuarios.get(row);
 
 			JOptionPane.showMessageDialog(null,
-					"Jugador expulsado de la partida: " + user.getNombre());
+					"Jugador expulsado de la partida: " + user.getLogin());
 			usuarios.remove(row);
 			fireTableRowsDeleted(row, row);
 			textField_2_1.setText(Integer.toString(usuarios.size()));
-
 		}
 
 		@Override
@@ -364,9 +388,7 @@ public class Playerschoice extends JFrame {
 
 		@Override
 		public int getRowCount() {
-			// return data.length;
 			return usuarios.size();
-
 		}
 
 		@Override
@@ -377,7 +399,7 @@ public class Playerschoice extends JFrame {
 		@Override
 		public Object getValueAt(int row, int col) {
 			// return data[row][col];
-			return usuarios.get(row).getNombre();
+			return usuarios.get(row).getLogin();
 
 		}
 
@@ -393,10 +415,9 @@ public class Playerschoice extends JFrame {
 
 		@Override
 		public void setValueAt(Object value, int row, int col) {
-			data[row][col] = value;
+			//data[row][col] = value;
 			fireTableCellUpdated(row, col);
 		}
-
 	}
 }
 
@@ -446,12 +467,10 @@ class ButtonEditor extends DefaultCellEditor {
 	@Override
 	public Object getCellEditorValue() {
 		if (isPushed) {
-
 			Playerschoice.ExampleTableModel model = (Playerschoice.ExampleTableModel) table
 					.getModel();
 			String label = (String) model.getValueAt(myRow, 0);
 			if (label != null) {
-				// delete the model's row here if desired.
 				model.removeRow(myRow);
 
 			}
@@ -475,7 +494,6 @@ class ButtonEditor extends DefaultCellEditor {
 @SuppressWarnings("serial")
 class ButtonRenderer extends JButton implements TableCellRenderer {
 	public ButtonRenderer() {
-
 		setOpaque(true);
 	}
 
