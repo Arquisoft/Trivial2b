@@ -355,13 +355,11 @@ public class Tablero extends JFrame {
 
 			int i = 0;
 			for (Usuario user : cj.getUsuarios()) {
-<<<<<<< HEAD
-				JTextField nombreJugador = new JTextField(user.getNombre());
+
+				JTextField nombreJugador = new JTextField(user.getLogin());
 				JLabel lblProfile = new JLabel("");
 				lblProfile.setIcon(new ImageIcon(Tablero.class.getResource("/es/uniovi/asw/trivial/gui/img/pro.png")));
-=======
-				JTextField nombreJugador = new JTextField(user.getLogin());
->>>>>>> origin/master
+
 				nombreJugador.setEditable(false);
 				
 				if(i==0){

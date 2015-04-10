@@ -32,7 +32,7 @@ public class UsuarioGatewayImpl implements UsuarioGateway{
 			ps = con.prepareStatement(Conf.get("SQL_USUARIO_SAVE"));
 			
 			ps.setString(1, usuario.getLogin());
-			ps.setObject(2, usuario.getContrasena().toCharArray());
+			ps.setObject(2, usuario.getContrasena());
 		
 			ps.executeUpdate();
 //			rows = ps.executeUpdate();
