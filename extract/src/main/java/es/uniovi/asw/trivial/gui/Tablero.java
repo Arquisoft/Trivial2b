@@ -9,7 +9,9 @@ import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -51,6 +53,8 @@ public class Tablero extends JFrame {
 	private JPanel panel_3;
 	private JPanel panel_4;
 	private JLabel lblNewLabel;
+	
+	private int usuarioJugando =0;
 
 	/**
 	 * Launch the application.
@@ -113,6 +117,23 @@ public class Tablero extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		contentPane.add(getPanel(), BorderLayout.WEST);
 		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
+	}
+
+	public int getUsuarioJugando() {
+		return usuarioJugando;
+	}
+
+	public void setUsuarioJugando(int usuarioJugando) {
+		this.usuarioJugando = usuarioJugando;
+	}
+
+
+	public ControladorJuego getCj() {
+		return cj;
+	}
+
+	public void setCj(ControladorJuego cj) {
+		this.cj = cj;
 	}
 
 	private JPanel getPanel() {
@@ -215,7 +236,7 @@ public class Tablero extends JFrame {
 						public void actionPerformed(ActionEvent e) {
 							new PreguntaDialog(Color.WHITE, "Especial",
 									new PreguntaMulti("", "", new String[0],
-											new String[0], 0)).setVisible(true);
+											new String[0], 0), Tablero.this).setVisible(true);
 						}
 					});
 				} else if ((i != 0 && i != botones.length / 2 && i != botones.length - 1)
@@ -290,7 +311,7 @@ public class Tablero extends JFrame {
 
 						PreguntaDialog dialog = new PreguntaDialog(colorDialog,
 								getCollection(colorDialog), cj.getPreguntas().get(getCollection(colorDialog))
-								.get(new Random().nextInt(cj.getPreguntas().get(getCollection(colorDialog)).size())));
+								.get(new Random().nextInt(cj.getPreguntas().get(getCollection(colorDialog)).size())), Tablero.this);
 											
 						dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
@@ -316,6 +337,16 @@ public class Tablero extends JFrame {
 			return "";
 	}
 
+	List<JTextField> nombresUsuarios = new ArrayList<JTextField>();
+	
+	public List<JTextField> getNombresUsuarios() {
+		return nombresUsuarios;
+	}
+
+	public void setNombresUsuarios(List<JTextField> nombresUsuarios) {
+		this.nombresUsuarios = nombresUsuarios;
+	}
+
 	private JPanel getPanelJugadores() {
 		if (panelJugadores == null) {
 			panelJugadores = new JPanel();
@@ -323,16 +354,32 @@ public class Tablero extends JFrame {
 			panelJugadores.setLayout(new GridLayout(cj.getUsuarios().size(), 1,
 					0, 0));
 
+			int i = 0;
 			for (Usuario user : cj.getUsuarios()) {
 				JTextField nombreJugador = new JTextField(user.getNombre());
+				JLabel lblProfile = new JLabel("");
+				lblProfile.setIcon(new ImageIcon(Tablero.class.getResource("/es/uniovi/asw/trivial/gui/img/pro.png")));
 				nombreJugador.setEditable(false);
+				
+				if(i==0){
+					usuarioJugando = 0;
+					nombreJugador.setBackground(Color.yellow);
+					cj.getUsuarios().get(usuarioJugando).setTocaJugar(true);
+				}
+				
+				nombresUsuarios.add(nombreJugador);
 				panelJugadores.add(nombreJugador);
+				panelJugadores.add(lblProfile);
 				panelJugadores
 						.add(new JLabel(
 								new ImageIcon(
 										Tablero.class
 												.getResource("/es/uniovi/asw/trivial/gui/img/arbolIni.jpg"))));
+				i++;
 			}
+			
+			
+			
 		}
 		return panelJugadores;
 	}
@@ -366,4 +413,5 @@ public class Tablero extends JFrame {
 		}
 		return lblNewLabel;
 	}
+
 }

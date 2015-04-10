@@ -2,7 +2,6 @@ package es.uniovi.asw.trivial.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,11 +13,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 
 import es.uniovi.asw.trivial.model.Pregunta;
-import javax.swing.SwingConstants;
 
 public class PreguntaDialog extends JDialog {
 
@@ -156,7 +155,7 @@ public class PreguntaDialog extends JDialog {
 //		}
 //	}
 
-	public PreguntaDialog(Color color, String categoria, final Pregunta p) {
+	public PreguntaDialog(Color color, String categoria, final Pregunta p, final Tablero tablero) {
 		setResizable(false);
 
 		setModal(true);
@@ -199,6 +198,21 @@ public class PreguntaDialog extends JDialog {
 					bt.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent arg0) {
 							timer.stop();
+							
+							//cambiar turno jugador
+							if(num != p.getCorrecta()){
+								tablero.getCj().getUsuarios().get(tablero.getUsuarioJugando()).setTocaJugar(false);
+								tablero.getNombresUsuarios().get(tablero.getUsuarioJugando()).setBackground(Color.white);
+								
+								if(tablero.getUsuarioJugando()+1 == tablero.getCj().getUsuarios().size())
+									tablero.setUsuarioJugando(0);
+								else
+									tablero.setUsuarioJugando(tablero.getUsuarioJugando()+1);
+								
+								tablero.getCj().getUsuarios().get(tablero.getUsuarioJugando()).setTocaJugar(true);
+								tablero.getNombresUsuarios().get(tablero.getUsuarioJugando()).setBackground(Color.yellow);
+							}
+		
 							JOptionPane.showMessageDialog(null,
 									p.getContestacion()[num]);
 							if (p.getCorrecta() == num) {

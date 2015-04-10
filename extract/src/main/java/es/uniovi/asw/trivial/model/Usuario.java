@@ -6,6 +6,7 @@ public class Usuario {
 	private String contrasena;
 	private String nombre;
 	private String apellidos;
+	private boolean tocaJugar = false;
 
 	public String getLogin() {
 		return login;
@@ -54,5 +55,15 @@ public class Usuario {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
+
+	public boolean isTocaJugar() {
+		return tocaJugar;
+	}
+
+	public void setTocaJugar(boolean tocaJugar) {
+		this.tocaJugar = tocaJugar;
+	}
+	
+	
 
 }
