@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
@@ -35,7 +36,7 @@ public class Registro extends JFrame {
 	private JTextField textFieldLogin;
 	private JPanel panel_4;
 	private JLabel lblNewLabel_1;
-	private JTextField textFieldContrasena;
+	private JPasswordField textFieldContrasena;
 
 	/**
 	 * Launch the application.
@@ -77,9 +78,27 @@ public class Registro extends JFrame {
 		if (btnAtras == null) {
 			btnAtras = new JButton("Registrarse");
 			btnAtras.addActionListener(new ActionListener() {
+				@SuppressWarnings("deprecation")
 				public void actionPerformed(ActionEvent arg0) {
 					UsuarioService uS = new UsuarioServiceImpl();
-					String res = uS.newUsuario(textFieldLogin.getText(), textFieldLogin.getText());
+					if (textFieldLogin.getText().equals("")) {
+						JOptionPane.showMessageDialog(null,
+								"El campo del login no puede ser vacio");
+						return;
+					}
+					if (textFieldContrasena.getText().equals("")) {
+						JOptionPane.showMessageDialog(null,
+								"El campo de la contraseña no puede ser vacio");
+						return;
+					}
+					
+					if (uS.login(textFieldLogin.getText(), textFieldContrasena.getText()) != null) {
+						JOptionPane.showMessageDialog(null,
+								"Ya existe un usuario con los datos especificados");
+						return;
+					}
+						
+					String res = uS.newUsuario(textFieldLogin.getText(), textFieldContrasena.getPassword().toString());
 					
 					JOptionPane.showMessageDialog(null, res);
 
@@ -163,9 +182,9 @@ public class Registro extends JFrame {
 		}
 		return lblNewLabel_1;
 	}
-	private JTextField getTextFieldContrasena() {
+	private JPasswordField getTextFieldContrasena() {
 		if (textFieldContrasena == null) {
-			textFieldContrasena = new JTextField();
+			textFieldContrasena = new JPasswordField();
 			textFieldContrasena.setColumns(10);
 		}
 		return textFieldContrasena;

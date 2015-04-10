@@ -2,6 +2,7 @@ package es.uniovi.asw.trivial.persistence.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import es.uniovi.asw.trivial.conf.conectionHSQLDB.Conf;
@@ -31,7 +32,7 @@ public class UsuarioGatewayImpl implements UsuarioGateway{
 			ps = con.prepareStatement(Conf.get("SQL_USUARIO_SAVE"));
 			
 			ps.setString(1, usuario.getLogin());
-			ps.setString(2, usuario.getContrasena());
+			ps.setObject(2, usuario.getContrasena().toCharArray());
 		
 			ps.executeUpdate();
 //			rows = ps.executeUpdate();
@@ -51,6 +52,38 @@ public class UsuarioGatewayImpl implements UsuarioGateway{
 		
 		return "Nuevo usuario añadido";
 		
+	}
+
+	@Override
+	public Usuario login(String login, String password) {
+		
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		Usuario user = null;
+		
+		try {
+			ps = con.prepareStatement(Conf.get("SQL_USUARIO_LOGIN"));
+			
+			ps.setString(1, login);
+			ps.setString(2, password);
+		
+			rs = ps.executeQuery();
+			
+			if(rs.next()) {
+				user = new Usuario(rs.getString(1), rs.getString(2));
+			}
+			
+			ps.close();			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new PersistenceException("Invalid SQL or database schema", e);
+		}
+		finally  {
+			Jdbc.close(ps, con);
+		}
+		
+		return user;
 	}
 
 }

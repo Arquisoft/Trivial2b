@@ -14,4 +14,10 @@ public class UsuarioServiceImpl implements UsuarioService{
 		return uG.newUsuario(u);
 	}
 
+	@Override
+	public Usuario login(String login, String password) {
+		UsuarioGateway uG = new UsuarioGatewayImpl();
+		return uG.login(login, password);
+	}
+
 }
