@@ -1070,7 +1070,8 @@
 	}
 
 		.wrapper.style1 {
-			background-color: #D7F6FC;
+			background-image: url("../images/degradadoAzul.jpg");
+			background-size: auto;
 			border-bottom: 1px solid rgba(144, 144, 144, 0.25);
 			border-top: 1px solid rgba(144, 144, 144, 0.25);
 		}
@@ -1083,7 +1084,7 @@
 				.wrapper.style1 .box h2, .wrapper.style1 .box h3, .wrapper.style1 .box h4, .wrapper.style1 .box h5, .wrapper.style1 .box h6 {
 					color: #858585;
 				}
-
+				
 		.wrapper.style2 .profiles {
 			border-bottom: 1px solid rgba(144, 144, 144, 0.25);
 			border-top: 1px solid rgba(144, 144, 144, 0.25);
@@ -1116,24 +1117,6 @@
 
 			.wrapper.style2 footer p {
 				margin-bottom: 3em;
-			}
-
-		.wrapper.style3 {
-			background-color: #3cadd4;
-			color: #ffffff;
-		}
-
-			.wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 p {
-				color: #ffffff;
-			}
-
-			.wrapper.style3 input[type="text"],
-			.wrapper.style3 input[type="password"],
-			.wrapper.style3 input[type="email"],
-			.wrapper.style3 select,
-			.wrapper.style3 textarea {
-				background-color: #fff;
-				color: #444;
 			}
 
 /* Footer */
