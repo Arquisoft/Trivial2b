@@ -6,8 +6,12 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -36,9 +40,10 @@ public class Admin extends JFrame {
 	private JButton btnCargar;
 	private JButton btnBorrarBaseDe;
 	private JLabel lblNombreColleccin;
-	private JTextField textFieldColeccion;
 	private JPanel panel_2;
-	
+	private JButton btnAbrir;
+	private JComboBox comboBox;
+
 
 	/**
 	 * Launch the application.
@@ -112,7 +117,7 @@ public class Admin extends JFrame {
 			panel_1.add(getLblPartidasJugadas());
 			panel_1.add(getTextFieldRuta());
 			panel_1.add(getLblNombreColleccin());
-			panel_1.add(getTextFieldColeccion());
+			panel_1.add(getComboBox());
 		}
 		return panel_1;
 	}
@@ -135,8 +140,7 @@ public class Admin extends JFrame {
 			btnCargar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					AdminService aS = new AdminServiceImpl();
-					String res = aS.cargarEnBase(textFieldRuta.getText(), textFieldColeccion.getText());
-					
+					String res = aS.cargarEnBase(textFieldRuta.getText(), comboBox.getSelectedItem().toString());
 					JOptionPane.showMessageDialog(null, res);
 				}
 			});
@@ -167,20 +171,44 @@ public class Admin extends JFrame {
 		}
 		return lblNombreColleccin;
 	}
-	private JTextField getTextFieldColeccion() {
-		if (textFieldColeccion == null) {
-			textFieldColeccion = new JTextField();
-			textFieldColeccion.setColumns(35);
-		}
-		return textFieldColeccion;
-	}
 	private JPanel getPanel_2_1() {
 		if (panel_2 == null) {
 			panel_2 = new JPanel();
 			panel_2.setLayout(null);
 			panel_2.add(getBtnCargar());
 			panel_2.add(getBtnBorrarBaseDe());
+			panel_2.add(getBtnAbrir());
 		}
 		return panel_2;
+	}
+	private void abrirArchivo(){
+		
+		 JFileChooser file = new JFileChooser(); 
+		 file.showOpenDialog(this);
+         file.setFileSelectionMode(JFileChooser.FILES_ONLY);
+         final File archivo = file.getSelectedFile();
+		
+         textFieldRuta.setText(archivo.getPath());
+		
+	}
+	private JButton getBtnAbrir() {
+		if (btnAbrir == null) {
+			btnAbrir = new JButton("Abrir");
+			btnAbrir.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					abrirArchivo();
+				}
+			});
+			btnAbrir.setBounds(27, 48, 89, 23);
+		}
+		return btnAbrir;
+	}
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private JComboBox getComboBox() {
+		if (comboBox == null) {
+			comboBox = new JComboBox();
+			comboBox.setModel(new DefaultComboBoxModel(new String[] {"ciencias", "deportes", "entretenimiento", "geografia", "historia"}));
+		}
+		return comboBox;
 	}
 }
