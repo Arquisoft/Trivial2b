@@ -184,17 +184,17 @@ public class Playerschoice extends JFrame {
 							"El campo de la contraseña no puede ser vacio");
 					return;
 				}
-					
-				Usuario u = us.login(textNombre.getText(), textContra.getText());
+				
+				Usuario u = us.findByLogin(textNombre.getText());
 				textNombre.setText(""); textContra.setText("");
 				
-				if (u != null) {
+				if (u != null && !model.getLoginUsuarios().contains(u.getLogin())) {
 					model.anadirUser(u);
 					model.addRow(u.getLogin());
 				}
 				else
 					JOptionPane.showMessageDialog(null,
-							"El usuario no está registrado");
+							"El usuario no está registrado o ya esta en la partida");
 //				Usuario user = new Usuario();// este usuario seria sacado de la
 //												// BD con findbyLogin(string)
 //												// por ejemplo
@@ -350,6 +350,12 @@ public class Playerschoice extends JFrame {
 
 		public List<Usuario> getUsuarios() {
 			return usuarios;
+		}
+		public List<String> getLoginUsuarios() {
+			List<String> logins= new ArrayList<String>();
+			for(Usuario user : usuarios)
+				logins.add(user.getLogin());
+			return logins;
 		}
 
 //		public void anadirUsuarios() {

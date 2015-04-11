@@ -86,4 +86,34 @@ public class UsuarioGatewayImpl implements UsuarioGateway{
 		return user;
 	}
 
+	@Override
+	public Usuario findByLogin(String login) {
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		Usuario user = null;
+		
+		try {
+			ps = con.prepareStatement(Conf.get("SQL_FIND_USER_BYLOGIN"));
+			
+			ps.setString(1, login);
+			
+		
+			rs = ps.executeQuery();
+			
+			if(rs.next()) {
+				user = new Usuario(rs.getString(1), rs.getString(2));
+			}
+			
+			ps.close();			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new PersistenceException("Invalid SQL or database schema", e);
+		}
+		finally  {
+			Jdbc.close(ps, con);
+		}
+		return user;
+	}
+
 }

@@ -77,7 +77,7 @@ public class Menuprincipal extends JFrame {
 	private JLabel getLabel() {
 		if (label == null) {
 			label = new JLabel("");
-			label.setIcon(new ImageIcon(Menuprincipal.class.getResource("/es/uniovi/asw/trivial/gui/img/triviados.png")));
+			label.setIcon(new ImageIcon(Menuprincipal.class.getResource("/es/uniovi/asw/trivial/gui/img/happytree.png")));
 					}
 		return label;
 	}

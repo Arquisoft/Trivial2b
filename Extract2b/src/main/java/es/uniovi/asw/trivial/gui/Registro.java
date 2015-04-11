@@ -92,9 +92,9 @@ public class Registro extends JFrame {
 						return;
 					}
 					
-					if (uS.login(textFieldLogin.getText(), textFieldContrasena.getText()) != null) {
+					if (uS.findByLogin(textFieldLogin.getText()) != null) {
 						JOptionPane.showMessageDialog(null,
-								"Ya existe un usuario con los datos especificados");
+								"Ya existe un usuario con ese login");
 						return;
 					}
 						

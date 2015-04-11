@@ -16,6 +16,7 @@ import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
 import es.uniovi.asw.trivial.model.Pregunta;
@@ -37,6 +38,7 @@ public class PreguntaDialog extends JDialog {
 	public PreguntaDialog(final Color color, final String categoria,
 			final Pregunta p, final Tablero tablero) {
 		setResizable(false);
+		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
 		setModal(true);
 		setAlwaysOnTop(true);
@@ -125,7 +127,7 @@ public class PreguntaDialog extends JDialog {
 								tablero.repaint();
 								}
 							}
-							JOptionPane.showMessageDialog(null,
+							JOptionPane.showMessageDialog(PreguntaDialog.this,
 									p.getContestacion()[num]);
 							if (p.getCorrecta() == num) {
 								// Acertadas ++
@@ -133,11 +135,43 @@ public class PreguntaDialog extends JDialog {
 								// falladas ++
 							}
 							if(tablero.getCj().getUsuarios()
-										.get(tablero.getUsuarioJugando()).isGanador(tablero.getColores().size()))
-								JOptionPane.showMessageDialog(null,
-										tablero.getCj().getUsuarios()
-										.get(tablero.getUsuarioJugando()).getLogin() + " ha ganado!!");
+										.get(tablero.getUsuarioJugando()).isGanador(tablero.getColores().size())){
+								partidaFinalizada(tablero);
+								}
 							dispose();
+						}
+
+						private void partidaFinalizada(final Tablero tablero) {
+							String textWin=tablero.getCj().getUsuarios()
+									.get(tablero.getUsuarioJugando()).getLogin() + " ha ganado!!";
+							JOptionPane.showMessageDialog(PreguntaDialog.this,
+									textWin);
+							//Guardar ganador partida en bd para estadísticas de partidas ganadas aqui
+							tablero.getPanelTablero().removeAll();
+							JButton volverLogin= new JButton();
+							JTextField textoWin = new JTextField();
+							textoWin.setText(textWin);
+							textoWin.setEditable(false);
+							
+							volverLogin.setIcon(new ImageIcon(PreguntaDialog.class.getResource("/es/uniovi/asw/trivial/gui/img/btnAtras.png")));
+							tablero.getBtnDado().setVisible(false);
+							volverLogin.addActionListener(new ActionListener() {
+
+								public void actionPerformed(ActionEvent e) {
+
+								new Menuprincipal().setVisible(true);
+								tablero.dispose();
+
+								}
+							});
+							tablero.getPanelTablero().setLayout(new BorderLayout());
+							
+							tablero.getPanelTablero().add(textoWin,BorderLayout.NORTH);
+							tablero.getPanelTablero().add(volverLogin,BorderLayout.CENTER);
+						
+							tablero.revalidate();
+
+							tablero.repaint();
 						}
 					});
 					bt.setActionCommand("Pregunta1");
@@ -159,7 +193,8 @@ public class PreguntaDialog extends JDialog {
 							counter--;
 							progressBar.setValue(counter);
 							if (counter < 1) {
-								JOptionPane.showMessageDialog(null,
+								
+								JOptionPane.showMessageDialog(PreguntaDialog.this,
 										"Tiempo agotado!");
 								timer.stop();
 								dispose();
@@ -184,10 +219,10 @@ public class PreguntaDialog extends JDialog {
 			{
 				textField = new JTextField();
 				textField.setEditable(false);
-				textField.setEnabled(false);
 				panel.add(textField);
 				textField.setColumns(10);
 				textField.setText(categoria);
+			
 			}
 
 		}
