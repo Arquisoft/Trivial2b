@@ -43,7 +43,7 @@ public class PreguntaDialog extends JDialog {
 		setModal(true);
 		setAlwaysOnTop(true);
 
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 650, 400);
 
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
