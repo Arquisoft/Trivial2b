@@ -249,7 +249,7 @@ public class Tablero extends JFrame {
 	    
 	 
 	    public void actionPerformed (ActionEvent e) {
-	    	unBoton.setText("");
+	    	unBoton.setText(cj.getUsuarios().get(getUsuarioJugando()).getLogin());
 	    	new SelectTypeDialog(Color.WHITE, Tablero.this,p).setVisible(true);
 	    }
 	}
@@ -273,7 +273,8 @@ public class Tablero extends JFrame {
 	    
 	 
 	    public void actionPerformed (ActionEvent e) {
-	    	unBoton.setText("");
+	    	
+	    	unBoton.setText(cj.getUsuarios().get(getUsuarioJugando()).getLogin());
 	    	PreguntaDialog dialog = new PreguntaDialog(p,
 					colorDialog,
 					getCollection(colorDialog),
