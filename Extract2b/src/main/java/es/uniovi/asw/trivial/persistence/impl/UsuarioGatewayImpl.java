@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package es.uniovi.asw.trivial.persistence.impl;
 
 import java.sql.Connection;
@@ -127,6 +128,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
+=======
+package es.uniovi.asw.trivial.persistence.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+>>>>>>> parent of 718e7d1... a
 
 import es.uniovi.asw.trivial.conf.conectionHSQLDB.Conf;
 import es.uniovi.asw.trivial.conf.conectionHSQLDB.util.Jdbc;
@@ -239,6 +248,7 @@ public class UsuarioGatewayImpl implements UsuarioGateway{
 		return user;
 	}
 
+<<<<<<< HEAD
 	public String recuperaDatos() {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -426,3 +436,6 @@ public class UsuarioGatewayImpl implements UsuarioGateway{
 
 }
 >>>>>>> origin/master
+=======
+}
+>>>>>>> parent of 718e7d1... a

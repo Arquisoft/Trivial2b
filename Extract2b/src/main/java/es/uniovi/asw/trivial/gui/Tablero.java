@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package es.uniovi.asw.trivial.gui;
 
 import java.awt.BorderLayout;
@@ -496,6 +497,8 @@ public class Tablero extends JFrame {
 
 }
 =======
+=======
+>>>>>>> parent of 718e7d1... a
 package es.uniovi.asw.trivial.gui;
 
 import java.awt.BorderLayout;
@@ -563,6 +566,7 @@ public class Tablero extends JFrame {
 	private int usuarioJugando = 0;
 
 	public Tablero(int tam, Color[] colors, ControladorJuego cj) {
+<<<<<<< HEAD
 		
 		for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels())
 			if("Metal".equals(laf.getName()))
@@ -572,6 +576,8 @@ public class Tablero extends JFrame {
 					e.printStackTrace();
 				}
 		
+=======
+>>>>>>> parent of 718e7d1... a
 		UIManager.put("Button.disabled", UIManager.get("Button.enabled"));
 		this.tamTablero = tam;
 		this.botones = new JButton[tamTablero][tamTablero];
@@ -599,12 +605,16 @@ public class Tablero extends JFrame {
 		int iUsuario=cj.getUsuarios().get(usuarioJugando).getPosicion().getI();
 		int jUsuario=cj.getUsuarios().get(usuarioJugando).getPosicion().getJ();
 		int tirada=Integer.valueOf(lblNewLabel.getText());
+<<<<<<< HEAD
 		System.out.println("Posicion usuario: ");
 		System.out.println(iUsuario+"-"+jUsuario);
+=======
+>>>>>>> parent of 718e7d1... a
 		
 		for (int i = 0; i < botones.length; i++) {
 			for (int j = 0; j < botones[i].length; j++) {
 				
+<<<<<<< HEAD
 				if(Math.abs(i-iUsuario)==tirada && tablero[i][jUsuario]!=-1){
 					botones[i][jUsuario].setEnabled(true);
 					botones[i][jUsuario].setText("Ir");
@@ -618,6 +628,20 @@ public class Tablero extends JFrame {
 				if(Math.abs(i-iUsuario)+Math.abs(j-jUsuario)==tirada && tablero[i][j]!=-1)
 					botones[i][j].setEnabled(true);
 					botones[i][j].setText("Ir");
+=======
+				if(tablero[i][j]!=-1){
+				if(Math.abs(i-iUsuario)==tirada){
+					botones[i][jUsuario].setEnabled(true);
+				}
+				
+				if(Math.abs(j-jUsuario)==tirada){
+					botones[iUsuario][j].setEnabled(true);
+				}
+				
+				if(Math.abs(i-iUsuario)+Math.abs(j-jUsuario)==tirada)
+					botones[i][j].setEnabled(true);
+				}
+>>>>>>> parent of 718e7d1... a
 			}
 		}
 	}
@@ -731,6 +755,10 @@ public class Tablero extends JFrame {
 	    public Posicion p;
 		 
 	    public void set(int i,int j,JButton boton) {
+<<<<<<< HEAD
+=======
+	    	System.out.println("set");
+>>>>>>> parent of 718e7d1... a
 	          p=new Posicion(i,j);
 	          this.unBoton=boton;
 	    }  
@@ -738,13 +766,20 @@ public class Tablero extends JFrame {
 	    public void agregaAction () {
 	          unBoton.addActionListener(this);
 	    }
+<<<<<<< HEAD
 	    
 	 
 	    public void actionPerformed (ActionEvent e) {
+=======
+	 
+	    public void actionPerformed (ActionEvent e) {
+	    	System.out.println("ACT");
+>>>>>>> parent of 718e7d1... a
 	    	new SelectTypeDialog(Color.WHITE, Tablero.this,p).setVisible(true);
 	    }
 	}
 	
+<<<<<<< HEAD
 	public class BotonesPosicion2 implements ActionListener {
 	    JButton unBoton;
 	 
@@ -779,6 +814,8 @@ public class Tablero extends JFrame {
 	    }
 	}
 	
+=======
+>>>>>>> parent of 718e7d1... a
 
 	private void rellenarBotones() {
 
@@ -788,7 +825,11 @@ public class Tablero extends JFrame {
 				
 				
 				botones[i][j] = new JButton("n" + "[" + i + "][" + j + "]");
+<<<<<<< HEAD
 				//System.out.println(botones[i][j].getText());
+=======
+
+>>>>>>> parent of 718e7d1... a
 				if ((i == 0 && j == botones.length - 1) || (i == 0 && j == 0)
 						|| (i == botones.length - 1 && j == botones.length - 1)
 						|| (i == botones.length - 1 && j == 0)
@@ -869,6 +910,7 @@ public class Tablero extends JFrame {
 	private void pintarCelda(JButton but, int i, int j, int colorActual) {
 
 		but.setBackground(colores.get(colorActual));
+<<<<<<< HEAD
 		final Color colorDialog = colores.get(colorActual);
 		
 		BotonesPosicion2 b=new BotonesPosicion2();
@@ -878,6 +920,12 @@ public class Tablero extends JFrame {
 		/*
 		but.addActionListener(new ActionListener() {
 			
+=======
+
+		final Color colorDialog = colores.get(colorActual);
+		but.addActionListener(new ActionListener() {
+
+>>>>>>> parent of 718e7d1... a
 			public void actionPerformed(ActionEvent e) {
 
 				PreguntaDialog dialog = new PreguntaDialog(
@@ -901,7 +949,10 @@ public class Tablero extends JFrame {
 
 			}
 		});
+<<<<<<< HEAD
 		*/
+=======
+>>>>>>> parent of 718e7d1... a
 	}
 
 	private void asignarColores(Color... coloresElegidos) {
@@ -1033,4 +1084,7 @@ public class Tablero extends JFrame {
 	}
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 718e7d1... a

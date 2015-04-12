@@ -13,7 +13,6 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
@@ -82,16 +81,8 @@ public class SelectTypeDialog extends JDialog {
 	}
 
 	public SelectTypeDialog(final Color color, final Tablero tablero,final Posicion p) {
-		for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels())
-            if("Nimbus".equals(laf.getName()))
-				try {
-					UIManager.setLookAndFeel(laf.getClassName());
-				} catch (Exception e) {
-					e.printStackTrace();
-				} 
 		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		setResizable(false);
-		
 		this.tablero = tablero;
 		setModal(true);
 		setAlwaysOnTop(true);

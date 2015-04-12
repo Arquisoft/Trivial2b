@@ -16,7 +16,6 @@ import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
-import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
@@ -39,13 +38,6 @@ public class PreguntaDialog extends JDialog {
 
 	public PreguntaDialog(final Color color, final String categoria,
 			final Pregunta p, final Tablero tablero) {
-		for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels())
-            if("Nimbus".equals(laf.getName()))
-				try {
-					UIManager.setLookAndFeel(laf.getClassName());
-				} catch (Exception e) {
-					e.printStackTrace();
-				} 
 		setResizable(false);
 		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
