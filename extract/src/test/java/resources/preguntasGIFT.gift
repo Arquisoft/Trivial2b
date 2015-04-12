@@ -1,0 +1,49 @@
+﻿// Conjunto de preguntas de múltiple respuesta 
+::1:: Cual de los elementos indicados no es un elemento de HTML5?
+{ 
+=center # Correcto!
+~audio # Incorrecto.
+~footer # Incorrecto.
+~source # Incorrecto.
+}
+::2:: Indica, cual de las siguientes estructuras de SGML no se utiliza en HTML4
+{ 
+~Comentarios # Incorrecto.
+~Entidades # Incorrecto.
+=Instrucciones de procesamiento # Correcto!
+~Atributos # Incorrecto.
+}
+::3:: Indicar el elemento de HTML5 mas apropiado para ubicar enlaces externos (articulos o sitios recomendados, redes sociales, etc.)
+{ 
+~section # Incorrecto.
+~div # Incorrecto.
+~nav # Incorrecto.
+=aside # Correcto!
+}
+::4:: Cual de los atributos de tabla indicados a continuacion no existe en HTML5
+{ 
+=summary # Correcto!
+~border # Incorrecto.
+~rowspan # Incorrecto.
+~colspan # Incorrecto.
+}
+::5:: Indica cual de los siguientes valores no es valido para el atributo type de un input
+{ 
+="textarea" # Correcto!
+~"hidden" # Incorrecto.
+~"submit" # Incorrecto.
+~"checkbox" # Incorrecto.
+}
+
+
+//Preguntas de V/F
+::1:: La mediana de un triangulo es también altura {F}
+::2:: Dos ángulos opuestos por el vértice no pueden ser suplementarios {F}
+::3:: Una perpendicular es una recta que va hacia arriba y hacia abajo {F}
+::4:: Las bisectrices de dos ángulos suplementarios adyacentes son perpendiculares {T}
+::5:: El lado mayor de un triangulo se llama hipotenusa {T} 
+::6:: Dos ángulos suplementarios forman un par lineal {F}
+::7:: La intersección de dos planos puede ser un punto {F}
+::8:: Los ángulos opuestos por el vértice son suplementarios {F}
+::9:: Una altura de un triangulo pasa por el punto medio del lado sobre el cual cae {F}
+::10:: El punto donde se cortan las medianas de un triangulo se llama baricentro {T}
