@@ -615,9 +615,10 @@ public class Tablero extends JFrame {
 					botones[iUsuario][j].setText("Ir");
 				}
 				
-				if(Math.abs(i-iUsuario)+Math.abs(j-jUsuario)==tirada && tablero[i][j]!=-1)
+				if(Math.abs(i-iUsuario)+Math.abs(j-jUsuario)==tirada && tablero[i][j]!=-1){
 					botones[i][j].setEnabled(true);
 					botones[i][j].setText("Ir");
+				}
 			}
 		}
 	}
@@ -741,6 +742,7 @@ public class Tablero extends JFrame {
 	    
 	 
 	    public void actionPerformed (ActionEvent e) {
+	    	unBoton.setText("");
 	    	new SelectTypeDialog(Color.WHITE, Tablero.this,p).setVisible(true);
 	    }
 	}
@@ -764,6 +766,7 @@ public class Tablero extends JFrame {
 	    
 	 
 	    public void actionPerformed (ActionEvent e) {
+	    	unBoton.setText("");
 	    	PreguntaDialog dialog = new PreguntaDialog(p,
 					colorDialog,
 					getCollection(colorDialog),
