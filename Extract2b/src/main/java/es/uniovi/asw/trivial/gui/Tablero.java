@@ -102,9 +102,14 @@ public class Tablero extends JFrame {
 		int iUsuario=cj.getUsuarios().get(usuarioJugando).getPosicion().getI();
 		int jUsuario=cj.getUsuarios().get(usuarioJugando).getPosicion().getJ();
 		int tirada=Integer.valueOf(lblNewLabel.getText());
-		System.out.println("Posicion usuario: ");
-		System.out.println(iUsuario+"-"+jUsuario);
+		for(Posicion p: recorre(iUsuario,jUsuario,tirada)){
+			botones[p.getI()][p.getJ()].setEnabled(true);
+			if(botones[p.getI()][p.getJ()].getText()==null || (botones[p.getI()][p.getJ()].getText()!=null && botones[p.getI()][p.getJ()].getText().isEmpty())){
+				botones[p.getI()][p.getJ()].setText("Ir");
+			}
+		}
 		
+		/*
 		for (int i = 0; i < botones.length; i++) {
 			for (int j = 0; j < botones[i].length; j++) {
 				
@@ -120,13 +125,67 @@ public class Tablero extends JFrame {
 						botones[iUsuario][j].setText("Ir");
 				}
 				
+				
 				if(Math.abs(i-iUsuario)+Math.abs(j-jUsuario)==tirada && tablero[i][j]!=-1){
 					botones[i][j].setEnabled(true);
 					if(botones[i][j].getText()==null || (botones[i][j].getText()!=null && botones[i][j].getText().isEmpty()))
 						botones[i][j].setText("Ir");
 				}
+				
+				
+				
 			}
+		}*/
+	}
+	
+	public List<Posicion> recorre(int i,int j,int movimientos){
+		List<Posicion> lista=new ArrayList<Posicion>();
+		int arriba=i+1;
+		int abajo=i-1;
+		int derecha=j+1;
+		int izquierda=j-1;
+		if(movimientos==0){
+			System.out.println(i+"-"+j);
+			lista.add(new Posicion(i,j));
+		}else{
+		if(arriba<tablero.length && tablero[arriba][j]!=-1){
+			movimientos--;
+			tablero[i][j]=-1;
+			for(Posicion p: recorre(arriba,j,movimientos)){
+				lista.add(p);
+			}
+			tablero[i][j]=0;
+			movimientos++;
 		}
+		if(abajo>=0 && tablero[abajo][j]!=-1){
+			movimientos--;
+			tablero[i][j]=-1;
+			for(Posicion p: recorre(abajo,j,movimientos)){
+				lista.add(p);
+			}
+			tablero[i][j]=-0;
+			movimientos++;
+		}
+		if(derecha<tablero.length && tablero[i][derecha]!=-1){
+			movimientos--;
+			tablero[i][j]=-1;
+			for(Posicion p: recorre(i,derecha,movimientos)){
+				lista.add(p);
+			}
+			tablero[i][j]=0;
+			movimientos++;
+		}
+		if(izquierda>=0 && tablero[i][izquierda]!=-1){
+			movimientos--;
+			tablero[i][j]=-1;
+			for(Posicion p: recorre(i,izquierda,movimientos)){
+				lista.add(p);
+			}
+			tablero[i][j]=0;
+			movimientos++;
+		}
+		}
+		return lista;
 	}
 
 	public int getUsuarioJugando() {
@@ -249,7 +308,7 @@ public class Tablero extends JFrame {
 	 
 	    public void actionPerformed (ActionEvent e) {
 	    	vaciaBotones(cj.getUsuarios().get(getUsuarioJugando()).getLogin());
-	    	unBoton.setText(unBoton.getText()+" - "+cj.getUsuarios().get(getUsuarioJugando()).getLogin());
+	    	unBoton.setText(unBoton.getText()+" "+cj.getUsuarios().get(getUsuarioJugando()).getLogin());
 	    	new SelectTypeDialog(Color.WHITE, Tablero.this,p).setVisible(true);
 	    }
 	}
@@ -274,7 +333,7 @@ public class Tablero extends JFrame {
 	 
 	    public void actionPerformed (ActionEvent e) {
 	    	vaciaBotones(cj.getUsuarios().get(getUsuarioJugando()).getLogin());
-	    	unBoton.setText(unBoton.getText()+" - "+cj.getUsuarios().get(getUsuarioJugando()).getLogin());
+	    	unBoton.setText(unBoton.getText()+" "+cj.getUsuarios().get(getUsuarioJugando()).getLogin());
 	    	PreguntaDialog dialog = new PreguntaDialog(p,
 					colorDialog,
 					getCollection(colorDialog),
