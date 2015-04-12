@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
 package es.uniovi.asw.trivial.gui;
 
 import java.awt.BorderLayout;
@@ -22,9 +25,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.UIDefaults;
 import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 
 import es.uniovi.asw.trivial.business.juego.ControladorJuego;
@@ -70,14 +71,15 @@ public class Tablero extends JFrame {
 
 	public Tablero(int tam, Color[] colors, ControladorJuego cj) {
 		
-			for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels())
-	            if("Metal".equals(laf.getName()))
-					try {
-						UIManager.setLookAndFeel(laf.getClassName());
-					} catch (Exception e) {
-						e.printStackTrace();
-					} 
-	           
+		for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels())
+			if("Metal".equals(laf.getName()))
+				try{
+					UIManager.setLookAndFeel(laf.getClassName());
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+		
+		UIManager.put("Button.disabled", UIManager.get("Button.enabled"));
 		this.tamTablero = tam;
 		this.botones = new JButton[tamTablero][tamTablero];
 		this.tablero =new int[tamTablero][tamTablero];
@@ -104,21 +106,25 @@ public class Tablero extends JFrame {
 		int iUsuario=cj.getUsuarios().get(usuarioJugando).getPosicion().getI();
 		int jUsuario=cj.getUsuarios().get(usuarioJugando).getPosicion().getJ();
 		int tirada=Integer.valueOf(lblNewLabel.getText());
+		System.out.println("Posicion usuario: ");
+		System.out.println(iUsuario+"-"+jUsuario);
 		
 		for (int i = 0; i < botones.length; i++) {
 			for (int j = 0; j < botones[i].length; j++) {
 				
-				if(tablero[i][j]!=-1){
-				if(Math.abs(i-iUsuario)==tirada){
+				if(Math.abs(i-iUsuario)==tirada && tablero[i][jUsuario]!=-1){
 					botones[i][jUsuario].setEnabled(true);
+					botones[i][jUsuario].setText("Ir");
 				}
 				
-				if(Math.abs(j-jUsuario)==tirada){
+				if(Math.abs(j-jUsuario)==tirada && tablero[iUsuario][j]!=-1){
 					botones[iUsuario][j].setEnabled(true);
+					botones[iUsuario][j].setText("Ir");
 				}
 				
-				if(Math.abs(i-iUsuario)+Math.abs(j-jUsuario)==tirada)
+				if(Math.abs(i-iUsuario)+Math.abs(j-jUsuario)==tirada && tablero[i][j]!=-1){
 					botones[i][j].setEnabled(true);
+					botones[i][j].setText("Ir");
 				}
 			}
 		}
@@ -233,7 +239,6 @@ public class Tablero extends JFrame {
 	    public Posicion p;
 		 
 	    public void set(int i,int j,JButton boton) {
-	    	System.out.println("set");
 	          p=new Posicion(i,j);
 	          this.unBoton=boton;
 	    }  
@@ -241,10 +246,46 @@ public class Tablero extends JFrame {
 	    public void agregaAction () {
 	          unBoton.addActionListener(this);
 	    }
+	    
 	 
 	    public void actionPerformed (ActionEvent e) {
-	    	System.out.println("ACT");
+	    	unBoton.setText("");
 	    	new SelectTypeDialog(Color.WHITE, Tablero.this,p).setVisible(true);
+	    }
+	}
+	
+	public class BotonesPosicion2 implements ActionListener {
+	    JButton unBoton;
+	 
+	    public Posicion p;
+	    
+	    public Color colorDialog;
+		 
+	    public void set(int i,int j,JButton boton,Color color) {
+	          p=new Posicion(i,j);
+	          this.unBoton=boton;
+	          this.colorDialog=color;
+	    }  
+	    
+	    public void agregaAction () {
+	          unBoton.addActionListener(this);
+	    }
+	    
+	 
+	    public void actionPerformed (ActionEvent e) {
+	    	unBoton.setText("");
+	    	PreguntaDialog dialog = new PreguntaDialog(p,
+					colorDialog,
+					getCollection(colorDialog),
+					cj.getPreguntas()
+							.get(getCollection(colorDialog))
+							.get(new Random()
+									.nextInt(cj
+											.getPreguntas()
+											.get(getCollection(colorDialog))
+											.size())), Tablero.this);
+			dialog.setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
+			dialog.setVisible(true);
 	    }
 	}
 	
@@ -257,7 +298,7 @@ public class Tablero extends JFrame {
 				
 				
 				botones[i][j] = new JButton("n" + "[" + i + "][" + j + "]");
-
+				//System.out.println(botones[i][j].getText());
 				if ((i == 0 && j == botones.length - 1) || (i == 0 && j == 0)
 						|| (i == botones.length - 1 && j == botones.length - 1)
 						|| (i == botones.length - 1 && j == 0)
@@ -338,10 +379,15 @@ public class Tablero extends JFrame {
 	private void pintarCelda(JButton but, int i, int j, int colorActual) {
 
 		but.setBackground(colores.get(colorActual));
-
 		final Color colorDialog = colores.get(colorActual);
+		
+		BotonesPosicion2 b=new BotonesPosicion2();
+		b.set(i, j,but,colorDialog);
+		b.agregaAction();
+		
+		/*
 		but.addActionListener(new ActionListener() {
-
+			
 			public void actionPerformed(ActionEvent e) {
 
 				PreguntaDialog dialog = new PreguntaDialog(
@@ -365,6 +411,7 @@ public class Tablero extends JFrame {
 
 			}
 		});
+		*/
 	}
 
 	private void asignarColores(Color... coloresElegidos) {
@@ -496,6 +543,7 @@ public class Tablero extends JFrame {
 	}
 
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 718e7d1... a
@@ -1088,3 +1136,5 @@ public class Tablero extends JFrame {
 >>>>>>> origin/master
 =======
 >>>>>>> parent of 718e7d1... a
+=======
+>>>>>>> origin/master
