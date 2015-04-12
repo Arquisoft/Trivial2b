@@ -16,6 +16,8 @@ import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
+import es.uniovi.asw.trivial.model.Posicion;
+
 public class SelectTypeDialog extends JDialog {
 
 	/**
@@ -26,7 +28,7 @@ public class SelectTypeDialog extends JDialog {
 	private JTextField textPreguntaEspecial;
 	private Tablero tablero;
 	private JPanel panelBotones;
-
+	private Posicion posicion;
 
 	/**
 	 * Create the dialog.
@@ -78,6 +80,34 @@ public class SelectTypeDialog extends JDialog {
 		rellenarPanelBotones();
 	}
 
+	public SelectTypeDialog(final Color color, final Tablero tablero,final Posicion p) {
+		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+		setResizable(false);
+		this.tablero = tablero;
+		setModal(true);
+		setAlwaysOnTop(true);
+		this.posicion=p;
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(new BorderLayout(0, 0));
+		{
+			textPreguntaEspecial = new JTextField();
+			textPreguntaEspecial.setText("Selecciona la manzana que quieres obtener");
+			textPreguntaEspecial.setEditable(false);
+			contentPanel.add(textPreguntaEspecial, BorderLayout.NORTH);
+			textPreguntaEspecial.setColumns(10);
+		}
+		{
+			panelBotones = new JPanel();
+			contentPanel.add(panelBotones, BorderLayout.CENTER);
+			panelBotones.setLayout(new GridLayout(1, 0, 0, 0));
+			
+		}
+		rellenarPanelBotones();
+	}
+
 	private void rellenarPanelBotones() {
 		List<String> categoriasGanadas = tablero.getCj().getUsuarios()
 				.get(tablero.getUsuarioJugando()).getCategoriasGanadas();
@@ -94,8 +124,8 @@ public class SelectTypeDialog extends JDialog {
 			cat.addActionListener(new ActionListener() {
 
 				public void actionPerformed(ActionEvent e) {
-
-					PreguntaDialog dialog=new PreguntaDialog(
+					System.out.println(tablero.getCj().getPreguntas().get(categoria).size());
+					PreguntaDialog dialog=new PreguntaDialog(posicion,
 							Color.WHITE,
 							"Especial "+categoria,
 							tablero.getCj().getPreguntas()

@@ -10,6 +10,7 @@ public class Usuario {
 	private String nombre;
 	private String apellidos;
 	private boolean tocaJugar = false;
+	private Posicion posicion=new Posicion();
 
 	private List<String> categoriasGanadas= new ArrayList<String>();
 
@@ -81,6 +82,14 @@ public class Usuario {
 
 	public void setCategoriasGanadas(List<String> categoriasGanadas) {
 		this.categoriasGanadas = categoriasGanadas;
+	}
+
+	public Posicion getPosicion() {
+		return posicion;
+	}
+
+	public void setPosicion(Posicion posicion) {
+		this.posicion = posicion;
 	}
 
 

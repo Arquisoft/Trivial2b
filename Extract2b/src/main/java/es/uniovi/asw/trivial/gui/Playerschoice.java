@@ -150,11 +150,9 @@ public class Playerschoice extends JFrame {
 
 		final JCheckBox chckbxHistoria = new JCheckBox("Historia");
 		panelCategorias.add(chckbxHistoria);
-		chckbxHistoria.setSelected(true);
 
 		final JCheckBox chckbxCine = new JCheckBox("Entretenimiento");
 		panelCategorias.add(chckbxCine);
-		chckbxCine.setSelected(true);
 
 		final JCheckBox checkboxGeografia = new JCheckBox("Geografia");
 		panelCategorias.add(checkboxGeografia);

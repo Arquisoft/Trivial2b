@@ -24,6 +24,7 @@ import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
 import es.uniovi.asw.trivial.business.juego.ControladorJuego;
+import es.uniovi.asw.trivial.model.Posicion;
 import es.uniovi.asw.trivial.model.Usuario;
 
 public class Tablero extends JFrame {
@@ -42,12 +43,15 @@ public class Tablero extends JFrame {
 	private int tamTablero = 9;
 	private ControladorJuego cj;
 	private JButton[][] botones = new JButton[tamTablero][tamTablero];
+	private int[][] tablero =new int[tamTablero][tamTablero];
 	private boolean defaultColors = true;
 	private JPanel panelJugadores;
 	private JPanel panel_3;
 	private JPanel panel_4;
 	private JLabel lblNewLabel;
 	private int colorActual = 0;
+	public final int posi=0;
+	public final int posj=0;
 	private List<Color> colores = new ArrayList<Color>();
 
 	public List<Color> getColores() {
@@ -61,8 +65,10 @@ public class Tablero extends JFrame {
 	private int usuarioJugando = 0;
 
 	public Tablero(int tam, Color[] colors, ControladorJuego cj) {
+		UIManager.put("Button.disabled", UIManager.get("Button.enabled"));
 		this.tamTablero = tam;
 		this.botones = new JButton[tamTablero][tamTablero];
+		this.tablero =new int[tamTablero][tamTablero];
 		this.defaultColors = false;
 		asignarColores(colors);
 		this.cj = cj;
@@ -71,6 +77,7 @@ public class Tablero extends JFrame {
 						.getResource("/es/uniovi/asw/trivial/gui/img/tab.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
+		
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -78,6 +85,31 @@ public class Tablero extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		contentPane.add(getPanel(), BorderLayout.WEST);
 		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
+		
+	}
+
+	private void activarCeldasSegunTirada() {
+		int iUsuario=cj.getUsuarios().get(usuarioJugando).getPosicion().getI();
+		int jUsuario=cj.getUsuarios().get(usuarioJugando).getPosicion().getJ();
+		int tirada=Integer.valueOf(lblNewLabel.getText());
+		
+		for (int i = 0; i < botones.length; i++) {
+			for (int j = 0; j < botones[i].length; j++) {
+				
+				if(tablero[i][j]!=-1){
+				if(Math.abs(i-iUsuario)==tirada){
+					botones[i][jUsuario].setEnabled(true);
+				}
+				
+				if(Math.abs(j-jUsuario)==tirada){
+					botones[iUsuario][j].setEnabled(true);
+				}
+				
+				if(Math.abs(i-iUsuario)+Math.abs(j-jUsuario)==tirada)
+					botones[i][j].setEnabled(true);
+				}
+			}
+		}
 	}
 
 	public int getUsuarioJugando() {
@@ -126,10 +158,14 @@ public class Tablero extends JFrame {
 			btnDado = new JButton("");
 			btnDado.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
+					
+					//estadoBotones(true);
+					getBtnDado().setEnabled(false);
 					Random rand = new Random();
 					int randomNum = rand.nextInt(MAXIMODADO) + MINIMODADO;
 
 					lblNewLabel.setText(String.valueOf(randomNum));
+					activarCeldasSegunTirada();
 				}
 			});
 			btnDado.setBackground(Color.WHITE);
@@ -159,15 +195,55 @@ public class Tablero extends JFrame {
 					panelTablero.add(botones[i][j]);
 				}
 			}
+			estadoBotones(false);
 		}
 		return panelTablero;
 	}
+	
+	public void estadoBotones(boolean estado){
+		for (int i = 0; i < botones.length; i++) {
+			for (int j = 0; j < botones[i].length; j++) {
+				botones[i][j].setEnabled(estado);
+				
+				if (estado && (i != 0 && i != botones.length / 2 && i != botones.length - 1)
+						&& (j != 0 && j != botones.length / 2 && j != botones.length - 1)) {
+					botones[i][j].setBackground(Color.WHITE);
+					botones[i][j].setEnabled(false);
+					botones[i][j].setBorder(null);
+				}
+			}
+		}
+	}
+	
+	public class BotonesPosicion implements ActionListener {
+	    JButton unBoton;
+	 
+	    public Posicion p;
+		 
+	    public void set(int i,int j,JButton boton) {
+	    	System.out.println("set");
+	          p=new Posicion(i,j);
+	          this.unBoton=boton;
+	    }  
+	    
+	    public void agregaAction () {
+	          unBoton.addActionListener(this);
+	    }
+	 
+	    public void actionPerformed (ActionEvent e) {
+	    	System.out.println("ACT");
+	    	new SelectTypeDialog(Color.WHITE, Tablero.this,p).setVisible(true);
+	    }
+	}
+	
 
 	private void rellenarBotones() {
 
 		for (int i = 0; i < botones.length; i++) {
 			for (int j = 0; j < botones[i].length; j++) {
-
+				tablero[i][j]=0;
+				
+				
 				botones[i][j] = new JButton("n" + "[" + i + "][" + j + "]");
 
 				if ((i == 0 && j == botones.length - 1) || (i == 0 && j == 0)
@@ -178,6 +254,10 @@ public class Tablero extends JFrame {
 					botones[i][j].setBorder(BorderFactory
 							.createLineBorder(Color.ORANGE));
 
+					BotonesPosicion p=new BotonesPosicion();
+					p.set(i, j,botones[i][j]);
+					p.agregaAction();
+					/*
 					botones[i][j].addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
 							//Color tipopreg = colores.get(new Random()
@@ -189,16 +269,18 @@ public class Tablero extends JFrame {
 									.get(new Random().nextInt(cj.getPreguntas()
 											.get(getCollection(tipopreg))
 											.size())), Tablero.this)
-									.setVisible(true);*/
+									.setVisible(true);
 							new SelectTypeDialog(Color.WHITE, Tablero.this).setVisible(true);
 
 						}
 					});
+					*/
 				} else if ((i != 0 && i != botones.length / 2 && i != botones.length - 1)
 						&& (j != 0 && j != botones.length / 2 && j != botones.length - 1)) {
 					botones[i][j].setBackground(Color.WHITE);
 					botones[i][j].setEnabled(false);
 					botones[i][j].setBorder(null);
+					tablero[i][j]=-1;
 				} else
 					while (botones[i][j].getBackground().equals(
 							UIManager.getColor("Button.background"))) {
@@ -231,7 +313,14 @@ public class Tablero extends JFrame {
 				botones[i][j].setText(null);
 			}
 		}
+	}
 
+	public int[][] getTablero() {
+		return tablero;
+	}
+
+	public void setTablero(int[][] tablero) {
+		this.tablero = tablero;
 	}
 
 	private void pintarCelda(JButton but, int i, int j, int colorActual) {
