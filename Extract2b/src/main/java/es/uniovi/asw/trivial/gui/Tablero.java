@@ -17,6 +17,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -496,33 +497,41 @@ public class Tablero extends JFrame {
 					0, 0));
 
 			int i = 0;
-			for (Usuario user : cj.getUsuarios()) {
-
-				JTextField nombreJugador = new JTextField(user.getLogin());
-				JPanel panelJugador = new JPanel();
-				panelJugador.setBackground(Color.WHITE);
-				panelJugador.setLayout(new GridLayout((colores.size()/2), (colores.size()/2),
-						0, 0));
-				JLabel lblProfile = new JLabel("");
-				lblProfile
-						.setIcon(new ImageIcon(
-								Tablero.class
-										.getResource("/es/uniovi/asw/trivial/gui/img/pro.png")));
-
-				nombreJugador.setEditable(false);
-
-				if (i == 0) {
-					usuarioJugando = 0;
-					nombreJugador.setBackground(Color.yellow);
-					cj.getUsuarios().get(usuarioJugando).setTocaJugar(true);
+			if(colores.size() == 0)
+				JOptionPane.showMessageDialog(null, "Seleccione al menos una categoría para empezar la partida");
+			else{
+				for (Usuario user : cj.getUsuarios()) {
+	
+					JTextField nombreJugador = new JTextField(user.getLogin());
+					JPanel panelJugador = new JPanel();
+					panelJugador.setBackground(Color.WHITE);
+					
+					if(colores.size() == 1)
+						panelJugador.setLayout(new GridLayout(1, 1, 0, 0));
+					else
+						panelJugador.setLayout(new GridLayout((colores.size()/2), (colores.size()/2),
+							0, 0));
+					JLabel lblProfile = new JLabel("");
+					lblProfile
+							.setIcon(new ImageIcon(
+									Tablero.class
+											.getResource("/es/uniovi/asw/trivial/gui/img/pro.png")));
+	
+					nombreJugador.setEditable(false);
+	
+					if (i == 0) {
+						usuarioJugando = 0;
+						nombreJugador.setBackground(Color.yellow);
+						cj.getUsuarios().get(usuarioJugando).setTocaJugar(true);
+					}
+					panelesUsuarios.add(panelJugador);
+					nombresUsuarios.add(nombreJugador);
+					panelJugadores.add(nombreJugador);
+					panelJugadores.add(lblProfile);
+					panelJugadores.add(panelJugador);
+	
+					i++;
 				}
-				panelesUsuarios.add(panelJugador);
-				nombresUsuarios.add(nombreJugador);
-				panelJugadores.add(nombreJugador);
-				panelJugadores.add(lblProfile);
-				panelJugadores.add(panelJugador);
-
-				i++;
 			}
 
 		}
