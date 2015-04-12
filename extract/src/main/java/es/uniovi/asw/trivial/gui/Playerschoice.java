@@ -38,6 +38,7 @@ import es.uniovi.asw.trivial.business.impl.UsuarioServiceImpl;
 import es.uniovi.asw.trivial.business.juego.ControladorJuego;
 import es.uniovi.asw.trivial.model.Pregunta;
 import es.uniovi.asw.trivial.model.Usuario;
+import es.uniovi.asw.trivial.persistence.impl.UsuarioGatewayImpl;
 
 import javax.swing.JPasswordField;
 
@@ -52,7 +53,7 @@ public class Playerschoice extends JFrame {
 	private JTextField textNombre;
 	public JTable tablero;
 	private JTextField textField_2_1;
-	
+
 	private final static int TABLERO_PEQUENO = 7;
 	private final static int TABLERO_NORMAL = 9;
 	private final static int TABLERO_GRANDE = 13;
@@ -150,14 +151,12 @@ public class Playerschoice extends JFrame {
 
 		final JCheckBox chckbxHistoria = new JCheckBox("Historia");
 		panelCategorias.add(chckbxHistoria);
-		chckbxHistoria.setSelected(true);
 
 		final JCheckBox chckbxCine = new JCheckBox("Entretenimiento");
 		panelCategorias.add(chckbxCine);
-		chckbxCine.setSelected(true);
 
-		final JCheckBox chckbxMatemticas = new JCheckBox("Matem\u00E1ticas");
-		panelCategorias.add(chckbxMatemticas);
+		final JCheckBox checkboxGeografia = new JCheckBox("Geografia");
+		panelCategorias.add(checkboxGeografia);
 
 		JLabel lblTamaoDelTablero = new JLabel("Tablero");
 		panel_2.add(lblTamaoDelTablero);
@@ -168,7 +167,7 @@ public class Playerschoice extends JFrame {
 		panel_2.add(comboBox);
 		JButton btnUnirse = new JButton("Unirse");
 		btnUnirse.addActionListener(new ActionListener() {
-			@SuppressWarnings("deprecation")
+			
 			public void actionPerformed(ActionEvent e) {
 
 				Playerschoice.ExampleTableModel model = (Playerschoice.ExampleTableModel) tablero
@@ -179,50 +178,61 @@ public class Playerschoice extends JFrame {
 							"El campo del login no puede ser vacio");
 					return;
 				}
-				if (textContra.getText().equals("")) {
+				String password = new String(textContra.getPassword());
+				if (password.equals("")) {
 					JOptionPane.showMessageDialog(null,
 							"El campo de la contraseña no puede ser vacio");
 					return;
 				}
-					
-				Usuario u = us.login(textNombre.getText(), textContra.getText());
-				textNombre.setText(""); textContra.setText("");
-				
-				if (u != null) {
-					model.anadirUser(u);
-					model.addRow(u.getLogin());
-				}
-				else
-					JOptionPane.showMessageDialog(null,
-							"El usuario no está registrado");
-//				Usuario user = new Usuario();// este usuario seria sacado de la
-//												// BD con findbyLogin(string)
-//												// por ejemplo
-//				if (!textNombre.getText().equals("")) {
-//					user.setNombre(textNombre.getText());
-//					model.anadirUser(user);
-//					model.addRow(user.getNombre());
-//				}
+
+				Usuario u = us.findByLogin(textNombre.getText());
+
+				if (u != null
+						&& !model.getLoginUsuarios().contains(u.getLogin())) {
+					if (password.equals(u.getContrasena())) {
+						model.anadirUser(u);
+						model.addRow(u.getLogin());
+					} else
+						JOptionPane.showMessageDialog(null,
+								"Password incorrecta");
+				} else
+					JOptionPane
+							.showMessageDialog(null,
+									"El usuario no está registrado o ya esta en la partida");
+				textNombre.setText("");
+				textContra.setText("");
 
 			}
 		});
-		
+
 		textContra = new JPasswordField();
 		textContra.setColumns(10);
 		panel_1.add(textContra);
 		panel_1.add(btnUnirse);
 
 		JButton btnComenzarLaPartida = new JButton("Comenzar la partida");
+		
 		btnComenzarLaPartida.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Playerschoice.ExampleTableModel model = (Playerschoice.ExampleTableModel) tablero
 						.getModel();
 				List<Usuario> usuarios = model.getUsuarios();
+				UsuarioGatewayImpl user=new UsuarioGatewayImpl();
+				
+				user.insertarPartida();
+				int id=user.getIdUltima();
 				if (model.getRowCount() < MIN_PLAYERS)
 					JOptionPane.showMessageDialog(null,
 							"Mínimo para jugar 2 jugadores");
+				else{
+					for(Usuario u: usuarios){
+						int idUser=user.findIdByLogin(u.getLogin());
+						if(idUser!=-1)
+							user.saveJuega(id,idUser);
+					}
+					
 				Color[] colors = getColoresPartida();
-				int tam = TABLERO_NORMAL;				
+				int tam = TABLERO_NORMAL;
 				if (comboBox.getSelectedItem().toString().equals("Grande")
 						&& isTableroPosible(TABLERO_GRANDE, colors.length)) {
 					tam = TABLERO_GRANDE;
@@ -234,15 +244,18 @@ public class Playerschoice extends JFrame {
 				Map<String, List<Pregunta>> preguntas = new HashMap<>();
 				JuegoService j = new JuegoServiceImpl();
 				for (Component c : panelCategorias.getComponents()) {
-				if (((JCheckBox) c).isSelected()) {
-						preguntas.put(((JCheckBox) c).getText().toLowerCase(), j.getPreguntasCollection(((JCheckBox) c).getText().toLowerCase()));
+					if (((JCheckBox) c).isSelected()) {
+						preguntas.put(((JCheckBox) c).getText().toLowerCase(),
+								j.getPreguntasCollection(((JCheckBox) c)
+										.getText().toLowerCase()));
 					}
 				}
-				Tablero tab = new Tablero(tam, colors, new ControladorJuego(preguntas, usuarios));
+				Tablero tab = new Tablero(tam, colors, new ControladorJuego(
+						preguntas, usuarios));
 				tab.setExtendedState(JFrame.MAXIMIZED_BOTH);
 				tab.setVisible(true);
 				dispose();
-
+				}
 			}
 
 			private boolean isTableroPosible(int tamTablero, int numColores) {
@@ -270,7 +283,7 @@ public class Playerschoice extends JFrame {
 					coloresArrayList.add(Color.GREEN);
 				if (chckbxHistoria.isSelected())
 					coloresArrayList.add(Color.BLUE);
-				if (chckbxMatemticas.isSelected())
+				if (checkboxGeografia.isSelected())
 					coloresArrayList.add(Color.CYAN);
 
 				return coloresArrayList.toArray(colores);
@@ -329,22 +342,22 @@ public class Playerschoice extends JFrame {
 		private String[] columnNames = { "Usuario", "Eliminar" };
 		public List<Usuario> usuarios = new ArrayList<Usuario>();
 
-//		private Object[][] data;
+		// private Object[][] data;
 
 		public final Object[] longValues = { "Usuario", "Eliminar" };
 
-//		public ExampleTableModel() {
-//			anadirUsuarios();
-//
-//			for (Usuario user : usuarios) {
-//				addRow(user.getNombre());
-//			}
-//
-//		}
+		// public ExampleTableModel() {
+		// anadirUsuarios();
+		//
+		// for (Usuario user : usuarios) {
+		// addRow(user.getNombre());
+		// }
+		//
+		// }
 
 		public void anadirUser(Usuario user) {
 			usuarios.add(user);
-//			data = new Object[usuarios.size()][usuarios.size()];
+			// data = new Object[usuarios.size()][usuarios.size()];
 			textField_2_1.setText(Integer.toString(usuarios.size()));
 		}
 
@@ -352,18 +365,25 @@ public class Playerschoice extends JFrame {
 			return usuarios;
 		}
 
-//		public void anadirUsuarios() {
-//			// llamar a este metodo cada vez que un usuario se logea con exito
-//			// y se anade a la partida
-//			for (int i = 0; i < 6; i++) {// anadidos estos a modo de ejemplo
-//				Usuario user = new Usuario();
-//				user.setNombre("usuario" + i);
-//				usuarios.add(user);
-//
-//			}
-//			data = new Object[usuarios.size()][usuarios.size()];
-//
-//		}
+		public List<String> getLoginUsuarios() {
+			List<String> logins = new ArrayList<String>();
+			for (Usuario user : usuarios)
+				logins.add(user.getLogin());
+			return logins;
+		}
+
+		// public void anadirUsuarios() {
+		// // llamar a este metodo cada vez que un usuario se logea con exito
+		// // y se anade a la partida
+		// for (int i = 0; i < 6; i++) {// anadidos estos a modo de ejemplo
+		// Usuario user = new Usuario();
+		// user.setNombre("usuario" + i);
+		// usuarios.add(user);
+		//
+		// }
+		// data = new Object[usuarios.size()][usuarios.size()];
+		//
+		// }
 
 		public void addRow(String value) {
 			fireTableRowsInserted(usuarios.size() - 1, usuarios.size() - 1);
@@ -415,7 +435,7 @@ public class Playerschoice extends JFrame {
 
 		@Override
 		public void setValueAt(Object value, int row, int col) {
-			//data[row][col] = value;
+			// data[row][col] = value;
 			fireTableCellUpdated(row, col);
 		}
 	}

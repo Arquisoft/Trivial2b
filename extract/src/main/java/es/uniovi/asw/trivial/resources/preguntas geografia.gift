@@ -1,39 +1,39 @@
-::1:: La capital de Brasil es ...
+ï»¿::1:: La capital de Brasil es ...
 {
 ~Nueva York # Incorrecto.
 =Brasilia # Correcto!
-~México # Incorrecto.
-~Sofía # Incorrecto.
+~MÃ©xico # Incorrecto.
+~Sofia # Incorrecto.
 }
 
 ::1:: La capital de Bulgaria es...
 {
-=Sofía # Correcto!
+=SofÃ­a # Correcto!
 ~Ottawa # Incorrecto.
-~México # Incorrecto.
-~Sofía # Incorrecto.
+~MÃ©xico # Incorrecto.
+~Sofia # Incorrecto.
 }
 
-::1:: La capital de Camerún es...
+::1:: La capital de CamerÃºn es...
 {
-~Sofía # Incorrecto.
+~Sofia # Incorrecto.
 ~Ottawa # Incorrecto.
 ~Rio de Janeiro # Incorrecto.
-=Yaundé # Correcto!
+=Yaounde # Correcto!
 }
 
-::1:: La capital de Canadá es...
+::1:: La capital de Canada es...
 {
 =Ottawa # Correcto!
-~Sofía # Incorrecto.
-~México # Incorrecto.
+~SofÃ­a # Incorrecto.
+~MÃ©xico # Incorrecto.
 ~Madrid # Incorrecto.
 }
 
 ::1:: La capital de Chile es...
 {
 ~Londres # Incorrecto.
-~Sofía # Incorrecto.
+~SofÃ­a # Incorrecto.
 =Santiago # Correcto!
 ~Madrid # Incorrecto.
 }
@@ -41,40 +41,40 @@
 ::1:: La capital de Colombia es...
 {
 ~Santiago # Incorrecto.
-=Bogotá # Correcto!
+=BogotÃ¡ # Correcto!
 ~Londres # Incorrecto.
 ~Roma # Incorrecto.
 }
 
-::1:: La capital del Congo es...
+::1:: La capital de el Congo es...
 {
 ~Nueva York # Incorrecto.
-~Bogotá # Incorrecto.
+~BogotÃ¡ # Incorrecto.
 ~Madrid # Incorrecto.
 =Kinshasa # Correcto!
 }
 
 ::1:: La capital de Corea del sur es...
 {
-=Seúl # Correcto!
-~Bogotá # Incorrecto.
+=Seul # Correcto!
+~BogotÃ¡ # Incorrecto.
 ~Paris # Incorrecto.
-~Bogotá # Incorrecto.
+~BogotÃ¡ # Incorrecto.
 }
 
 ::1:: La capital de Costa de Marfil es...
 {
-=Yamusukro # Correcto!
+=Yamusco # Correcto!
 ~Viena # Incorrecto.
-~León # Incorrecto.
+~LeÃ³n # Incorrecto.
 ~Praga # Incorrecto.
 }
 
 ::1:: La capital de Croacia es...
 {
-~Yamusrkro # Incorrecto.
+~Yamusco # Incorrecto.
 ~Viena # Incorrecto.
-~León # Incorrecto.
+~LeÃ³n # Incorrecto.
 =Zagreb # Correcto!
 }
 
@@ -82,35 +82,43 @@
 {
 ~Madrid # Incorrecto.
 ~Viena # Incorrecto.
-=Habana # Correcto!
+=Havana # Correcto!
 ~Nueva York # Incorrecto.
 }
 
-::1:: ¿Cual es el río mas largo del Asia?
+::1:: Â¿Cual es el rÃ­o mas largo del Asia?
 {
 ~Amur # Incorrecto.
-=Yangtsé # Correcto!
+=YangtsÃ© # Correcto!
 ~Amarillo # Incorrecto.
 ~Mekong # Incorrecto.
 }
 
-::1:: ¿Cual es la cadena montañosa considerada más antigua y de menor relieve de entre las siguientes?
+::1:: Â¿Cual es la cadena montaÃ±osa considerada mas antigua y de menor relieve de entre las siguientes?
 {
 ~Montes Escandinavos # Incorrecto.
 ~Pirineos # Incorrecto.
-=Cáucaso # Correcto!
+=CÃ¡ucaso # Correcto!
 ~Alpes # Incorrecto.
 }
 
-::1:: ¿En que cordillera se encuentra el monte Everest?
+::1:: Â¿Cual es capital de EspaÃ±a?
+{
+~ParÃ­s # Incorrecto.
+~Roma # Incorrecto.
+=Madrid # Correcto!
+~Barcelona # Incorrecto.
+}
+
+::1:: Â¿En que cordillera se encuentra el monte Everest?
 {
 =Himalaya # Correcto!
 ~Pamir # Incorrecto.
-~Deccán # Incorrecto.
+~DeccÃ¡n # Incorrecto.
 ~Cherski # Incorrecto.
 }
 
-::1:: ¿A que país pertenece al Antártida?
+::1:: Â¿A que paÃ­s pertenece al AntÃ¡rtida?
 {
 ~Estados Unidos # Incorrecto.
 ~Dinamarca # Incorrecto.
@@ -118,39 +126,31 @@
 =A ninguno # Correcto!
 }
 
-::1:: ¿A que país pertenece al Antártida?
+::1:: Â¿CuÃ¡l de estos tipos de climas no se encuentra entre los mas habituales en Europa?
 {
-~Estados Unidos # Incorrecto.
-~Dinamarca # Incorrecto.
-~Chile # Incorrecto.
-=A ninguno # Correcto!
-}
-
-::1:: ¿Cuál de estos tipos de climas no se encuentra entre los más habituales en Europa?
-{
-~Oceánico # Incorrecto.
-~Mediterráneo # Incorrecto.
+~OceÃ¡nico # Incorrecto.
+~Mediterraneo # Incorrecto.
 =Ecuatorial # Correcto!
 ~Continental # Incorrecto.
 }
 
-::1:: ¿Que tipo de climas predominan en el norte del continente americano?
+::1:: Â¿Que tio de climas predominan en el norte del continente americano?
 {
-~Cálidos # Incorrecto.
+~CÃ¡lidos # Incorrecto.
 =Templados # Correcto!
-~Fríos # Incorrecto.
-~Desérticos # Incorrecto.
+~FrÃ­os # Incorrecto.
+~DesÃ©rticos # Incorrecto.
 }
 
-::1:: ¿Cual de estos ríos americanos desemboca en el Ártico?
+::1:: Â¿Cual de estos rÃ­os americanos desemboca en el Ã¡rtico?
 {
 ~Mississippi # Incorrecto.
-=Yukón # Correcto!
+=YukÃ³n # Correcto!
 ~Colorado # Incorrecto.
 ~Columbia # Incorrecto.
 }
 
-::1:: ¿Cual de estos ríos europeos no desemboca en la vertiente atlántica?
+::1:: Â¿Cual de estos rÃ­os europeos no desemboca en la vertiente atrlÃ¡ntica?
 {
 =Danubio # Correcto!
 ~Tajo# Incorrecto.
@@ -158,63 +158,63 @@
 ~Rin # Incorrecto.
 }
 
-::1:: ¿A qué país pertenece la isla de Eubea?
+::1:: Â¿A que paÃ­s pertenece la isla de Eubea?
 {
 =Grecia # Correcto!
-~España # Incorrecto.
+~EspaÃ±a # Incorrecto.
 ~Alemania # Incorrecto.
 ~Italia # Incorrecto.
 }
 
-::1:: ¿Sobre qué mar tiene sus costas Níger?
+::1:: Â¿Sobre que mar tiene sus costas NÃ­ger?
 {
-~Mediterráneo # Incorrecto.
+~Mediterrnaeo # Incorrecto.
 ~Blanco # Incorrecto.
 ~Rojo # Incorrecto.
 =Ninguno # Correcto!
 }
 
-::1:: ¿Qué río Europeo al final de su recorrido, forma la frontera entre Austria y Alemania?
+::1:: Â¿QuÃ© rÃ­o Europeo al final de su recorrido, forma la frontera entre Austria y Alemania?
 {
 =Inn # Correcto!
-~Támesis # Incorrecto.
-~Éufrates # Incorrecto.
+~TÃ¡mesis # Incorrecto.
+~EÃºfrates # Incorrecto.
 ~Tigris # Incorrecto.
 }
 
-::1:: ¿Cuál es la capital de la República Centroafricana?
+::1:: Â¿CuÃ¡l es la capital de la RepÃºblica Centroafricana?
 {
 ~Barbados # Incorrecto.
-~Puerto príncipe # Incorrecto.
+~Puerto principe # Incorrecto.
 =Bangui # Correcto!
 ~Praga # Incorrecto.
 }
 
-::1:: ¿En dónde desemboca el río europeo Bug Meridional?
+::1:: Â¿En donde desemboca el rÃ­o europeo Bug Meridional?
 {
 ~Mar Egeo # Incorrecto.
-~Mar Mediterráneo # Incorrecto.
+~Mar Mediterraneo # Incorrecto.
 ~Mar Muerto # Incorrecto.
 =Mar Negro # Correcto!
 }
 
-::1:: ¿Cuál es el principal río de Hungría?
+::1:: Â¿CuÃ¡l es el principal rÃ­o de HungrÃ­a?
 {
 =Tisza # Correcto!
 ~Sena # Incorrecto.
 ~Po # Incorrecto.
-~Támesis # Incorrecto.
+~TÃ¡mesis # Incorrecto.
 }
 
-::1:: ¿Cuál es la capital de la República Islámica de Mauritania?
+::1:: Â¿CuÃ¡l es la capital de la RepÃºblica IslÃ¡mica de Mauritania?
 {
 =Roma # Correcto!
 ~Praga # Incorrecto.
 ~Nuakchot # Incorrecto.
-~Sofía # Incorrecto.
+~SofÃ­a # Incorrecto.
 }
 
-::1:: ¿A qué montaña, la más elevada de África, pertenecen los picos volcánicos Kibo y Mawensi?
+::1:: Â¿A que montaÃ±a, la mÃ¡s elevada de Ãfrica, pertenecen los picos volcÃ¡nicos Kibo y Mawensi?
 {
 ~Aconcagua # Incorrecto.
 =Kilimanjaro # Correcto!
@@ -222,39 +222,39 @@
 ~K2 # Incorrecto.
 }
 
-::1:: ¿De qué océano forma parte el mar de Bering?
+::1:: Â¿De que ocÃ©ano forma parte el mar de Bering?
 {
-~Índico # Incorrecto.
-=Pacífico # Correcto!
-~Atlántico # Incorrecto.
-~Glacial Ártico # Incorrecto.
+~Ãndico # Incorrecto.
+=PacÃ­fico # Correcto!
+~AtlÃ¡ntico # Incorrecto.
+~Glacial Artico # Incorrecto.
 }
 
-::1:: ¿Cuál es el mayor río que fluye por Brasil?
+::1:: Â¿CuÃ¡l es el mayor rÃ­o que fluye por Brasil?
 {
 ~Po # Incorrecto.
 =Amazonas # Correcto!
 ~Rio de Plata # Incorrecto.
-~Nalón # Incorrecto.
+~NalÂ´Ã­n # Incorrecto.
 }
 
-::1:: ¿Cuál es la capital de Irlanda?
+::1:: Â¿CuÃ¡l es la capital de Irlanda?
 {
 ~Mascat # Incorrecto.
 ~Argel # Incorrecto.
-=Dublín # Correcto!
+=DublÃ­n # Correcto!
 ~Koror # Incorrecto.
 }
 
-::1:: ¿Cuál es la cima más elevada de las antiguas repúblicas soviéticas?
+::1:: Â¿CuÃ¡l es la cima mÃ¡s elevada de las antiguas repÃºblicas soviÃ©ticas?
 {
 ~Everest # Incorrecto.
 ~Teide # Incorrecto.
-~Aconcagua # Incorrecto.
+~Acancagua # Incorrecto.
 =Ismail Samani # Correcto!
 }
 
-::1:: ¿Qué sistema montañoso se extiende a lo largo de la frontera septentrional de la República Checa?
+::1:: Â¿QuÃ© sistema montaÃ±oso se extiende a lo largo de la frontera septentrional de la RepÃºblica Checa?
 {
 ~Pirineos # Incorrecto.
 ~Himalaya # Incorrecto.
@@ -262,7 +262,7 @@
 ~Apeninos # Incorrecto.
 }
 
-::1:: ¿Cuál es la cima más alta en la cordillera centroeuropea Sudetes?
+::1:: Â¿CuÃ¡l es la cima mÃ¡s alta en la cordillera centroeuropea Sudetes?
 {
 ~Everest # Incorrecto.
 =Sriezka # Correcto!
@@ -270,7 +270,7 @@
 ~Mont Blanc # Incorrecto.
 }
 
-::1:: ¿En qué país se encuentra el río Arkansas?
+::1:: Â¿En que paÃ­s se encuentra el rÃ­o Arkansas?
 {
 ~Francia # Incorrecto.
 ~Paraguay # Incorrecto.
@@ -278,7 +278,7 @@
 =Estados Unidos # Correcto!
 }
 
-::1:: ¿Cuáles son los colores de la bandera de Letonia?
+::1:: Â¿Cuales son los colores de la bandera de Letonia?
 {
 ~Azul y negro # Incorrecto.
 ~Amarillo y  verde # Incorrecto.
@@ -286,15 +286,15 @@
 =Rojo y blanco # Correcto!
 }
 
-::1:: ¿En qué país nace el río Kabul?
+::1:: Â¿En que paÃ­s nace el rÃ­o Kabul?
 {
 ~Vietnam # Incorrecto.
-~Noruega # Incorrecto.
+~Nuruega # Incorrecto.
 ~Alemania # Incorrecto.
-=Afganistán # Correcto!
+=Afganistan # Correcto!
 }
 
-::1:: ¿Cuántas islas componen el grupo de las Islas Vírgenes de los Estados Unidos?
+::1:: Â¿Cuantas islas componen el grupo de las Islas VÃ­rgenes de los Estados Undios?
 {
 ~15 # Incorrecto.
 ~8 # Incorrecto.
@@ -302,23 +302,23 @@
 =3 # Correcto!
 }
 
-::1:: ¿En qué continente se encuentra el río Tocantins?
+::1:: Â¿En que continente se encuentra el rÃ­o Tocantins?
 {
-=América # Correcto!
+=AmÃ©rica # Correcto!
 ~Europa # Incorrecto.
 ~Asia # Incorrecto.
-~África # Incorrecto.
+~Ãfrica # Incorrecto.
 }
 
-::1:: ¿Cuál es el país más pequeño de Centroamérica?
+::1:: Â¿Cual es el paÃ­s mÃ¡s pequeÃ±o de centroamÃ©rica?
 {
 ~Nicaragua # Incorrecto.
-~Panamá # Incorrecto.
+~PanamÃ¡ # Incorrecto.
 =El Salvador # Correcto!
 ~Honduras # Incorrecto.
 }
 
-::1:: ¿En qué país de Europa se encuentra el misterioso Lago de Ness?
+::1:: Â¿En que paÃ­s de Europa se encuentra el misterioso Lago de Ness?
 {
 ~Finlandia # Incorrecto.
 =Escocia # Correcto!
@@ -326,15 +326,15 @@
 ~Dinamarca # Incorrecto.
 }
 
-::1:: ¿En qué país se encuentra la ciudad de Aviñón?
+::1:: Â¿En que paÃ­s se encuentra la ciudad de Avignon?
 {
 ~Alemania # Incorrecto.
 =Francia # Correcto!
-~República checa # Incorrecto.
+~RepÃºblica checa # Incorrecto.
 ~Suecia # Incorrecto.
 }
 
-::1:: ¿Cuál es el río más largo de Lituania?
+::1:: Â¿CuÃ¡l es el rÃ­o mÃ¡s largo de Lituania?
 {
 ~Jura # Incorrecto.
 ~Sesupe # Incorrecto.
@@ -342,18 +342,18 @@
 ~Danubio # Incorrecto.
 }
 
-::1:: ¿En qué continente se encuentra el río Kasai?
+::1:: Â¿En que continente se encuentra el rÃ­o Kasai?
 {
-=África # Correcto!
+=Ãfrica # Correcto!
 ~Asia # Incorrecto.
-~América # Incorrecto.
+~AmÃ©rica # Incorrecto.
 ~Europa # Incorrecto.
 }
 
-::1:: ¿Sobre qué océano se encuentran las islas Maldivas?
+::1:: Â¿Sobre que oceano se encuentran las islas Maldivas?
 {
-~Atlántico # Incorrecto.
-~Glacial Ártico # Incorrecto.
-~Pacífico # Incorrecto.
-=Índico # Correcto!
+~AtlÃ¡ntico # Incorrecto.
+~Glacial Ã¡rtico # Incorrecto.
+~PacÃ­fico # Incorrecto.
+=Ãndico # Correcto!
 }

@@ -20,4 +20,10 @@ public class UsuarioServiceImpl implements UsuarioService{
 		return uG.login(login, password);
 	}
 
+	@Override
+	public Usuario findByLogin(String login) {
+		UsuarioGateway uG = new UsuarioGatewayImpl();
+		return uG.findByLogin(login);
+	}
+
 }

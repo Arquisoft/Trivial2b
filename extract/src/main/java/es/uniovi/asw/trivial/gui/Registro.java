@@ -78,7 +78,7 @@ public class Registro extends JFrame {
 		if (btnAtras == null) {
 			btnAtras = new JButton("Registrarse");
 			btnAtras.addActionListener(new ActionListener() {
-				@SuppressWarnings("deprecation")
+			
 				public void actionPerformed(ActionEvent arg0) {
 					UsuarioService uS = new UsuarioServiceImpl();
 					if (textFieldLogin.getText().equals("")) {
@@ -86,19 +86,20 @@ public class Registro extends JFrame {
 								"El campo del login no puede ser vacio");
 						return;
 					}
-					if (textFieldContrasena.getText().equals("")) {
+					String password = new String(textFieldContrasena.getPassword());
+					if (password.equals("")) {
 						JOptionPane.showMessageDialog(null,
 								"El campo de la contraseña no puede ser vacio");
 						return;
 					}
 					
-					if (uS.login(textFieldLogin.getText(), textFieldContrasena.getText()) != null) {
+					if (uS.findByLogin(textFieldLogin.getText()) != null) {
 						JOptionPane.showMessageDialog(null,
-								"Ya existe un usuario con los datos especificados");
+								"Ya existe un usuario con ese login");
 						return;
 					}
 						
-					String res = uS.newUsuario(textFieldLogin.getText(), textFieldContrasena.getPassword().toString());
+					String res = uS.newUsuario(textFieldLogin.getText(), password);
 					
 					JOptionPane.showMessageDialog(null, res);
 

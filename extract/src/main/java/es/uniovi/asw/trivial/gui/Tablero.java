@@ -9,25 +9,23 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
-import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
 import es.uniovi.asw.trivial.business.juego.ControladorJuego;
-import es.uniovi.asw.trivial.model.PreguntaMulti;
+import es.uniovi.asw.trivial.model.Posicion;
 import es.uniovi.asw.trivial.model.Usuario;
 
 public class Tablero extends JFrame {
@@ -39,68 +37,48 @@ public class Tablero extends JFrame {
 	private JPanel contentPane;
 	private JPanel panel;
 	private JPanel panel_1;
-	private JButton btnNewButton;
-	private JLabel lblNewLabel_1;
-	private JTextField textField;
+	private JButton btnDado;
+
 	private JPanel panelTablero;
 	private int tamTablero = 9;
 	private ControladorJuego cj;
-	private HashMap<Integer, HashMap<Color, Integer>> cuentaColores = new HashMap<Integer, HashMap<Color, Integer>>();
 	private JButton[][] botones = new JButton[tamTablero][tamTablero];
+	private int[][] tablero = new int[tamTablero][tamTablero];
 	private boolean defaultColors = true;
 	private JPanel panelJugadores;
 	private JPanel panel_3;
 	private JPanel panel_4;
 	private JLabel lblNewLabel;
-	
-	private int usuarioJugando =0;
+	private int colorActual = 0;
+	public final int posi = 0;
+	public final int posj = 0;
+	private List<Color> colores = new ArrayList<Color>();
 
-//	/**
-//	 * Launch the application.
-//	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					for (UIManager.LookAndFeelInfo laf : UIManager
-//							.getInstalledLookAndFeels()) {
-//						if ("Nimbus".equals(laf.getName()))
-//							try {
-//								UIManager.setLookAndFeel(laf.getClassName());
-//							} catch (Exception ex) {
-//							}
-//					}
-//					Tablero frame = new Tablero();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
+	public List<Color> getColores() {
+		return colores;
+	}
 
-//	/**
-//	 * Create the frame.
-//	 */
-//	public Tablero() {
-//		asignarColores();
-//		setIconImage(Toolkit.getDefaultToolkit().getImage(
-//				Tablero.class
-//						.getResource("/es/uniovi/asw/trivial/gui/img/tab.png")));
-//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		setBounds(100, 100, 450, 300);
-//		contentPane = new JPanel();
-//		contentPane.setBackground(Color.WHITE);
-//		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-//		setContentPane(contentPane);
-//		contentPane.setLayout(new BorderLayout(0, 0));
-//		contentPane.add(getPanel(), BorderLayout.WEST);
-//		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
-//	}
+	public void setColores(List<Color> colores) {
+		this.colores = colores;
+	}
+
+	private int usuarioJugando = 0;
 
 	public Tablero(int tam, Color[] colors, ControladorJuego cj) {
+
+		for (UIManager.LookAndFeelInfo laf : UIManager
+				.getInstalledLookAndFeels())
+			if ("Metal".equals(laf.getName()))
+				try {
+					UIManager.setLookAndFeel(laf.getClassName());
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+		
 		this.tamTablero = tam;
 		this.botones = new JButton[tamTablero][tamTablero];
+		this.tablero = new int[tamTablero][tamTablero];
 		this.defaultColors = false;
 		asignarColores(colors);
 		this.cj = cj;
@@ -109,6 +87,7 @@ public class Tablero extends JFrame {
 						.getResource("/es/uniovi/asw/trivial/gui/img/tab.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
+
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -116,6 +95,74 @@ public class Tablero extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		contentPane.add(getPanel(), BorderLayout.WEST);
 		contentPane.add(getPanelTablero(), BorderLayout.CENTER);
+
+	}
+
+	private void activarCeldasSegunTirada() {
+		int iUsuario = cj.getUsuarios().get(usuarioJugando).getPosicion()
+				.getI();
+		int jUsuario = cj.getUsuarios().get(usuarioJugando).getPosicion()
+				.getJ();
+		int tirada = Integer.valueOf(lblNewLabel.getText());
+		for (Posicion p : recorre(iUsuario, jUsuario, tirada)) {
+			botones[p.getI()][p.getJ()].setEnabled(true);
+			if (botones[p.getI()][p.getJ()].getText() == null
+					|| (botones[p.getI()][p.getJ()].getText() != null && botones[p
+							.getI()][p.getJ()].getText().isEmpty())) {
+				botones[p.getI()][p.getJ()].setText("Ir");
+			}
+		}
+
+	}
+
+	public List<Posicion> recorre(int i, int j, int movimientos) {
+		List<Posicion> lista = new ArrayList<Posicion>();
+		int arriba = i + 1;
+		int abajo = i - 1;
+		int derecha = j + 1;
+		int izquierda = j - 1;
+		if (movimientos == 0) {
+			System.out.println(i + "-" + j);
+			lista.add(new Posicion(i, j));
+		} else {
+			if (arriba < tablero.length && tablero[arriba][j] != -1) {
+				movimientos--;
+				tablero[i][j] = -1;
+				for (Posicion p : recorre(arriba, j, movimientos)) {
+					lista.add(p);
+				}
+				tablero[i][j] = 0;
+				movimientos++;
+			}
+			if (abajo >= 0 && tablero[abajo][j] != -1) {
+				movimientos--;
+				tablero[i][j] = -1;
+				for (Posicion p : recorre(abajo, j, movimientos)) {
+					lista.add(p);
+				}
+				tablero[i][j] = -0;
+				movimientos++;
+			}
+			if (derecha < tablero.length && tablero[i][derecha] != -1) {
+				movimientos--;
+				tablero[i][j] = -1;
+				for (Posicion p : recorre(i, derecha, movimientos)) {
+					lista.add(p);
+				}
+				tablero[i][j] = 0;
+				movimientos++;
+			}
+			if (izquierda >= 0 && tablero[i][izquierda] != -1) {
+				movimientos--;
+				tablero[i][j] = -1;
+				for (Posicion p : recorre(i, izquierda, movimientos)) {
+					lista.add(p);
+				}
+				tablero[i][j] = 0;
+				movimientos++;
+			}
+		}
+		return lista;
 	}
 
 	public int getUsuarioJugando() {
@@ -125,7 +172,6 @@ public class Tablero extends JFrame {
 	public void setUsuarioJugando(int usuarioJugando) {
 		this.usuarioJugando = usuarioJugando;
 	}
-
 
 	public ControladorJuego getCj() {
 		return cj;
@@ -160,70 +206,129 @@ public class Tablero extends JFrame {
 	private final static int MAXIMODADO = 6;
 	private final static int MINIMODADO = 1;
 
-	private JButton getBtnNewButton() {
-		if (btnNewButton == null) {
-			btnNewButton = new JButton("");
-			btnNewButton.addActionListener(new ActionListener() {
+	public JButton getBtnDado() {
+		if (btnDado == null) {
+			btnDado = new JButton("");
+			btnDado.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
+
+					// estadoBotones(true);
+					getBtnDado().setEnabled(false);
 					Random rand = new Random();
 					int randomNum = rand.nextInt(MAXIMODADO) + MINIMODADO;
 
 					lblNewLabel.setText(String.valueOf(randomNum));
+					activarCeldasSegunTirada();
 				}
 			});
-			btnNewButton.setBackground(Color.WHITE);
-			btnNewButton.setForeground(Color.WHITE);
-			btnNewButton
-					.setIcon(new ImageIcon(
-							Tablero.class
-									.getResource("/es/uniovi/asw/trivial/gui/img/icono-dado.jpg")));
-			btnNewButton.setToolTipText("Tirar Dado");
+			btnDado.setBackground(Color.WHITE);
+			btnDado.setForeground(Color.WHITE);
+			btnDado.setIcon(new ImageIcon(
+					Tablero.class
+							.getResource("/es/uniovi/asw/trivial/gui/img/icono-dado.jpg")));
+			btnDado.setToolTipText("Tirar Dado");
 		}
-		return btnNewButton;
+		return btnDado;
 	}
 
-	private JLabel getLblNewLabel_1() {
-		if (lblNewLabel_1 == null) {
-			lblNewLabel_1 = new JLabel("Turno del jugador:");
-		}
-		return lblNewLabel_1;
-	}
-
-	private JTextField getTextField() {
-		if (textField == null) {
-			textField = new JTextField();
-			textField.setEnabled(false);
-			textField.setEditable(false);
-			textField.setColumns(10);
-		}
-		return textField;
-	}
-
-	private JPanel getPanelTablero() {
+	public JPanel getPanelTablero() {
 		if (panelTablero == null) {
 			panelTablero = new JPanel();
 			panelTablero.setBackground(Color.WHITE);
 
 			panelTablero
 					.setLayout(new GridLayout(tamTablero, tamTablero, 0, 0));
-			// asignarColores();
+
 			rellenarBotones();
 			for (int i = 0; i < botones.length; i++) {
 				for (int j = 0; j < botones[i].length; j++) {
 					panelTablero.add(botones[i][j]);
 				}
 			}
+			estadoBotones(false);
 		}
 		return panelTablero;
+	}
+
+	public void estadoBotones(boolean estado) {
+		for (int i = 0; i < botones.length; i++) {
+			for (int j = 0; j < botones[i].length; j++) {
+				botones[i][j].setEnabled(estado);
+
+				if (estado
+						&& (i != 0 && i != botones.length / 2 && i != botones.length - 1)
+						&& (j != 0 && j != botones.length / 2 && j != botones.length - 1)) {
+					botones[i][j].setBackground(Color.WHITE);
+					botones[i][j].setEnabled(false);
+					botones[i][j].setBorder(null);
+				}
+			}
+		}
+	}
+
+	public class BotonesPosicion implements ActionListener {
+		JButton unBoton;
+
+		public Posicion p;
+
+		public void set(int i, int j, JButton boton) {
+			p = new Posicion(i, j);
+			this.unBoton = boton;
+		}
+
+		public void agregaAction() {
+			unBoton.addActionListener(this);
+		}
+
+		public void actionPerformed(ActionEvent e) {
+			vaciaBotones(cj.getUsuarios().get(getUsuarioJugando()).getLogin());
+			unBoton.setText(unBoton.getText() + " "
+					+ cj.getUsuarios().get(getUsuarioJugando()).getLogin());
+			new SelectTypeDialog(Color.WHITE, Tablero.this, p).setVisible(true);
+		}
+	}
+
+	public class BotonesPosicion2 implements ActionListener {
+		JButton unBoton;
+
+		public Posicion p;
+
+		public Color colorDialog;
+
+		public void set(int i, int j, JButton boton, Color color) {
+			p = new Posicion(i, j);
+			this.unBoton = boton;
+			this.colorDialog = color;
+		}
+
+		public void agregaAction() {
+			unBoton.addActionListener(this);
+		}
+
+		public void actionPerformed(ActionEvent e) {
+			vaciaBotones(cj.getUsuarios().get(getUsuarioJugando()).getLogin());
+			unBoton.setText(unBoton.getText() + " "
+					+ cj.getUsuarios().get(getUsuarioJugando()).getLogin());
+			PreguntaDialog dialog = new PreguntaDialog(p, colorDialog,
+					getCollection(colorDialog), cj
+							.getPreguntas()
+							.get(getCollection(colorDialog))
+							.get(new Random().nextInt(cj.getPreguntas()
+									.get(getCollection(colorDialog)).size())),
+					Tablero.this);
+			dialog.setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
+			dialog.setVisible(true);
+		}
 	}
 
 	private void rellenarBotones() {
 
 		for (int i = 0; i < botones.length; i++) {
 			for (int j = 0; j < botones[i].length; j++) {
+				tablero[i][j] = 0;
 
 				botones[i][j] = new JButton("n" + "[" + i + "][" + j + "]");
-
+				// System.out.println(botones[i][j].getText());
 				if ((i == 0 && j == botones.length - 1) || (i == 0 && j == 0)
 						|| (i == botones.length - 1 && j == botones.length - 1)
 						|| (i == botones.length - 1 && j == 0)
@@ -231,100 +336,122 @@ public class Tablero extends JFrame {
 					botones[i][j].setBackground(Color.WHITE);
 					botones[i][j].setBorder(BorderFactory
 							.createLineBorder(Color.ORANGE));
-					botones[i][j].addActionListener(new ActionListener() {
-						public void actionPerformed(ActionEvent e) {
-							new PreguntaDialog(Color.WHITE, "Especial",
-									new PreguntaMulti("", "", new String[0],
-											new String[0], 0), Tablero.this).setVisible(true);
-						}
-					});
+
+					BotonesPosicion p = new BotonesPosicion();
+					p.set(i, j, botones[i][j]);
+					p.agregaAction();
+
 				} else if ((i != 0 && i != botones.length / 2 && i != botones.length - 1)
 						&& (j != 0 && j != botones.length / 2 && j != botones.length - 1)) {
 					botones[i][j].setBackground(Color.WHITE);
 					botones[i][j].setEnabled(false);
 					botones[i][j].setBorder(null);
+					tablero[i][j] = -1;
 				} else
 					while (botones[i][j].getBackground().equals(
 							UIManager.getColor("Button.background"))) {
 						botones[i][j].setBorder(BorderFactory
 								.createLineBorder(Color.ORANGE));
-						Random rm = new Random();
-						int key = rm.nextInt(cuentaColores.size());
-						pintarAleatorio(botones[i][j], key);
+						if (colorActual >= colores.size()) {
+							colorActual = 0;
+						}
+
+						if (i == 0) {
+							pintarCelda(botones[i][j], i, j, colorActual);
+							colorActual++;
+						} else {
+							if (botones[i - 1][j].getBackground() != colores
+									.get(colorActual)) {
+								pintarCelda(botones[i][j], i, j, colorActual);
+								colorActual++;
+							} else {
+								if (colorActual == colores.size() - 1) {
+									colorActual = 0;
+								} else {
+									colorActual++;
+								}
+								pintarCelda(botones[i][j], i, j, colorActual);
+								colorActual++;
+							}
+						}
 					}
 
 				botones[i][j].setText(null);
 			}
 		}
-
 	}
 
-	private void asignarColores(Color... colors) {
-		if (defaultColors) {
-			HashMap<Color, Integer> color = new HashMap<Color, Integer>();
-			color.put(Color.RED, 0);
-			cuentaColores.put(0, color);
-			HashMap<Color, Integer> color1 = new HashMap<Color, Integer>();
-			color1.put(Color.blue, 0);
-			cuentaColores.put(1, color1);
-			HashMap<Color, Integer> color2 = new HashMap<Color, Integer>();
-			color2.put(Color.YELLOW, 0);
-			cuentaColores.put(2, color2);
-			HashMap<Color, Integer> color3 = new HashMap<Color, Integer>();
-			color3.put(Color.green, 0);
-			cuentaColores.put(3, color3);
-		} else {
-			int i = 0;
-			for (Color color : colors) {
-				HashMap<Color, Integer> colorMap = new HashMap<Color, Integer>();
-				colorMap.put(color, 0);
-				cuentaColores.put(i, colorMap);
-				i++;
-			}
-			// Aqui iria el codigo para que recuperase los colores con el que el
-			// jugador quiere jugar y los meta al array de colores
-
-		}
-	}
-
-	private int getNumeroColoreables() {
-		int num = 0;
-		num = (tamTablero * tamTablero)
-				- ((tamTablero - 3) * (tamTablero - 3) + 5);
-		return num;
-	}
-
-	private void pintarAleatorio(JButton but, final int key) {
-		Set<Color> arg = cuentaColores.get(key).keySet();
-
-		for (Color color : arg) {
-
-			if (cuentaColores.get(key).get(color) < (getNumeroColoreables() / cuentaColores
-					.size())) {
-				but.setBackground(color);
-				cuentaColores.get(key).put(color, cuentaColores.get(key).get(color) + 1);
-				final Color colorDialog = color;
-				but.addActionListener(new ActionListener() {
-
-					public void actionPerformed(ActionEvent e) {
-
-						PreguntaDialog dialog = new PreguntaDialog(colorDialog,
-								getCollection(colorDialog), cj.getPreguntas().get(getCollection(colorDialog))
-								.get(new Random().nextInt(cj.getPreguntas().get(getCollection(colorDialog)).size())), Tablero.this);
-											
-						dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-
-						dialog.setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
-						dialog.setVisible(true);
+	public void vaciaBotones(String string) {
+		for (int i = 0; i < botones.length; i++) {
+			for (int j = 0; j < botones[i].length; j++) {
+				if (botones[i][j].getText() != null) {
+					if (botones[i][j].getText().equals("Ir")) {
+						botones[i][j].setText("");
 					}
-				});
-
+					if (botones[i][j].getText().contains(string))
+						botones[i][j].setText(botones[i][j].getText().replace(
+								string, ""));
+				}
 			}
 		}
+
 	}
 
-	private String getCollection(Color color) {
-		if(color.equals(Color.RED))
+	public int[][] getTablero() {
+		return tablero;
+	}
+
+	public void setTablero(int[][] tablero) {
+		this.tablero = tablero;
+	}
+
+	private void pintarCelda(JButton but, int i, int j, int colorActual) {
+
+		but.setBackground(colores.get(colorActual));
+		final Color colorDialog = colores.get(colorActual);
+
+		BotonesPosicion2 b = new BotonesPosicion2();
+		b.set(i, j, but, colorDialog);
+		b.agregaAction();
+
+		/*
+		 * but.addActionListener(new ActionListener() {
+		 * 
+		 * public void actionPerformed(ActionEvent e) {
+		 * 
+		 * PreguntaDialog dialog = new PreguntaDialog( colorDialog,
+		 * getCollection(colorDialog), cj.getPreguntas()
+		 * .get(getCollection(colorDialog)) .get(new Random() .nextInt(cj
+		 * .getPreguntas() .get(getCollection(colorDialog)) .size())),
+		 * Tablero.this);
+		 * 
+		 * 
+		 * // descomentar esto cuando se acabe la funcionalidad //
+		 * 
+		 * 
+		 * dialog.setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
+		 * dialog.setVisible(true);
+		 * 
+		 * } });
+		 */
+	}
+
+	private void asignarColores(Color... coloresElegidos) {
+		if (defaultColors) {
+			colores.add(Color.RED);
+			colores.add(Color.BLUE);
+			colores.add(Color.YELLOW);
+			colores.add(Color.GREEN);
+		} else {
+			for (Color color : coloresElegidos) {
+				colores.add(color);
+			}
+		}
+
+	}
+
+	public String getCollection(Color color) {
+		if (color.equals(Color.RED))
 			return "deportes";
 		else if (color.equals(Color.BLUE))
 			return "historia";
@@ -332,12 +459,33 @@ public class Tablero extends JFrame {
 			return "ciencias";
 		else if (color.equals(Color.GREEN))
 			return "entretenimiento";
+		else if (color.equals(Color.CYAN))
+			return "geografia";
+		else if (color.equals(Color.WHITE))
+			return "Especial";
 		else
 			return "";
 	}
 
+	public List<String> getAllCategories(List<Color> colores) {
+		List<String> categorias = new ArrayList<String>();
+		for (Color color : colores)
+			categorias.add(getCollection(color));
+		return categorias;
+
+	}
+
 	List<JTextField> nombresUsuarios = new ArrayList<JTextField>();
-	
+	List<JPanel> panelesUsuarios = new ArrayList<JPanel>();
+
+	public List<JPanel> getPanelesUsuarios() {
+		return panelesUsuarios;
+	}
+
+	public void setPanelesUsuarios(List<JPanel> panelesUsuarios) {
+		this.panelesUsuarios = panelesUsuarios;
+	}
+
 	public List<JTextField> getNombresUsuarios() {
 		return nombresUsuarios;
 	}
@@ -346,7 +494,7 @@ public class Tablero extends JFrame {
 		this.nombresUsuarios = nombresUsuarios;
 	}
 
-	private JPanel getPanelJugadores() {
+	public JPanel getPanelJugadores() {
 		if (panelJugadores == null) {
 			panelJugadores = new JPanel();
 			panelJugadores.setBackground(Color.WHITE);
@@ -354,33 +502,46 @@ public class Tablero extends JFrame {
 					0, 0));
 
 			int i = 0;
-			for (Usuario user : cj.getUsuarios()) {
+			if (colores.size() == 0)
+				JOptionPane
+						.showMessageDialog(null,
+								"Seleccione al menos una categoría para empezar la partida");
+			else {
+				for (Usuario user : cj.getUsuarios()) {
 
-				JTextField nombreJugador = new JTextField(user.getLogin());
-				JLabel lblProfile = new JLabel("");
-				lblProfile.setIcon(new ImageIcon(Tablero.class.getResource("/es/uniovi/asw/trivial/gui/img/pro.png")));
+					JTextField nombreJugador = new JTextField(user.getLogin());
+					JPanel panelJugador = new JPanel();
+					panelJugador.setBackground(Color.WHITE);
 
-				nombreJugador.setEditable(false);
-				
-				if(i==0){
-					usuarioJugando = 0;
-					nombreJugador.setBackground(Color.yellow);
-					cj.getUsuarios().get(usuarioJugando).setTocaJugar(true);
+					if (colores.size() == 1)
+						panelJugador.setLayout(new GridLayout(1, 1, 0, 0));
+					else
+						panelJugador.setLayout(new GridLayout(
+								(colores.size() / 2), (colores.size() / 2), 0,
+								0));
+					JLabel lblProfile = new JLabel("");
+					lblProfile
+							.setIcon(new ImageIcon(
+									Tablero.class
+											.getResource("/es/uniovi/asw/trivial/gui/img/pro.png")));
+
+					nombreJugador.setEditable(false);
+
+					if (i == 0) {
+						usuarioJugando = 0;
+						nombreJugador.setBackground(Color.yellow);
+						cj.getUsuarios().get(usuarioJugando).setTocaJugar(true);
+					}
+					panelesUsuarios.add(panelJugador);
+					nombresUsuarios.add(nombreJugador);
+					panelJugadores.add(nombreJugador);
+					panelJugadores.add(lblProfile);
+					panelJugadores.add(panelJugador);
+
+					i++;
 				}
-				
-				nombresUsuarios.add(nombreJugador);
-				panelJugadores.add(nombreJugador);
-				panelJugadores.add(lblProfile);
-				panelJugadores
-						.add(new JLabel(
-								new ImageIcon(
-										Tablero.class
-												.getResource("/es/uniovi/asw/trivial/gui/img/arbolIni.jpg"))));
-				i++;
 			}
-			
-			
-			
+
 		}
 		return panelJugadores;
 	}
@@ -390,7 +551,7 @@ public class Tablero extends JFrame {
 			panel_3 = new JPanel();
 			panel_3.setBackground(Color.WHITE);
 			panel_3.setLayout(new GridLayout(0, 2, 0, 0));
-			panel_3.add(getBtnNewButton());
+			panel_3.add(getBtnDado());
 			panel_3.add(getLblNewLabel());
 		}
 		return panel_3;
@@ -400,8 +561,6 @@ public class Tablero extends JFrame {
 		if (panel_4 == null) {
 			panel_4 = new JPanel();
 			panel_4.setBackground(Color.WHITE);
-			panel_4.add(getLblNewLabel_1());
-			panel_4.add(getTextField());
 		}
 		return panel_4;
 	}
