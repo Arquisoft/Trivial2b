@@ -167,7 +167,7 @@ public class Playerschoice extends JFrame {
 		panel_2.add(comboBox);
 		JButton btnUnirse = new JButton("Unirse");
 		btnUnirse.addActionListener(new ActionListener() {
-			@SuppressWarnings("deprecation")
+			
 			public void actionPerformed(ActionEvent e) {
 
 				Playerschoice.ExampleTableModel model = (Playerschoice.ExampleTableModel) tablero

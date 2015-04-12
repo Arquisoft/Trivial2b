@@ -42,7 +42,7 @@ public class Admin extends JFrame {
 	private JLabel lblNombreColleccin;
 	private JPanel panel_2;
 	private JButton btnAbrir;
-	private JComboBox comboBox;
+	private JComboBox<String> comboBox;
 
 
 	/**
@@ -84,7 +84,7 @@ public class Admin extends JFrame {
 
 	private JButton getBtnSalir() {
 		if (btnSalir == null) {
-			btnSalir = new JButton("Salir");
+			btnSalir = new JButton("Atras");
 			btnSalir.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					new Menuprincipal().setVisible(true);
@@ -203,11 +203,11 @@ public class Admin extends JFrame {
 		}
 		return btnAbrir;
 	}
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private JComboBox getComboBox() {
+
+	private JComboBox<String> getComboBox() {
 		if (comboBox == null) {
-			comboBox = new JComboBox();
-			comboBox.setModel(new DefaultComboBoxModel(new String[] {"ciencias", "deportes", "entretenimiento", "geografia", "historia"}));
+			comboBox = new JComboBox<String>();
+			comboBox.setModel(new DefaultComboBoxModel<String>(new String[] {"ciencias", "deportes", "entretenimiento", "geografia", "historia"}));
 		}
 		return comboBox;
 	}
