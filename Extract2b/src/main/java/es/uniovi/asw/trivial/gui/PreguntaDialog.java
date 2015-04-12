@@ -278,6 +278,7 @@ public class PreguntaDialog extends JDialog {
 							timer.stop();
 							// cambiar turno jugador
 							if (num != p.getCorrecta()) {
+								tablero.getCj().getUsuarios().get(tablero.getUsuarioJugando()).setPosicion(posicion);	
 								tablero.getCj().getUsuarios()
 										.get(tablero.getUsuarioJugando())
 										.setTocaJugar(false);
@@ -286,11 +287,15 @@ public class PreguntaDialog extends JDialog {
 										.setBackground(Color.white);
 
 								if (tablero.getUsuarioJugando() + 1 == tablero
-										.getCj().getUsuarios().size())
+										.getCj().getUsuarios().size()){
 									tablero.setUsuarioJugando(0);
-								else
+								}
+									
+								else{
 									tablero.setUsuarioJugando(tablero
 											.getUsuarioJugando() + 1);
+								}
+								
 
 								tablero.getCj().getUsuarios()
 										.get(tablero.getUsuarioJugando())
@@ -322,6 +327,7 @@ public class PreguntaDialog extends JDialog {
 
 								tablero.repaint();
 								}
+								tablero.getCj().getUsuarios().get(tablero.getUsuarioJugando()).setPosicion(posicion);	
 							}
 							JOptionPane.showMessageDialog(PreguntaDialog.this,
 									p.getContestacion()[num]);
@@ -334,8 +340,8 @@ public class PreguntaDialog extends JDialog {
 										.get(tablero.getUsuarioJugando()).isGanador(tablero.getColores().size())){
 								partidaFinalizada(tablero);
 								}
-							System.out.println(posicion.getI());
-							tablero.getCj().getUsuarios().get(tablero.getUsuarioJugando()).setPosicion(posicion);
+							//System.out.println(tablero.getUsuarioJugando());
+							//tablero.getCj().getUsuarios().get(tablero.getUsuarioJugando()).setPosicion(posicion);
 							tablero.estadoBotones(false);
 							tablero.getBtnDado().setEnabled(true);
 							tablero.repaint();

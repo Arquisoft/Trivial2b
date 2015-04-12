@@ -38,6 +38,7 @@ import es.uniovi.asw.trivial.business.impl.UsuarioServiceImpl;
 import es.uniovi.asw.trivial.business.juego.ControladorJuego;
 import es.uniovi.asw.trivial.model.Pregunta;
 import es.uniovi.asw.trivial.model.Usuario;
+import es.uniovi.asw.trivial.persistence.impl.UsuarioGatewayImpl;
 
 import javax.swing.JPasswordField;
 
@@ -210,14 +211,26 @@ public class Playerschoice extends JFrame {
 		panel_1.add(btnUnirse);
 
 		JButton btnComenzarLaPartida = new JButton("Comenzar la partida");
+		
 		btnComenzarLaPartida.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Playerschoice.ExampleTableModel model = (Playerschoice.ExampleTableModel) tablero
 						.getModel();
 				List<Usuario> usuarios = model.getUsuarios();
+				UsuarioGatewayImpl user=new UsuarioGatewayImpl();
+				
+				user.insertarPartida();
+				int id=user.getIdUltima();
 				if (model.getRowCount() < MIN_PLAYERS)
 					JOptionPane.showMessageDialog(null,
 							"Mínimo para jugar 2 jugadores");
+				else{
+					for(Usuario u: usuarios){
+						int idUser=user.findIdByLogin(u.getLogin());
+						if(idUser!=-1)
+							user.saveJuega(id,idUser);
+					}
+					
 				Color[] colors = getColoresPartida();
 				int tam = TABLERO_NORMAL;
 				if (comboBox.getSelectedItem().toString().equals("Grande")
@@ -242,7 +255,7 @@ public class Playerschoice extends JFrame {
 				tab.setExtendedState(JFrame.MAXIMIZED_BOTH);
 				tab.setVisible(true);
 				dispose();
-
+				}
 			}
 
 			private boolean isTableroPosible(int tamTablero, int numColores) {
