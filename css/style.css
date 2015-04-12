@@ -575,6 +575,17 @@
 			.image.fit img {
 				width: 100%;
 			}
+			
+		.image.fix {
+			display: block;
+			margin: 0 0 2em 0;
+			width: 67%;
+		}
+
+			.image.fix img {
+				width: 67%;
+				margin: 0 40%;
+			}
 
 /* List */
 
@@ -1059,6 +1070,34 @@
 			font-size: 1.5em;
 			margin-bottom: 1.75em;
 		}
+		
+/* Banner Treevial*/
+
+	#bannerTreevial {
+		background-image: url(../images/dark_tint.png), url(../images/Treevial_juego.png);
+		background-position: center center;
+		background-size: cover;
+		color: #ffffff;
+		padding: 14em 0em 14em;
+		text-align: center;
+	}
+
+		#bannerTreevial :last-child {
+			margin-bottom: 0;
+		}
+
+		#bannerTreevial h2 {
+			color: #fff;
+			font-size: 3em;
+			line-height: 1.0em;
+			margin: 0 0 0.5em 0;
+			padding: 0;
+		}
+
+		#bannerTreevial p {
+			font-size: 1.5em;
+			margin-bottom: 1.75em;
+		}		
 
 /* Wrapper */
 
