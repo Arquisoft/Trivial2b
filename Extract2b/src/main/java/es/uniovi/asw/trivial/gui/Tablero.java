@@ -20,7 +20,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.UIDefaults;
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 
 import es.uniovi.asw.trivial.business.juego.ControladorJuego;
@@ -65,7 +67,15 @@ public class Tablero extends JFrame {
 	private int usuarioJugando = 0;
 
 	public Tablero(int tam, Color[] colors, ControladorJuego cj) {
-		UIManager.put("Button.disabled", UIManager.get("Button.enabled"));
+		
+			for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels())
+	            if("Metal".equals(laf.getName()))
+					try {
+						UIManager.setLookAndFeel(laf.getClassName());
+					} catch (Exception e) {
+						e.printStackTrace();
+					} 
+	           
 		this.tamTablero = tam;
 		this.botones = new JButton[tamTablero][tamTablero];
 		this.tablero =new int[tamTablero][tamTablero];
