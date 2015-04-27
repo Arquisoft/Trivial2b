@@ -1,0 +1,48 @@
+New log file opened at Mon Apr 27 17:54:25 CEST 2015 by 5976@Hp-HP
+Taking next connection to: 50273
+New client attempting to connect on port: 50274-50273
+  Address = /192.168.1.38:50273
+This client on port 50274 has uuid 9ad9b9e3-0b03-45bd-a6ea-c01e4dd00978 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-9ad9b9e3-0b03-45bd-a6ea-c01e4dd00978
+Taking next connection to: 50273
+New client attempting to connect on port: 50275-50273
+  Address = /192.168.1.38:50273
+Handshake exception on socket: 50275
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 50273
+New client attempting to connect on port: 50276-50273
+  Address = /192.168.1.38:50273
+This client on port 50276 has uuid 2e060e5a-40c3-49af-b62e-8120d03f4656 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-9ad9b9e3-0b03-45bd-a6ea-c01e4dd00978, activator-2e060e5a-40c3-49af-b62e-8120d03f4656
+Taking next connection to: 50273
+New client attempting to connect on port: 50278-50273
+  Address = /192.168.1.38:50273
+Handshake exception on socket: 50278
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 50273
+New client attempting to connect on port: 50279-50273
+  Address = /192.168.1.38:50273
+This client on port 50279 has uuid 53a0cc06-d04c-466a-8a6b-af6e8cfd8a3f configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-9ad9b9e3-0b03-45bd-a6ea-c01e4dd00978, play-fork-run-53a0cc06-d04c-466a-8a6b-af6e8cfd8a3f
+Taking next connection to: 50273
