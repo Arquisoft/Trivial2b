@@ -1,0 +1,9 @@
+http://testingbaires.com/cucumber-y-las-pruebas-de-aceptacion-de-usuario/
+http://adrianmoya.com/2013/04/bdd-de-historias-un-ejemplo-concreto/
+https://github.com/adrianmoya/bddsample-java/blob/master/src/test/java/com/adrianmoya/bddsample/cucumber/StepDefinition.java
+http://adrianmoya.com/2013/04/bdd-de-historias-un-ejemplo-concreto-en-java/
+http://www.vlctesting.es/seminario-bdd-en-pr%C3%A1ctica
+http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=bdd-con-cucumber
+
+Como instalarlo
+http://www.toolsqa.com/cucumber/install-cucumber-eclipse-plugin/
