@@ -1,0 +1,21 @@
+# language: es
+Característica: Administrar preguntas
+  Como administrador de la aplicación
+  Quiero añadir o borrar preguntas
+  Para jugar al treevial con dichas preguntas
+
+  Esquema del escenario: Cargar preguntas en la BBDD
+    Dado que he introducido la ruta correspondiente donde se encuentra el fichero .GIFT
+    usando o no la opción del botón Abrir que despliega los archivos del sistema
+    Cuando oprimo el botón Cargar
+    Entonces las preguntas se habrán cargado satisfactoriamente en la BBDD.
+
+  Esquema del escenario: Borrar preguntas de la BBDD
+    Dado que quiero reiniciar la BBDD de preguntas
+    Cuando oprimo el botón Borrar Base de datos
+    Entonces las preguntas se habrán borrado satisfactoriamente de la BBDD.
+
+  Esquema del escenario: salir de la pantalla de Administrador
+    Dado que quiero salir de la pantalla del administrador
+    Cuando oprimo el botón Salir
+    Entonces se mostrará la pantalla de inicio.

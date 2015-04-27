@@ -1,0 +1,16 @@
+# language: es
+Característica: Registro
+  Como usuario sin identificar
+  Quiero crear un usuario con el que poder jugar
+  Para unirme y crear a una partida de treevial
+
+  Esquema del escenario: registrarse en la aplicación de manera satisfactoria
+    Dado que he introducido un nombre en el formulario donde me pedía el nombre
+    Y que he introducido una contraseña en el formulario donde me pedía la contraseña
+    Cuando oprimo el botón Registrarse
+    Entonces me habré registrado satisfactoriamente.
+
+  Esquema del escenario: salir del registro
+    Dado que quiero salir de la pantalla de registro
+    Cuando oprimo el botón Atrás
+    Entonces se mostrará la pantalla de inicio.

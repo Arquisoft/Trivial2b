@@ -1,0 +1,24 @@
+# language: es
+Característica: Crear partida
+  Como usuario sin identificar
+  Quiero crear una nueva partida de treevial con dos o más usuarios identificados
+  Para jugar con mis amigos y divertirme
+
+  Esquema del escenario: añadir usuarios a la partida
+    Dado que aún no están identificados los jugadores
+    Y siendo yo un usuario con una cuenta
+    Y habiendo colocado en los distintos formularios los datos de mi cuenta
+    Cuando oprimo el botón Unirse
+    Entonces me habré añadido a la próxima partida como jugador
+    si los datos del formulario eran correctos
+
+  Esquema del escenario: nueva partida
+    Dado que ya hay más de dos jugadores añadidos a la partida
+    Cuando oprimo el botón Comenzar la partida
+    Entonces seré redirigido a un nuevo tablero donde 
+    se podrá jugar una partida de treevial
+
+  Esquema del escenario: salir de la pantalla de creación de partidas
+    Dado que quiero salir de la pantalla de creación de partidas
+    Cuando oprimo el botón Volver al menú
+    Entonces se mostrará la pantalla de inicio
