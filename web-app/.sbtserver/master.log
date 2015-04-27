@@ -1,5 +1,5 @@
-New log file opened at Mon Apr 27 17:54:25 CEST 2015 by 5976@Hp-HP
-jvm 5976@Hp-HP
+New log file opened at Mon Apr 27 18:20:29 CEST 2015 by 6460@Hp-HP
+jvm 6460@Hp-HP
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=23.6-b04
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.7
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:PermSize=64m, -XX:MaxPermSize=256m]
@@ -7,16 +7,16 @@ Starting event engine
 Starting sbt command engine
 Waiting for sbt command engine
 Command engine arguments=List()
-Command engine baseDirectory=C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app
+Command engine baseDirectory=C:\Users\Hp\Documents\GitHub\Trivial2b\web-app
 Command engine initial remaining commands List(--initialize, onFailure load-failed, boot, server-send-ready-for-request, server-handle-next-server-request)
 > --initialize
 > initialize
 > onFailure load-failed
 > boot
 > reload
-[Loading] Scanning directory C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app\project
+[Loading] Scanning directory C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\project
 [Loading] Found non-root projects 
-[Loading] Done in C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app\project, returning: ()
+[Loading] Done in C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\project, returning: ()
 deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
 sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
@@ -25,9 +25,9 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
-[Loading] Done in C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app\project, returning: (web-app-build)
-Loading project definition from C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@727a80e3, check cycles: false
+[Loading] Done in C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\project, returning: (web-app-build)
+Loading project definition from C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\project
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@1ae60fb5, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -46,7 +46,7 @@ All initially invalidated sources: Set()
 
 Copy resource mappings: 
 	
-[Loading] Scanning directory C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app
+[Loading] Scanning directory C:\Users\Hp\Documents\GitHub\Trivial2b\web-app
 [Loading] Found root project root w/ remaining 
 deducing auto plugins based on known facts Set(Atom(play.PlayJava), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(play.Play))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(play.Play),Set(Atom(com.typesafe.sbt.webdriver.SbtWebDriver))), Clause(Atom(play.Play),Set(Atom(play.twirl.sbt.SbtTwirl))), Clause(Atom(play.Play),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(play.PlayJava),Set(Atom(play.Play))), Clause(Atom(play.PlayScala),Set(Atom(play.Play))), Clause(Atom(play.twirl.sbt.SbtTwirl),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.webdriver.SbtWebDriver),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(sbt.plugins.BackgroundRunPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.less.SbtLess),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.jshint.SbtJSHint),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.rjs.SbtRjs),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.digest.SbtDigest),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.mocha.SbtMocha),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(And(Set(Atom(sbt.plugins.BackgroundRunPlugin), Atom(play.Play), Atom(sbt.plugins.SerializersPlugin))),Set(Atom(play.sbt.forkrun.PlayForkRun))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.webdriver.SbtWebDriver))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.InteractionServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SendEventServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.less.SbtLess))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jshint.SbtJSHint))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.rjs.SbtRjs))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.digest.SbtDigest))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.mocha.SbtMocha)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,play.PlayJava,sbt.plugins.InteractionServicePlugin,sbt.plugins.SendEventServicePlugin,play.Play,sbt.plugins.SerializersPlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,com.typesafe.sbt.jse.SbtJsTask,play.twirl.sbt.SbtTwirl,com.typesafe.sbt.webdriver.SbtWebDriver,com.typesafe.sbt.jshint.SbtJSHint,sbt.plugins.JUnitXmlReportPlugin,com.typesafe.sbt.mocha.SbtMocha,com.typesafe.sbt.less.SbtLess,com.typesafe.sbt.web.SbtWeb,com.typesafe.sbt.rjs.SbtRjs,com.typesafe.sbt.jse.SbtJsEngine,com.typesafe.sbt.coffeescript.SbtCoffeeScript,sbt.plugins.BackgroundRunPlugin,com.typesafe.sbt.digest.SbtDigest,play.sbt.forkrun.PlayForkRun)
@@ -58,16 +58,16 @@ sorting: ns: List(sbt.plugins.CorePlugin, play.PlayJava, sbt.plugins.Interaction
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, play.Play) not found List(play.PlayJava, play.sbt.forkrun.PlayForkRun)
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, play.Play, play.PlayJava, play.sbt.forkrun.PlayForkRun) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, play.Play, play.PlayJava, play.sbt.forkrun.PlayForkRun)
-[Loading] Done in C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app, returning: (root)
-Set current project to web-app (in build file:/C:/Users/Hp/Desktop/activator-1.3.2-minimal/web-app/)
+[Loading] Done in C:\Users\Hp\Documents\GitHub\Trivial2b\web-app, returning: (root)
+Set current project to web-app (in build file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/)
 Reapplying settings...
-Set current project to web-app (in build file:/C:/Users/Hp/Desktop/activator-1.3.2-minimal/web-app/)
+Set current project to web-app (in build file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/)
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/C:/Users/Hp/Desktop/activator-1.3.2-minimal/web-app/}root/compile:discoveredMainClasses
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@663b1e70, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@46988c24, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -84,18 +84,18 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 2 s, completed 27-abr-2015 17:54:35
+Total time: 2 s, completed 27-abr-2015 18:20:44
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Hp/Desktop/activator-1.3.2-minimal/web-app/}root/compile:mainClass
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@8e43975, check cycles: false
-Total time: 0 s, completed 27-abr-2015 17:54:35
+Running task... Cancel: sbt.server.ServerTaskCancellation@260b158d, check cycles: false
+Total time: 0 s, completed 27-abr-2015 18:20:44
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Hp/Desktop/activator-1.3.2-minimal/web-app/}root/compile:discoveredMainClasses
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@12008036, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@7a4402f, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -112,36 +112,58 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed 27-abr-2015 17:54:37
+Total time: 2 s, completed 27-abr-2015 18:20:46
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Hp/Desktop/activator-1.3.2-minimal/web-app/}root/compile:mainClass
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@10c87411, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 27-abr-2015 18:20:47
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@668c5318, check cycles: false
-Total time: 0 s, completed 27-abr-2015 17:54:37
+Running task... Cancel: sbt.server.ServerTaskCancellation@1cc27eab, check cycles: false
+Total time: 0 s, completed 27-abr-2015 18:20:47
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@6996c2aa, check cycles: false
-Total time: 0 s, completed 27-abr-2015 17:55:01
+Running task... Cancel: sbt.server.ServerTaskCancellation@74a05624, check cycles: false
+Total time: 0 s, completed 27-abr-2015 18:21:09
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Hp/Desktop/activator-1.3.2-minimal/web-app/}root/*:playForkConfig
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@5a86eb32, check cycles: false
-Total time: 1 s, completed 27-abr-2015 17:55:06
+Running task... Cancel: sbt.server.ServerTaskCancellation@61bbaa20, check cycles: false
+Total time: 1 s, completed 27-abr-2015 18:21:17
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@575bedd, check cycles: false
-Total time: 0 s, completed 27-abr-2015 17:55:07
+Running task... Cancel: sbt.server.ServerTaskCancellation@5386e252, check cycles: false
+Total time: 0 s, completed 27-abr-2015 18:21:19
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/Hp/Desktop/activator-1.3.2-minimal/web-app/}root/*:playForkReload
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@5173520e, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@1bd172ba, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -159,8 +181,944 @@ Sources indirectly invalidated by:
 All initially invalidated sources: Set()
 
 Copy resource mappings: 
-	(C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app\conf\application.conf,C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app\target\scala-2.11\classes\application.conf)
-	(C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app\conf\routes,C:\Users\Hp\Desktop\activator-1.3.2-minimal\web-app\target\scala-2.11\classes\routes)
-Total time: 2 s, completed 27-abr-2015 17:55:11
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\application.conf,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\application.conf)
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\routes)
+Total time: 3 s, completed 27-abr-2015 18:21:24
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@2e1ad9e9, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 6f434f5f, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 10.856089782 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\application.conf,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\application.conf)
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\routes)
+Total time: 16 s, completed 27-abr-2015 18:25:18
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@36e945c5, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Recompiling all 6 sources: invalidated sources (4) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 4 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 421b054a, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Read from stdout: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes:7: value main is not a member of object controllers.Application
+C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes:7: value main is not a member of object controllers.Application
+Read from stdout: GET /main							controllers.Application.main()
+GET /main							controllers.Application.main()
+Read from stdout: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes:7: value main is not a member of object controllers.Application
+C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes:7: value main is not a member of object controllers.Application
+Read from stdout: GET /main							controllers.Application.main()
+GET /main							controllers.Application.main()
+Read from stdout: two errors found
+two errors found
+Compilation failed (CompilerInterface)
+Total time: 6 s, completed 27-abr-2015 18:29:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@2eac9dda, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Recompiling all 6 sources: invalidated sources (5) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 4 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 73edad01, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 8.005534058 s
+Attempting to call com.sun.tools.javac.api.JavacTool@440519d2 directly...
+Read from stdout: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:15: method render in class views.html.main cannot be applied to given types;
+Read from stdout: required: java.lang.String,play.twirl.api.Html
+Read from stdout: found: java.lang.String
+Read from stdout: reason: actual and formal argument lists differ in length
+C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:15: method render in class views.html.main cannot be applied to given types;
+  required: java.lang.String,play.twirl.api.Html
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+Read from stdout: main.render
+main.render
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 12 s, completed 27-abr-2015 18:31:41
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@f3ab970, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Recompiling all 6 sources: invalidated sources (5) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 4 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 5e7eb49f, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 3.85685647 s
+Attempting to call com.sun.tools.javac.api.JavacTool@4021724b directly...
+Read from stdout: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:15: method render in class views.html.main cannot be applied to given types;
+Read from stdout: required: java.lang.String,play.twirl.api.Html
+Read from stdout: found: java.lang.String
+Read from stdout: reason: actual and formal argument lists differ in length
+C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:15: method render in class views.html.main cannot be applied to given types;
+  required: java.lang.String,play.twirl.api.Html
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+Read from stdout: main.render
+main.render
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 5 s, completed 27-abr-2015 18:31:46
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@264e05de, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Recompiling all 6 sources: invalidated sources (5) exceeded 50.0% of all sources
+Read from stdout: Compiling 4 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 4 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 6f5bc191, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 4.218413791 s
+Attempting to call com.sun.tools.javac.api.JavacTool@46e18aac directly...
+Read from stdout: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:15: method render in class views.html.main cannot be applied to given types;
+Read from stdout: required: java.lang.String,play.twirl.api.Html
+Read from stdout: found: java.lang.String
+Read from stdout: reason: actual and formal argument lists differ in length
+C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:15: method render in class views.html.main cannot be applied to given types;
+  required: java.lang.String,play.twirl.api.Html
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+Read from stdout: main.render
+main.render
+Total time: 6 s, completed 27-abr-2015 18:31:52
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@5416734b, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+
+Recompiling all 7 sources: invalidated sources (6) exceeded 50.0% of all sources
+Read from stdout: Compiling 5 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 5 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 7c669799, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 4.313062567 s
+Attempting to call com.sun.tools.javac.api.JavacTool@17c3adb7 directly...
+Read from stdout: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:25: cannot find symbol
+Read from stdout: symbol:   variable Player
+Read from stdout: location: class controllers.Application.Register
+C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:25: cannot find symbol
+  symbol:   variable Player
+  location: class controllers.Application.Register
+Read from stdout: Player
+Player
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 5 s, completed 27-abr-2015 18:39:33
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@7c28100c, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+
+Recompiling all 7 sources: invalidated sources (6) exceeded 50.0% of all sources
+Read from stdout: Compiling 5 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 5 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 75ec6455, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 3.640883761 s
+Attempting to call com.sun.tools.javac.api.JavacTool@220fb4e5 directly...
+Read from stdout: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:25: cannot find symbol
+Read from stdout: symbol:   variable Player
+Read from stdout: location: class controllers.Application.Register
+C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java:25: cannot find symbol
+  symbol:   variable Player
+  location: class controllers.Application.Register
+Read from stdout: Player
+Player
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 4 s, completed 27-abr-2015 18:39:54
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@57a92168, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+
+Recompiling all 7 sources: invalidated sources (6) exceeded 50.0% of all sources
+Read from stdout: Compiling 5 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 5 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 1e3a5695, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 2.492108484 s
+Attempting to call com.sun.tools.javac.api.JavacTool@26a75518 directly...
+Java compilation took 0.187525848 s
+Java analysis took 0.146396533 s
+Java compile + analysis took 0.344800061 s
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Invalidating (transitively) by inheritance from C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Initial set of included nodes: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+The C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala source file has the following regular definitions changed:
+	showRegister.
+All member reference dependencies will be considered within this context.
+None of the modified names appears in C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\main.template.scala. This dependency is not being considered for invalidation.
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java...
+Invalidating (transitively) by inheritance from C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java...
+Initial set of included nodes: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+The C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java source file has the following regular definitions changed:
+	.
+All member reference dependencies will be considered within this context.
+None of the modified names appears in C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala. This dependency is not being considered for invalidation.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java
+None of the modified names appears in C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala. This dependency is not being considered for invalidation.
+None of the modified names appears in C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala. This dependency is not being considered for invalidation.
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala...
+Invalidating (transitively) by inheritance from C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala...
+Initial set of included nodes: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala)
+The C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\register.template.scala source file has the following regular definitions changed:
+	notify, register, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 4 s, completed 27-abr-2015 18:40:19
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@2f16f5c0, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\application.conf,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\application.conf)
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 27-abr-2015 18:40:21
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@48838e1a, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 32a7eecf, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.596322031 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\application.conf,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\application.conf)
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\routes)
+Total time: 3 s, completed 27-abr-2015 18:43:17
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@b05e1ad, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler f577a0b, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 1.011169226 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\application.conf,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\application.conf)
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 27-abr-2015 18:45:08
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@704f055c, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala)
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Recompiling all 9 sources: invalidated sources (7) exceeded 50.0% of all sources
+Read from stdout: Compiling 7 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 7 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 79479713, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Read from stdout: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes:9: value showAdmin is not a member of object controllers.Application
+C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes:9: value showAdmin is not a member of object controllers.Application
+Read from stdout: GET		/admin							controllers.Application.showAdmin()
+GET		/admin							controllers.Application.showAdmin()
+Read from stdout: C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes:9: value showAdmin is not a member of object controllers.Application
+C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes:9: value showAdmin is not a member of object controllers.Application
+Read from stdout: GET		/admin							controllers.Application.showAdmin()
+GET		/admin							controllers.Application.showAdmin()
+Read from stdout: two errors found
+two errors found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 2 s, completed 27-abr-2015 18:50:17
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@3b1a68fa, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala)
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Recompiling all 9 sources: invalidated sources (7) exceeded 50.0% of all sources
+Read from stdout: Compiling 7 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 7 Scala sources and 2 Java sources to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 104514f1, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 2.856130075 s
+Attempting to call com.sun.tools.javac.api.JavacTool@5f1c45e8 directly...
+Java compilation took 0.261125513 s
+Java analysis took 0.011401855 s
+Java compile + analysis took 0.281608256 s
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala...
+Invalidating (transitively) by inheritance from C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala...
+Initial set of included nodes: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala)
+The C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, estadisticas, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Invalidating (transitively) by inheritance from C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
+Initial set of included nodes: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
+The C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\src_managed\main\routes_reverseRouting.scala source file has the following regular definitions changed:
+	showEstadisticas, showAdmin.
+All member reference dependencies will be considered within this context.
+None of the modified names appears in C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\main.template.scala. This dependency is not being considered for invalidation.
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala...
+Invalidating (transitively) by inheritance from C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala...
+Initial set of included nodes: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala)
+The C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala source file has the following regular definitions changed:
+	notify, format, admin, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 4 s, completed 27-abr-2015 18:51:20
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@79c66080, check cycles: false
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1430152818548) to lastModified(1430153479524)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@f38e35d directly...
+Java compilation took 0.128758553 s
+Java analysis took 0.010592976 s
+Java compile + analysis took 0.147498099 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\application.conf,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\application.conf)
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\routes)
+Total time: 2 s, completed 27-abr-2015 18:51:37
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@81077c7, check cycles: false
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1430153479524) to lastModified(1430153496881)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 1 Scala source and 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 7528d256, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.708430516 s
+Attempting to call com.sun.tools.javac.api.JavacTool@456ae323 directly...
+Java compilation took 0.111274517 s
+Java analysis took 0.012381405 s
+Java compile + analysis took 0.141892961 s
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala...
+Invalidating (transitively) by inheritance from C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala...
+Initial set of included nodes: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala)
+The C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\admin.template.scala source file has the following regular definitions changed:
+	apply, admin, f, render.
+All member reference dependencies will be considered within this context.
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 27-abr-2015 18:51:58
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@4d46252f, check cycles: false
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1430153496881) to lastModified(1430153518741)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala, C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 1 Scala source and 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 5ebe2528, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.7.0_10\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_10\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_10\jre\classes;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
+	-classpath
+	C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes;C:\Users\Hp\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Hp\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Hp\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Hp\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Hp\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Hp\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Hp\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Hp\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Hp\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Hp\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Hp\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Hp\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Hp\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Hp\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Hp\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Hp\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Hp\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Hp\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Hp\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Hp\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Hp\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Hp\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Hp\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Hp\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Hp\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Hp\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Hp\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 0.747469211 s
+Attempting to call com.sun.tools.javac.api.JavacTool@3c355fbe directly...
+Java compilation took 0.145231868 s
+Java analysis took 0.011751558 s
+Java compile + analysis took 0.166070777 s
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala...
+Invalidating (transitively) by inheritance from C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala...
+Initial set of included nodes: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala)
+The C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\twirl\main\views\html\estadisticas.template.scala source file has the following regular definitions changed:
+	apply, f, estadisticas, render.
+All member reference dependencies will be considered within this context.
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 27-abr-2015 18:52:08
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Hp/Documents/GitHub/Trivial2b/web-app/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@2602894, check cycles: false
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1430153518741) to lastModified(1430153528108)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@2ee418de directly...
+Java compilation took 0.107471112 s
+Java analysis took 0.011471035 s
+Java compile + analysis took 0.128221074 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\application.conf,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\application.conf)
+	(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\conf\routes,C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\routes)
+Total time: 1 s, completed 27-abr-2015 18:52:09
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@2da043c3, check cycles: false
+Invalidating C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class: stamp changed from lastModified(1430153528108) to lastModified(1430153529052)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes\controllers\Application.class)
+Initial directly invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\app\controllers\Application.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Hp\Documents\GitHub\Trivial2b\web-app\target\scala-2.11\classes...
+Attempting to call com.sun.tools.javac.api.JavacTool@1bd569e8 directly...
+Java compilation took 0.102815114 s
+Java analysis took 0.010510871 s
+Java compile + analysis took 0.121901323 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 27-abr-2015 18:53:45
 > server-post-command-cleanup
 > server-handle-next-server-request
