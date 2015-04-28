@@ -4,8 +4,40 @@
 <html>
 <head>
 <title>Registro</title>
+<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
 </head>
 <body>
-Registro
+	<div align="center" class="page-header">
+		<h3>Registro</h3>
+		<img src="@routes.Assets.at("images/pro.png")" alt="User"
+			class="img-circle">
+	</div>
+	<div align="center">
+		<div align="center" style="width: 50%">
+			<div class="panel panel-success">
+				<div class="panel-heading">Registro</div>
+				<form action="/principal">
+					<div class="form-group">
+						<label for="username">Nombre de usuario</label> <input
+							type="email" class="form-control" id="username"
+							placeholder="Nombre de usuario">
+					</div>
+					<div class="form-group">
+						<label for="pass">Password</label> <input type="password"
+							class="form-control" id="pass" placeholder="Password">
+					</div>
+					<div class="form-group">
+						<label for="pass2">Repite Password</label> <input type="password"
+							class="form-control" id="pass2" placeholder="Password">
+					</div>
+
+
+					<button type="submit" class="btn btn-default">Confirmar registro</button>
+				</form>
+			</div>
+		</div>
+		<a href="/" id="btnAtras" class="btn btn-info"
+			role="button">aaAtras</a>
+	</div>
 </body>
 </html>
