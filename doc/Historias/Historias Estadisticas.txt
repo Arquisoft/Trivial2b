@@ -1,0 +1,15 @@
+# language: es
+Característica: Estadisticas
+  Como dueño de la aplicación
+  Quiero comprobar mis estadísticas en dicha aplicación
+  Para ver los datos de las partidas que he jugado
+
+  Esquema del escenario: ver estadísticas
+    Dado que me encuentro en la pestaña del menú principal
+    Cuando oprimo el botón Estadísticas
+    Entonces podré ver una pantalla donde están mis estadísticas.
+
+  Esquema del escenario: salir de las estadísticas
+    Dado que quiero salir de la pantalla de estadísticas
+    Cuando oprimo el botón Salir
+    Entonces se mostrará la pantalla de inicio.

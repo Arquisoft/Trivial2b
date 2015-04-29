@@ -15,8 +15,8 @@ Característica: Crear partida
   Esquema del escenario: nueva partida
     Dado que ya hay más de dos jugadores añadidos a la partida
     Cuando oprimo el botón Comenzar la partida
-    Entonces seré redirigido a un nuevo tablero donde 
-    se podrá jugar una partida de treevial
+    Y he seleccionado categorías de preguntas
+    Entonces seré redirigido a un nuevo tablero donde se podrá jugar una partida de treevial
 
   Esquema del escenario: salir de la pantalla de creación de partidas
     Dado que quiero salir de la pantalla de creación de partidas

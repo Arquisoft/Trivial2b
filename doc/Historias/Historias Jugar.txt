@@ -1,0 +1,32 @@
+# language: es
+Característica: Registro
+  Como jugador
+  Quiero moverme entre casillas
+  Para jugar la partida
+
+  Esquema del escenario: lanzar dado
+    Dado que es mi turno
+    Cuando pulse en el dado
+    Entonces recibiré un número del dado y podré moverme
+
+  Esquema del escenario: movimiento
+    Dado que he lanzado el dado
+    Cuando selecciono la casilla a la que deseo moverme
+    Entonces me moveré a dicha casilla
+
+  Esquema del escenario: responder pregunta
+    Dado que me he movido de casilla
+    Cuando salga el panel con la pregunta
+    Y seleccione la respuesta que considero correcta
+    Entonces se mostrará si la respuesta es correcta o no
+    Y ganaré o no una manzana
+
+  Esquema del escenario: casilla blanca
+    Dado que he caido en una casilla blanca
+    Cuando se habra el panel
+    Entonces se me mostrará la opción de la manzana por la que quiero jugar y me hará una pregunta.
+
+  Esquema del escenario: victoria
+    Dado que he jugado una casilla
+    Cuando consiga todos los tipos de manzana
+    Entonces he ganado la partida
