@@ -1,19 +1,11 @@
-name := """web-app"""
+name := "web-app"
 
 version := "1.0-SNAPSHOT"
-
-lazy val root = (project in file(".")).enablePlugins(PlayJava)
-
-scalaVersion := "2.11.1"
 
 libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
-  cache,
-  javaWs
-)
+  cache
+)     
 
-
-fork in run := true
-
-fork in run := true
+play.Project.playJavaSettings
