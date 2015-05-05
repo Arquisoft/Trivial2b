@@ -11,11 +11,9 @@ ANTES DE EMPEZAR:
 Con esto ya tenemos las variable de entorno necesarias para arrancar el proyecto play
 
 PARA ARRANCAR EL SERVIDOR
-	1º Sacar a fuera del proyecto maven el proyecto "web-app"
+	1º Importar el proyecto completo de maven donde se incluye el "web-app" que es nuestro proyecto play
 	2º Nueva linea de comandos, nos sitiamos sobre la carpeta "web-app" y ejecutamo "play".
-	3º Hacemos un "eclipse"
-	4º Una vez a finalizado, ejecutamos "run" con esto el servidor pasa a escuchar en el puerto 9000
-	5º Importamos como java proyect el proyecto "web-app"
+	3º Una vez a finalizado, ejecutamos "run" con esto el servidor pasa a escuchar en el puerto 9000
 	
 Ahora todos los cambios que hagamos en el proyecto play desde eclipse, basta con refrescar tanto el proyecto como
 "localhost:9000" para que sean visibles los cambios.

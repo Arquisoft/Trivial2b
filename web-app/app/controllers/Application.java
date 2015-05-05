@@ -66,10 +66,9 @@ public class Application extends Controller {
 				return "Usuario ya existente";
 			else if (!pass.equals(pass2))
 				return "Las contraseñas no coinciden";
-			else {
-				escribeFichero();
+			else
 				us.newUsuario(id, pass);
-			}
+			
 			return null;
 		}
 
@@ -87,28 +86,8 @@ public class Application extends Controller {
 			return showPrincipal();
 		}
 	}
-
-	public static Result index() {
-		return ok(index.render("asdsaddYour new application is ready."));
-	}
-
-	public static Result showRegister() {
-		return ok(register.render(Form.form(Register.class)));
-	}
-<<<<<<< HEAD
-    
-    public static Result showPrincipal() {
-  		return ok(principal.render());
-  	}
-    
-    public static Result showEstadisticas(){
-    	return ok(estadisticas.render());
-    }
-    public static Result showAdmin(){
-    	return ok(admin.render());
-    }
-    
-    public static class Cargar {
+	
+	public static class Cargar {
 		public String ruta;
 		public String categoria;
 		
@@ -123,15 +102,14 @@ public class Application extends Controller {
     	Form<Cargar> cargarForm = Form.form(Cargar.class).bindFromRequest();
     	return ok(admin.render());
     }
-    
-    
-    
-    public static class Register {
-		public String id;
-		public String password;
-		public String password2;
-=======
->>>>>>> origin/master
+
+	public static Result index() {
+		return ok(index.render("asdsaddYour new application is ready."));
+	}
+
+	public static Result showRegister() {
+		return ok(register.render(Form.form(Register.class)));
+	}
 
 	public static Result showPrincipal() {
 		return ok(principal.render());

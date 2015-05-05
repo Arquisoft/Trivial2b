@@ -8,14 +8,10 @@ GET 	/registro						controllers.Application.showRegister()
 GET 	/estadisticas					controllers.Application.showEstadisticas()
 GET		/admin							controllers.Application.showAdmin()
 GET 	/principal						controllers.Application.showPrincipal()
-<<<<<<< HEAD
-GET     /adminCargar				controllers.Application.cargarBase()
-POST	/							controllers.Application.authenticate()
-=======
->>>>>>> origin/master
 
 POST	/								controllers.Application.authenticate()
 GET 	/registrarse					controllers.Application.registrate()
+GET     /adminCargar				controllers.Application.cargarBase()
 
 GET		/logout							controllers.Application.logout()
 
