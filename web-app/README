@@ -2,18 +2,20 @@ DESCARGAR play 2.2.6
 
 ANTES DE EMPEZAR:
 	**creamos dos variables de entorno (una para play y otra para javac)
-	1ª variable de entorno (variables del sistema) java -> JAVA_HOME C:\Program Files\Java\jdk1.7.0_07\bin  -->
+	1 - variable de entorno (variables del sistema) java -> JAVA_HOME C:\Program Files\Java\jdk1.7.0_07\bin  -->
 		DEBE SER JAVA 1.7, YA QUE JAVA 1.8 NO DISPONE DE javac
-	2º variable de entorno (variable del sistema) play -> PLAY_HOME C:\play-2.2.6
+	2 - variable de entorno (variable del sistema) play -> PLAY_HOME C:\play-2.2.6
 
-	Por ultimo, en la variable de entonto ya definida (Path) añadimos al final --> %PLAY_HOME%;%JAVA_HOME%;
+	Por ultimo, en la variable de entonto ya definida (Path) aï¿½adimos al final --> %PLAY_HOME%;%JAVA_HOME%;
 
 Con esto ya tenemos las variable de entorno necesarias para arrancar el proyecto play
 
 PARA ARRANCAR EL SERVIDOR
-	1º Importar el proyecto completo de maven donde se incluye el "web-app" que es nuestro proyecto play
-	2º Nueva linea de comandos, nos sitiamos sobre la carpeta "web-app" y ejecutamo "play".
-	3º Una vez a finalizado, ejecutamos "run" con esto el servidor pasa a escuchar en el puerto 9000
+	1 - Sacar a fuera del proyecto maven el proyecto "web-app"
+	2 - Nueva linea de comandos, nos sitiamos sobre la carpeta "web-app" y ejecutamo "play".
+	3 - Hacemos un "eclipse"
+	4 - Una vez a finalizado, ejecutamos "run" con esto el servidor pasa a escuchar en el puerto 9000
+	5 - Importamos como java proyect el proyecto "web-app"
 	
 Ahora todos los cambios que hagamos en el proyecto play desde eclipse, basta con refrescar tanto el proyecto como
 "localhost:9000" para que sean visibles los cambios.
