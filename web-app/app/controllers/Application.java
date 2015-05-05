@@ -1,11 +1,17 @@
 package controllers;
 
+import java.io.IOException;
+
+import play.data.Form;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.admin;
+import views.html.estadisticas;
+import views.html.index;
+import views.html.principal;
+import views.html.register;
 import business.UsuarioService;
 import business.impl.UsuarioServiceImpl;
-import play.*;
-import play.data.Form;
-import play.mvc.*;
-import views.html.*;
 
 public class Application extends Controller {
 	
@@ -13,9 +19,10 @@ public class Application extends Controller {
 		public String id;
 		public String password;
 
-		public String validate() {
-			if (!id.equals("a") && !password.equals("garcia")) {
-				return "Usuario o contraseña inválida";
+		public String validate() throws IOException {
+			UsuarioService us = new UsuarioServiceImpl();
+			if (us.login(id, password) == null) {
+				return "Usuario o contrasena invalida";
 			}
 			return null;
 		}
@@ -33,11 +40,11 @@ public class Application extends Controller {
 		} else {
 			session().clear();
 			session("id", loginForm.get().id);
-
-			if(loginForm.get().id.equals("marcos"))
-				return ok(principal.render());
+			
+			if (loginForm.get().id.equals("admin"))
+				 return showAdmin();
 			else
-		        return ok(index.render("asdsaddYour new application is ready."));
+				return showPrincipal();
 		}
 	}
 
