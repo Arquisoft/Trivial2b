@@ -10,7 +10,9 @@ import views.html.estadisticas;
 import views.html.index;
 import views.html.principal;
 import views.html.register;
+import business.AdminService;
 import business.UsuarioService;
+import business.impl.AdminServiceImpl;
 import business.impl.UsuarioServiceImpl;
 
 public class Application extends Controller {
@@ -66,6 +68,25 @@ public class Application extends Controller {
     public static Result showAdmin(){
     	return ok(admin.render());
     }
+    
+    public static class Cargar {
+		public String ruta;
+		public String categoria;
+		
+		public String validate() throws IOException {
+			AdminService aS = new AdminServiceImpl();
+			aS.cargarEnBase(ruta, categoria);
+			return null;
+		}
+	}
+    
+    public static Result cargarBase(){
+    	Form<Cargar> cargarForm = Form.form(Cargar.class).bindFromRequest();
+    	return ok(admin.render());
+    }
+    
+    
+    
     public static class Register {
 		public String id;
 		public String password;

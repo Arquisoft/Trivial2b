@@ -8,6 +8,7 @@ GET 	/registro						controllers.Application.showRegister()
 GET 	/estadisticas					controllers.Application.showEstadisticas()
 GET		/admin							controllers.Application.showAdmin()
 GET 	/principal						controllers.Application.showPrincipal()
+GET     /adminCargar				controllers.Application.cargarBase()
 POST	/							controllers.Application.authenticate()
 
 GET		/logout						controllers.Application.logout()
