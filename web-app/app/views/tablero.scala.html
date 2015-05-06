@@ -57,7 +57,6 @@
 		<div class="progress">
 			<progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
 			<span id="status"></span>
-			<h1 id="finalMessage"></h1>
 			<script>
 				function progressBarSim(al) {
 				  var bar = document.getElementById('progressBar');
@@ -65,7 +64,6 @@
 				  status.innerHTML = al+"%";
 				  bar.value = al;
 				  al++;
-					var sim = setTimeout("progressBarSim("+al+")",100);
 					if(al == 100){
 					  status.innerHTML = "100%";
 					  bar.value = 100;
@@ -148,7 +146,7 @@
 				<td><a href="/mostrarPreguntaEnt" class="opener"><img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
-				<td><a href="/mostrarPreguntGeo" class="opener"> <img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaGeo" class="opener"> <img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
 				<td><a href="/mostrarPreguntaHist" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
@@ -178,7 +176,7 @@
 	<script type="text/javascript">
 		$( "#dialog" ).dialog({ autoOpen: false });
 		$( ".opener" ).click(function() {
-		   $( "#dialog" ).dialog( "open" );
+		   $( "#dialog" ).dialog( "open" );	   
 		});
     </script>
 </body>
