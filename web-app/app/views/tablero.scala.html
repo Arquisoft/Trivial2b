@@ -38,11 +38,13 @@
 				<a href="#"> <img src="@routes.Assets.at("images/dado.png")"  width="300"></a>
 				<p><input type="text" class="form-control" placeholder="Tirada del dado" aria-describedby="basic-addon1" disabled><br/><br/></p>
 		<ul class="list-group">
-			<li class="list-group-item list-group-item-success">Jugador1</li>
-			<li class="list-group-item list-group-item-info">Jugador2</li>
+			<li class="list-group-item list-group-item-success">@session().get("id")</li>
+			<!-- <li class="list-group-item list-group-item-info">Jugador2</li>
 			<li class="list-group-item list-group-item-warning">Jugador3</li>
-			<li class="list-group-item list-group-item-danger">Jugador4</li>
+			<li class="list-group-item list-group-item-danger">Jugador4</li> -->
 		</ul>
+		
+		<a href="/principal" class="btn btn-primary btn-lg btn-block" role="button">Volver al menú principal <a/>
 	</div>
 	
 <div id="sub-right">

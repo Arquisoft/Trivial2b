@@ -1,14 +1,9 @@
 package controllers;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.fasterxml.jackson.databind.JsonNode;
 
 import model.ChatRoom;
 import model.Pregunta;
@@ -18,13 +13,13 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.WebSocket;
 import views.html.admin;
+import views.html.chatRoom;
 import views.html.estadisticas;
 import views.html.index;
+import views.html.join;
 import views.html.principal;
 import views.html.register;
 import views.html.tablero;
-import views.html.join;
-import views.html.chatRoom;
 import business.AdminService;
 import business.JuegoService;
 import business.UsuarioService;
@@ -32,6 +27,8 @@ import business.impl.AdminServiceImpl;
 import business.impl.JuegoServiceImpl;
 import business.impl.UsuarioServiceImpl;
 import business.juego.ControladorJuego;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 public class Application extends Controller {
 	
@@ -149,7 +146,19 @@ public class Application extends Controller {
      	cj = new ControladorJuego(preguntas, u);
      	
      	return showTablero();
-     }
+    }
+     
+     
+    public static Result mostrarPregunta(String categoria) {
+    	Pregunta p = cj.obtenerPreguntaAleatoriaCategoria(categoria);
+    	
+    	//Ver si es una vista
+    	//Agregar a los atributos las respuestas y la pregunta
+    	//Comparar con la correcta
+    	//Dar una solucion
+    	
+    	return showTablero();
+    }
      	
     
     public static Result showTablero() {
