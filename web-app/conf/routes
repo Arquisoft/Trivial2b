@@ -11,7 +11,8 @@ GET 	/principal						controllers.Application.showPrincipal()
 
 POST	/								controllers.Application.authenticate()
 GET 	/registrarse					controllers.Application.registrate()
-GET     /adminCargar					controllers.Application.cargarBase()
+GET     /adminCargar				    controllers.Application.cargarBase()
+GET     /borrarBase				        controllers.Application.borrarBase()
 GET		/cargarTablero					controllers.Application.cargarTablero()
 
 GET		/logout							controllers.Application.logout()

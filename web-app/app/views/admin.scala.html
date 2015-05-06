@@ -1,3 +1,6 @@
+@(form: Form[Application.Cargar])
+
+<!DOCTYPE html>
 <html>
 <head>
 <title>Admin</title>
@@ -11,26 +14,31 @@
 	<div align="center">
 		<div class="panel panel-primary" style="width: 50%">
 			<div class="center-block" style="width: 80%">
-				<div class="form-group">
-					<label for="ruta">Ruta fichero .GIFT</label> 
-					<input type="text"
-						id="ruta" name="ruta" class="form-control"
-						placeholder="Ruta del fichero" required autofocus></br>
-					<label for="categoria">Categoría a la que pertenece el GIFT</label> 
-					<select class="form-control" id="categoria" name="categoria">
-					  <option value="ciencias">Ciencias</option>
-					  <option value="deportes">Deportes</option>
-					  <option value="entretenimiento">Entretenimiento</option>
-					  <option value="cine">Cine</option>
-					  <option value="historio">Historia</option>
-					</select>	
-				</div>
-				<div class="form-group" style="width: 60%">
-					<a href="/adminCargar" id="btnCargar"
-					class="btn btn-primary btn-block" role="button">Cargar</a><br />
-					<a href="/" id="btnBorrar"
-					class="btn btn-primary btn-block" role="button">Borrar base de datos (preguntas)</a><br />
-				</div>
+				<form action="/adminCargar">
+					<div class="form-group">
+						<label for="ruta">Ruta fichero .GIFT</label> 
+						<input type="text"
+							id="ruta" name="ruta" class="form-control"
+							placeholder="Ruta del fichero" required autofocus></br>
+					</div>
+					<div class="form-group">
+						<label for="categoria">Categoría a la que pertenece el GIFT</label> 
+						<select class="form-control" id="categoria" name="categoria">
+						  <option value="ciencias">Ciencias</option>
+						  <option value="deportes">Deportes</option>
+						  <option value="entretenimiento">Entretenimiento</option>
+						  <option value="historia">Historia</option>
+						  <option value="geografia">Geografía</option>
+						</select>	
+					</div>
+				
+					<div class="form-group" style="width: 60%">
+					    <button type="submit" class="btn btn-default">Cargar</button>	
+						<br />
+					<a href="/borrarBase" id="btnBorrar"
+						class="btn btn-primary btn-block" role="button">Borrar base de datos (preguntas)</a><br />
+					</div>
+				</form>
 				<br /> 
 				<div class="form-group">
 					<a href="/estadisticas" id="btnEstadisticas"

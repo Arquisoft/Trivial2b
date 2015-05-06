@@ -110,32 +110,41 @@ public class Application extends Controller {
 	}
     
     public static Result cargarBase(){
-    	Form<Cargar> cargarForm = Form.form(Cargar.class).bindFromRequest();
-    	return ok(admin.render());
+    	Form.form(Cargar.class).bindFromRequest();
+		return showAdmin();
     }
     
-   /**
-    * Este  metodo requiere que las preguntas esten cargadas previamente en el mongoDB, sino no funcionará.
-    *
-    * @return
-    */
-    public static Result cargarTablero() {
+    public static Result borrarBase(){
     	
-    	UsuarioService us = new UsuarioServiceImpl();
-    	JuegoService js = new JuegoServiceImpl();
-    	Map<String, List<Pregunta>> preguntas = new HashMap<>();
+    	AdminService aS = new AdminServiceImpl();
+		aS.removeDataBase();
     	
-    	Usuario u = us.findByLogin(session().get("id"));
-    	String[] categorias = new String[]{"ciencias", "deportes", "entretenimiento", "geografia", "historia"};
-    	
-    	for (String cat: categorias) {
-    		preguntas.put(cat, js.getPreguntasCollection(cat));
-    	}
-    	
-    	cj = new ControladorJuego(preguntas, u);
-    	
-    	return showTablero();
+		return showAdmin();
     }
+    
+    /**
+     * Este  metodo requiere que las preguntas esten cargadas previamente en el mongoDB, sino no funcionará.
+     *
+     * @return
+     */ 
+     public static Result cargarTablero() {
+     	
+     	UsuarioService us = new UsuarioServiceImpl();
+     	JuegoService js = new JuegoServiceImpl();
+     	Map<String, List<Pregunta>> preguntas = new HashMap<>();
+     	
+     	Usuario u = us.findByLogin(session().get("id"));
+     	String[] categorias = new String[]{"ciencias", "deportes", "entretenimiento", "geografia", "historia"};
+     	
+     	for (String cat: categorias) {
+     		preguntas.put(cat, js.getPreguntasCollection(cat));
+     	}
+     	
+     	cj = new ControladorJuego(preguntas, u);
+     	
+     	return showTablero();
+     }
+     	
     
     public static Result showTablero() {
     	return ok(tablero.render());
@@ -158,7 +167,7 @@ public class Application extends Controller {
 	}
 
 	public static Result showAdmin() {
-		return ok(admin.render());
+		return ok(admin.render(Form.form(Cargar.class)));
 	}
 
 	private static void escribeFichero() { // Borrar metodo
