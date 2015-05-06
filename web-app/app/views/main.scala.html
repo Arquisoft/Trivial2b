@@ -1,45 +1,15 @@
-@(connected: String)(content: Html)
+@(title: String)(content: Html)
 
 <!DOCTYPE html>
 
 <html>
     <head>
-        <title>Sala de Chat</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <title>@title</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
     </head>
     <body>
-        <div class="topbar">
-            <div class="fill">
-                <div class="container">
-                    <a class="brand" >Sala de chat</a>
-                    
-                    @if(connected != null) {
-                        <p class="pull-right">
-                            Logged in as @connected —
-                            <a href="@routes.Application.showPrincipal()">Volver al menu principal</a>
-                        </p>
-                    } else {
-                        <form action="@routes.Application.chatRoom()" class="pull-right">
-                            <input id="username" name="username" class="input-small" type="text" placeholder="Username">
-                            <button class="btn" type="submit">Sign in</button>
-                        </form>
-                    }
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-
-            <div class="content">
-                @content
-            </div>
-
-           
-
-        </div>
+        @content
     </body>
 </html>
