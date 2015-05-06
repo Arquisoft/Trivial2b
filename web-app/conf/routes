@@ -18,7 +18,11 @@ GET     /join							controllers.Application.showJoin(username: String ?=null)
 GET     /room                           controllers.Application.chatRoom(username: String ?= null)
 GET     /room/chat                      controllers.Application.chat(username)
 GET     /assets/javascripts/chatroom.js controllers.Application.chatRoomJs(username)
-GET		/mostrarPregunta				controllers.Application.mostrarPregunta(categoria)
+GET		/mostrarPreguntaHist			controllers.Application.mostrarPreguntaHist
+GET		/mostrarPreguntaCi				controllers.Application.mostrarPreguntaCi
+GET		/mostrarPreguntaGeo				controllers.Application.mostrarPreguntaGeo
+GET		/mostrarPreguntaEnt				controllers.Application.mostrarPreguntaEnt
+GET		/mostrarPreguntaDep				controllers.Application.mostrarPreguntaDep
 
 GET		/logout							controllers.Application.logout()
 

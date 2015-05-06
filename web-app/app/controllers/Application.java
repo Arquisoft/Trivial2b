@@ -33,6 +33,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 public class Application extends Controller {
 	
 	private static ControladorJuego cj;
+	private static final long ESPERA = 8000;
 
 	public static class Login {
 		public String id;
@@ -147,17 +148,48 @@ public class Application extends Controller {
      	
      	return showTablero();
     }
+    
+    public static Result mostrarPreguntaHist() {
+    	mostrarPregunta("historia");
+    	return ok(tablero.render());
+    }
+    
+    public static Result mostrarPreguntaCi() {
+    	mostrarPregunta("ciencias");
+    	return ok(tablero.render());
+    }
+    
+    public static Result mostrarPreguntaDep() {
+    	mostrarPregunta("deportes");
+    	return ok(tablero.render());
+    }
+    
+    public static Result mostrarPreguntaEnt() {
+    	mostrarPregunta("entretenimiento");
+    	return ok(tablero.render());
+    }
+    
+    public static Result mostrarPreguntaGeo() {
+    	mostrarPregunta("geografia");
+    	return ok(tablero.render());
+    }
      
-     
-    public static Result mostrarPregunta(String categoria) {
+    public static void mostrarPregunta(String categoria) {
     	Pregunta p = cj.obtenerPreguntaAleatoriaCategoria(categoria);
     	
-    	//Ver si es una vista
-    	//Agregar a los atributos las respuestas y la pregunta
-    	//Comparar con la correcta
-    	//Dar una solucion
+    	session("pregunta", p.getPregunta());
+    	for (int i = 0; i < p.getRespuestas().length; i++) {
+    		session("respuesta" + i, p.getRespuestas()[i]);
+    		session("contestacion" + i, p.getContestacion()[i]);
+    	}
+    	session("correcta", String.valueOf(p.getCorrecta()));
+    	session("categoria", categoria);
     	
-    	return showTablero();
+    	try {
+			Thread.sleep(ESPERA);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
     }
      	
     

@@ -35,22 +35,22 @@
 
 </head>
 <body>
-	<div id="dialog" title="[CATEGORIA]">
+	<div id="dialog" title="@session().get("categoria")">
 		<div align="center" class="page-header">
-			<h3>AQUI VA LA PREGUNTA A MOSTRAR</h3>
+			<h3>@session().get("pregunta")</h3>
 		</div>
 		<br>
 		<div align="center">
 			<div class="panel panel-primary" style="width: 90%">
 				<div class="center-block" style="width: 90%">
 					<a href="#" id="btnBorrar"
-							class="btn btn-primary btn-block" role="button">1a respuesta</a><br />
+							class="btn btn-primary btn-block" role="button">@session().get("respuesta0")</a><br />
 					<a href="#" id="btnBorrar"
-							class="btn btn-primary btn-block" role="button">2a respuesta</a><br />
+							class="btn btn-primary btn-block" role="button">@session().get("respuesta1")</a><br />
 					<a href="#" id="btnBorrar"
-							class="btn btn-primary btn-block" role="button">3a respuesta</a><br />
+							class="btn btn-primary btn-block" role="button">@session().get("respuesta2")</a><br />
 					<a href="#" id="btnBorrar"
-							class="btn btn-primary btn-block" role="button">4a respuesta</a><br />
+							class="btn btn-primary btn-block" role="button">@session().get("respuesta3")</a><br />
 				</div>
 			</div>
 		</div>
@@ -109,67 +109,67 @@
 		<thead></thead>
 		<tbody>
 			<tr>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="120"></a></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="120"></a></td>
+				<td><a href="/mostrarPreguntaHist" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="120"></a></td>
+				<td><a href="/mostrarPreguntaDep" class="opener"> <img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaCi" class="opener"> <img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaGeo" class="opener"> <img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaEnt" class="opener"> <img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaHist" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaDep" class="opener"> <img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="120"></a></td>
 			</tr>
 			<tr>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaCi" class="opener"> <img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaHist" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaCi" class="opener"> <img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
 			</tr>
 			<tr>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaDep" class="opener"> <img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaDep" class="opener"><img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaGeo" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
 			</tr>
 			<tr>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="120"></a></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaGeo" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaEnt" class="opener"> <img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaHist" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaCi" class="opener"><img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="120"></a></td>
+				<td><a href="/mostrarPreguntaEnt" class="opener"> <img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaGeo" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaDep" class="opener"><img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
 			</tr>
 			<tr>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaEnt" class="opener"><img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntGeo" class="opener"> <img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaHist" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
 			</tr>
 			<tr>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaHist" class="opener"> <img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaDep" class="opener"> <img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
 				<td><p></p></td>
 				<td><p></p></td>
-				<td><a href="#" class="opener"> <img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaCi" class="opener"> <img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
 			</tr>
 			<tr>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="120"></a></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
-				<td><a href="#" class="opener"><img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="120"></a></td>
+				<td><a href="/mostrarPreguntaGeo" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="120"></a></td>
+				<td><a href="/mostrarPreguntaCi" class="opener"><img src="@routes.Assets.at("images/verde.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaDep" class="opener"><img src="@routes.Assets.at("images/rojo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaEnt" class="opener"><img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaHist" class="opener"><img src="@routes.Assets.at("images/amarillo.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaGeo" class="opener"><img src="@routes.Assets.at("images/azul.png")" class="img-circle" width="80"></a></td>
+				<td><a href="/mostrarPreguntaEnt" class="opener"><img src="@routes.Assets.at("images/celeste.png")" class="img-circle" width="120"></a></td>
 			</tr>
 		</tbody>
 	</table>
