@@ -64,6 +64,7 @@
 				  status.innerHTML = al+"%";
 				  bar.value = al;
 				  al++;
+					var sim = setTimeout("progressBarSim("+al+")",90);
 					if(al == 100){
 					  status.innerHTML = "100%";
 					  bar.value = 100;
