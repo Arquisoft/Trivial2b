@@ -4,7 +4,12 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+import model.Pregunta;
+import model.Usuario;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -15,11 +20,16 @@ import views.html.principal;
 import views.html.register;
 import views.html.tablero;
 import business.AdminService;
+import business.JuegoService;
 import business.UsuarioService;
 import business.impl.AdminServiceImpl;
+import business.impl.JuegoServiceImpl;
 import business.impl.UsuarioServiceImpl;
+import business.juego.ControladorJuego;
 
 public class Application extends Controller {
+	
+	private static ControladorJuego cj;
 
 	public static class Login {
 		public String id;
@@ -104,7 +114,26 @@ public class Application extends Controller {
     	return ok(admin.render());
     }
     
+   /**
+    * Este  metodo requiere que las preguntas esten cargadas previamente en el mongoDB, sino no funcionará.
+    *
+    * @return
+    */
     public static Result cargarTablero() {
+    	
+    	UsuarioService us = new UsuarioServiceImpl();
+    	JuegoService js = new JuegoServiceImpl();
+    	Map<String, List<Pregunta>> preguntas = new HashMap<>();
+    	
+    	Usuario u = us.findByLogin(session().get("id"));
+    	String[] categorias = new String[]{"ciencias", "deportes", "entretenimiento", "geografia", "historia"};
+    	
+    	for (String cat: categorias) {
+    		preguntas.put(cat, js.getPreguntasCollection(cat));
+    	}
+    	
+    	cj = new ControladorJuego(preguntas, u);
+    	
     	return showTablero();
     }
     
