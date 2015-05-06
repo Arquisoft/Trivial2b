@@ -13,6 +13,7 @@ import views.html.estadisticas;
 import views.html.index;
 import views.html.principal;
 import views.html.register;
+import views.html.tablero;
 import business.AdminService;
 import business.UsuarioService;
 import business.impl.AdminServiceImpl;
@@ -101,6 +102,14 @@ public class Application extends Controller {
     public static Result cargarBase(){
     	Form<Cargar> cargarForm = Form.form(Cargar.class).bindFromRequest();
     	return ok(admin.render());
+    }
+    
+    public static Result cargarTablero() {
+    	return showTablero();
+    }
+    
+    public static Result showTablero() {
+    	return ok(tablero.render());
     }
 
 	public static Result index() {
