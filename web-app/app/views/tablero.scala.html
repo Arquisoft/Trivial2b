@@ -54,22 +54,54 @@
 				</div>
 			</div>
 		</div>
+		<div class="progress">
+			<progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+			<span id="status"></span>
+			<h1 id="finalMessage"></h1>
+			<script>
+				function progressBarSim(al) {
+				  var bar = document.getElementById('progressBar');
+				  var status = document.getElementById('status');
+				  status.innerHTML = al+"%";
+				  bar.value = al;
+				  al++;
+					var sim = setTimeout("progressBarSim("+al+")",100);
+					if(al == 100){
+					  status.innerHTML = "100%";
+					  bar.value = 100;
+					  clearTimeout(sim);
+					  var finalMessage = document.getElementById('finalMessage');
+					  finalMessage.innerHTML = "Process is complete";
+					}
+				}
+				var amountLoaded = 0;
+				progressBarSim(amountLoaded);
+			</script>
+		</div>
 	</div>
 
 
 	<div id="sub-main">
-				<div id="sub-left">
-				<a href="#"> <img src="@routes.Assets.at("images/dado.png")"  width="300"></a>
-				<p><input type="text" class="form-control" placeholder="Tirada del dado" aria-describedby="basic-addon1" disabled><br/><br/></p>
+		<div id="sub-left">
 		<ul class="list-group">
 			<li class="list-group-item list-group-item-success">@session().get("id")</li>
 			<!-- <li class="list-group-item list-group-item-info">Jugador2</li>
 			<li class="list-group-item list-group-item-warning">Jugador3</li>
 			<li class="list-group-item list-group-item-danger">Jugador4</li> -->
 		</ul>
+		<a href="#" onClick="throwdice()"> <img src="@routes.Assets.at("images/dado.png")"  width="150"></a></br></br>
+		<p><input id="myText" type="text" class="form-control" placeholder="Tirada del dado" aria-describedby="basic-addon1" disabled><br/><br/></p>
 		
 		<a href="/principal" class="btn btn-primary btn-lg btn-block" role="button">Volver al menú principal <a/>
 	</div>
+	
+	<script>
+		function throwdice(){
+		//create a random integer between 0 and 5
+		var randomdice = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+		document.getElementById("myText").value = randomdice
+		}
+	</script>
 	
 <div id="sub-right">
 	<table class="table-space">
