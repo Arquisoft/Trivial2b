@@ -14,6 +14,10 @@ GET 	/registrarse					controllers.Application.registrate()
 GET     /adminCargar				    controllers.Application.cargarBase()
 GET     /borrarBase				        controllers.Application.borrarBase()
 GET		/cargarTablero					controllers.Application.cargarTablero()
+GET     /join						controllers.Application.showJoin(username: String ?=null)
+GET     /room                            controllers.Application.chatRoom(username: String ?= null)
+GET     /room/chat                       controllers.Application.chat(username)
+GET     /assets/javascripts/chatroom.js  controllers.Application.chatRoomJs(username)
 
 GET		/logout							controllers.Application.logout()
 

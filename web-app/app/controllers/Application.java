@@ -8,17 +8,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
+import model.ChatRoom;
 import model.Pregunta;
 import model.Usuario;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.WebSocket;
 import views.html.admin;
 import views.html.estadisticas;
 import views.html.index;
 import views.html.principal;
 import views.html.register;
 import views.html.tablero;
+import views.html.join;
+import views.html.chatRoom;
 import business.AdminService;
 import business.JuegoService;
 import business.UsuarioService;
@@ -170,18 +176,39 @@ public class Application extends Controller {
 		return ok(admin.render(Form.form(Cargar.class)));
 	}
 
-	private static void escribeFichero() { // Borrar metodo
-		File file = new File("archivo.txt");
-		FileWriter fw;
-		BufferedWriter bw;
-		try {
-			fw = new FileWriter(file.getAbsoluteFile());
-			bw = new BufferedWriter(fw);
-			bw.write("hola que ase");
-			bw.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public static Result showJoin(String username) {
+		return ok(join.render(session("id")));
 	}
+	 
+    public static Result chatRoom(String username) {
+       /* if(username == null || username.trim().equals("")) {
+            flash("error", "Please choose a valid username.");
+            return redirect(routes.Application.showPrincipal());
+        }*/
+        return ok(chatRoom.render(session("id")));
+    }
+
+    public static Result chatRoomJs(String username) {
+        return ok(views.js.chatRoom.render(session("id")));
+    }
+    
+    
+    public static WebSocket<JsonNode> chat(final String username) {
+        return new WebSocket<JsonNode>() {
+            
+           
+            public void onReady(WebSocket.In<JsonNode> in, WebSocket.Out<JsonNode> out){
+                
+                
+                try { 
+                    ChatRoom.join(username, in, out);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        };
+    }
+
+
 
 }
