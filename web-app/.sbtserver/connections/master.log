@@ -1,0 +1,13 @@
+New log file opened at Mon Apr 27 20:19:48 CEST 2015 by 6168@Hp-HP
+Taking next connection to: 52744
+New client attempting to connect on port: 52745-52744
+  Address = /192.168.1.38:52744
+This client on port 52745 has uuid 32a2b16a-1c09-41ab-888a-94eff1dd4a76 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-32a2b16a-1c09-41ab-888a-94eff1dd4a76
+Taking next connection to: 52744
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 6168@Hp-HP logs at Mon Apr 27 20:22:48 CEST 2015, goodbye.
