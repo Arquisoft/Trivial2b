@@ -1,10 +1,74 @@
-
+@(user: String)
 <!DOCTYPE html>
 <html>
 <head>
 <title>Estadisticas</title>
+<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
 </head>
 <body>
-Estadisticas
+<div align="center" class="page-header">
+		<h3>Estadisticas</h3>
+		<img src="@routes.Assets.at("images/grafico.png")" alt="User"
+			class="img-circle">
+	</div>
+	<div align="center">
+		<div align="center" style="width: 50%">
+			<div class="panel panel-success">
+				<div class="panel-heading">Estadisticas para el usuario: @user</div>
+				
+					<div class="form-group">
+					Preguntas de historia<br/>
+						<label for="historia"> acertadas</label> <input
+							type="text" class="form-control" id="historia" name="id"
+							placeholder="40" style=text-align:center disabled>
+							<label for="historiab"> falladas</label> <input
+							type="text" class="form-control" id="historiab" name="id"
+							placeholder="56" style=text-align:center disabled>
+					</div>
+					<div class="form-group">
+					Preguntas de Entretenimiento<br/>
+						<label for="entretenimiento">acertadas</label> <input
+							type="text" class="form-control" id="entretenimiento" name="id"
+							placeholder="22" style=text-align:center disabled>
+							<label for="entretenimientob">falladas</label> <input
+							type="text" class="form-control" id="entretenimientob" name="id"
+							placeholder="33" style=text-align:center disabled>
+					</div>
+					<div class="form-group">
+					Preguntas de geografia <br/>
+						<label for="geografia">acertadas</label> <input
+							type="text" class="form-control" id="geografia" name="id"
+							placeholder="54" style=text-align:center disabled>
+							<label for="geografiab">falladas</label> <input
+							type="text" class="form-control" id="geografiab" name="id"
+							placeholder="43" style=text-align:center disabled>
+					</div>
+					<div class="form-group">
+					Preguntas de ciencia <br/>
+						<label for="ciencia"> acertadas</label> <input
+							type="text" class="form-control" id="ciencia" name="id"
+							placeholder="" style=text-align:center disabled>
+							<label for="cienciab">falladas</label> <input
+							type="text" class="form-control" id="cienciab" name="id"
+							placeholder="" style=text-align:center disabled>
+					</div>
+					Preguntas de deporte
+					<div class="form-group">
+						<label for="deporte">acertadas</label> <input
+							type="text" class="form-control" id="deporte" name="id"
+							placeholder="" style=text-align:center disabled>
+							<label for="deporteb">falladas</label> <input
+							type="text" class="form-control" id="deporteb" name="id"
+							placeholder="" style=text-align:center disabled>
+					</div>
+					
+			
+					
+			</div>
+		</div>
+		<a href="/" id="btnAtras" class="btn btn-info"
+			role="button">Atras</a>
+	</div>
+
 </body>
 </html>

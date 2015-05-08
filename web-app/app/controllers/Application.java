@@ -209,8 +209,8 @@ public class Application extends Controller {
 		return ok(principal.render());
 	}
 
-	public static Result showEstadisticas() {
-		return ok(estadisticas.render());
+	public static Result showEstadisticas(String username) {
+		return ok(estadisticas.render(session("id")));
 	}
 
 	public static Result showAdmin() {

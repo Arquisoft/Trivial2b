@@ -5,7 +5,7 @@
 # Home page
 GET     /                           	controllers.Application.index()
 GET 	/registro						controllers.Application.showRegister()
-GET 	/estadisticas					controllers.Application.showEstadisticas()
+GET 	/estadisticas					controllers.Application.showEstadisticas(username: String ?=null)
 GET		/admin							controllers.Application.showAdmin()
 GET 	/principal						controllers.Application.showPrincipal()
 
