@@ -33,7 +33,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 public class Application extends Controller {
 	
 	private static ControladorJuego cj;
-	private static final long ESPERA = 8000;
+	private static final long ESPERA = 2000;
 
 	public static class Login {
 		public String id;
@@ -138,12 +138,12 @@ public class Application extends Controller {
      	Map<String, List<Pregunta>> preguntas = new HashMap<>();
      	
      	Usuario u = us.findByLogin(session().get("id"));
-     	String[] categorias = new String[]{"ciencias", "deportes", "entretenimiento", "geografia", "historia"};
+     	String[] categorias = new String[]{"ciencias"};
      	
      	for (String cat: categorias) {
      		preguntas.put(cat, js.getPreguntasCollection(cat));
      	}
-     	
+
      	cj = new ControladorJuego(preguntas, u);
      	
      	return showTablero();
@@ -176,6 +176,8 @@ public class Application extends Controller {
      
     public static void mostrarPregunta(String categoria) {
     	Pregunta p = cj.obtenerPreguntaAleatoriaCategoria(categoria);
+    	
+    	
     	
     	session("pregunta", p.getPregunta());
     	for (int i = 0; i < p.getRespuestas().length; i++) {
